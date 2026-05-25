@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iGiftAid — Daily Gifts for Daily Needs</title>
+  <meta name="description" content="iGiftAid turns urgent needs into daily gifts. Fair exposure for every campaign, a Daily Needs Wall, and faster, cheaper payouts. Launching soon.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=5">
+  <link rel="icon" type="image/png" sizes="180x180" href="/favicon.png?v=5">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=5">
+
+  <meta property="og:title" content="iGiftAid — Daily Gifts for Daily Needs">
+  <meta property="og:description" content="Fair exposure for every campaign, a Daily Needs Wall, faster cheaper payouts. Launching soon.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://igiftaid.org">
+  <meta property="og:image" content="https://igiftaid.org/icon-192.png?v=5">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css?v=5">
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <img src="/favicon.png?v=5" alt="" class="hero-mark">
+      <img src="/logo.png?v=5" alt="iGiftAid" class="logo">
+      <p class="tagline">Daily Gifts for Daily Needs</p>
+      <span class="badge">Launching soon</span>
+    </header>
+
+    <section class="block">
+      <h2>What we do</h2>
+      <p>
+        iGiftAid turns urgent needs into daily gifts. We simplify giving with
+        fair exposure for every campaign, a Daily Needs Wall, and faster,
+        cheaper payouts to the people who need them.
+      </p>
+      <p>
+        Our mission is simple: a regular and fair flow of donations to the
+        most in-need, every day.
+      </p>
+    </section>
+
+    <section class="block">
+      <h2>Where our campaigns live</h2>
+      <p>
+        All iGiftAid campaigns are hosted and operated on regulated
+        fundraising platforms; these partners handle donor processing,
+        compliance, and disbursement. iGiftAid coordinates and curates,
+        the platforms below provide the regulated rails.
+      </p>
+      <ul class="platforms">
+        <li><a href="https://chuffed.org" target="_blank" rel="noopener">Chuffed.org</a></li>
+        <li><a href="https://gofundme.com" target="_blank" rel="noopener">GoFundMe</a></li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>Our values</h2>
+      <ul class="pills">
+        <li>Generosity in Motion</li>
+        <li>Fair Exposure</li>
+        <li>Transparent by Design</li>
+        <li>Inclusive &amp; Accessible</li>
+        <li>Empowerment</li>
+      </ul>
+    </section>
+
+    <section class="block contact">
+      <h2>Get in touch</h2>
+      <p>
+        We're in pre-launch and would love to hear from partners, beneficiaries,
+        and donors. Reach us at
+        <a href="mailto:igiftaid@gmail.com">igiftaid@gmail.com</a>.
+      </p>
+    </section>
+  </main>
+
+  <div class="trust-line" aria-label="Trust signals">
+    UK Charity (in formation) <span class="sep">·</span> Hosted by Regulated Platforms <span class="sep">·</span> UK GDPR Compliant
+  </div>
+
+  <footer>
+    <p class="entity">iGiftAid Limited <span class="sep">·</span> UK charity, registration pending</p>
+    <p>20&ndash;22 Wenlock Road, London N1 7GU <span class="sep">·</span> <a href="mailto:igiftaid@gmail.com">igiftaid@gmail.com</a></p>
+    <p class="legal">
+      <a href="/privacy.html">Privacy</a> <span class="sep">·</span>
+      <a href="/terms.html">Terms</a>
+    </p>
+    <p class="copy">&copy; 2026 iGiftAid Limited</p>
+  </footer>
+
+  <div id="cookie-banner" role="dialog" aria-label="Cookie consent" hidden>
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <strong>We respect your privacy.</strong>
+        This site uses essential cookies only; we don't load analytics or tracking.
+        <a href="/privacy.html#cookies">Learn more</a>
+      </div>
+      <div class="cookie-buttons">
+        <button type="button" class="btn-secondary" data-consent="declined">Decline all</button>
+        <button type="button" class="btn-secondary" data-consent="essential">Essential only</button>
+        <button type="button" class="btn-primary" data-consent="all">Accept all</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var KEY = 'igiftaid_cookie_consent';
+      var banner = document.getElementById('cookie-banner');
+      if (!localStorage.getItem(KEY)) banner.hidden = false;
+      banner.addEventListener('click', function (e) {
+        var btn = e.target.closest('button[data-consent]');
+        if (!btn) return;
+        try { localStorage.setItem(KEY, btn.dataset.consent); } catch (_) {}
+        banner.hidden = true;
+      });
+    })();
+  </script>
+</body>
+</html>
