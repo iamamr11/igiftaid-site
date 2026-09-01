@@ -62,18 +62,40 @@ main {
   letter-spacing: -0.01em;
 }
 
-.badge {
-  display: inline-block;
-  background: var(--gold);
-  color: var(--burgundy);
+/* Replaced the "Launching soon" badge: campaigns are live, so the pill was
+   simply untrue. What sits under the tagline now is the thing a visitor most
+   needs to know — which charity they are actually dealing with. */
+.operated-by {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 14px 0 0;
+}
+.operated-by strong { color: var(--burgundy); font-weight: 600; }
+
+/* WhatsApp button. Points at /chat, which server.js redirects — the number is
+   never in the markup, so it cannot be scraped and can change without breaking
+   anything already published. */
+.chat-wrap { margin: 22px 0; }
+.chat-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: #fff;
   font-family: 'Inter', sans-serif;
   font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 6px 14px;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 13px 22px;
   border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
+.chat-btn:hover { background: #1EBE5A; transform: translateY(-1px); }
+.chat-btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.chat-btn svg { flex: none; }
 
 .block {
   margin-bottom: 48px;
