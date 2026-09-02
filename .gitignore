@@ -3,3 +3,6 @@ node_modules/
 *.log
 .env
 .env.*
+
+# Generated: public/<lang>/ comes from src/ + i18n/ via build_i18n.py.
+# The English pages at public/ root are generated too. Sources are src/ and i18n/.

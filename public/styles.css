@@ -1,4 +1,8 @@
 :root {
+  /* Ink for anything on a sticky note. Deliberately theme-INDEPENDENT: the notes keep
+     their light fills in dark mode, so text on them must stay dark in both. Using
+     --brown here made every note unreadable the moment dark mode landed. */
+  --note-ink: #2C1810;
   --plum: #8B3A62;
   --burgundy: #4A1C32;
   --gold: #D4A574;
@@ -473,9 +477,15 @@ footer .copy {
   color: var(--burgundy); text-decoration: none; padding: 6px 2px; border-bottom: 2px solid transparent; }
 .site-nav a.navlink:hover { border-bottom-color: var(--gold); }
 .site-nav a.navlink[aria-current="page"] { border-bottom-color: var(--plum); font-weight: 600; }
-.skip-link { position: absolute; left: -9999px; top: 0; z-index: 200; background: var(--burgundy);
-  color: #fff; padding: .7rem 1.2rem; border-radius: 0 0 8px 0; text-decoration: none; font-weight: 600; }
-.skip-link:focus { left: 0; }
+/* Hidden by a VERTICAL offset, not `left: -9999px`.
+   In LTR, leftward overflow is ignored and left:-9999px is the classic trick. In RTL
+   left IS the scroll direction, so the same rule gave every Arabic and Urdu page a
+   scrollWidth of ~10,000px and a page that scrolled sideways into nothing. Vertical
+   offset is direction-neutral and does the same job. */
+.skip-link { position: absolute; inset-inline-start: 0; top: -100px; z-index: 200;
+  background: var(--burgundy); color: #fff; padding: .7rem 1.2rem;
+  border-radius: 0 0 8px 0; text-decoration: none; font-weight: 600; }
+.skip-link:focus { top: 0; }
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible,
 label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border-radius: 3px; }
 
@@ -553,7 +563,7 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
   box-shadow: inset 0 2px 14px rgba(44,24,16,.10); }
 .wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(216px, 1fr)); gap: 22px; }
 .note { position: relative; padding: 17px 16px 14px; border-radius: 2px; min-height: 178px;
-  display: flex; flex-direction: column; gap: 9px; color: var(--brown);
+  display: flex; flex-direction: column; gap: 9px; color: var(--note-ink);
   box-shadow: 2px 4px 10px rgba(44,24,16,.20); transition: transform .16s, box-shadow .16s; }
 .note:hover { transform: rotate(0deg) translateY(-3px) !important; box-shadow: 3px 8px 18px rgba(44,24,16,.26); }
 .note.picked { outline: 3px solid var(--burgundy); outline-offset: 2px; }
@@ -567,7 +577,7 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
 .note .fam { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14.5px; margin: 0; }
 .note .txt { font-size: 14.5px; line-height: 1.45; margin: 0; flex: 1; }
 .note .amt { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 21px; margin: 0; }
-.note .meta { font-size: 12px; color: rgba(44,24,16,.66); margin: 0;
+.note .meta { font-size: 12px; color: rgba(44,24,16,.72); margin: 0;
   display: flex; justify-content: space-between; gap: 8px; align-items: center; }
 .note .soon { color: #9A2020; font-weight: 600; }
 .note .tick { position: absolute; top: 9px; right: 9px; width: 24px; height: 24px;
@@ -634,3 +644,101 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
   .filters .spacer { display: none; }
   .filters { gap: 8px; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   DARK MODE + RTL — added 2026-09-02 with localisation.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Follows the operating system. No toggle: the OS setting is the user's stated
+   preference and asking again is asking twice. Structured as token overrides only,
+   so no component needs a dark-specific rule.
+
+   Designed, not inverted. The light palette is warm cream and plum; a naive inversion
+   gives a cold grey that loses the brand entirely. The dark ground is a deep warm
+   brown taken from --brown, and plum and gold are LIFTED rather than darkened,
+   because a mid-tone accent that works on cream is unreadable on near-black. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --plum:     #D98BB0;   /* lifted from #8B3A62 — the original fails contrast on dark */
+    --burgundy: #F0DCE6;   /* was the darkest ink; on dark it becomes the lightest */
+    --gold:     #E2B888;
+    --cream:    #1A1210;   /* the ground, a warm brown-black rather than grey */
+    --brown:    #F2E9DC;   /* body text, inverted role */
+    --muted:    #B0A092;
+  }
+  body { background: var(--cream); color: var(--brown); }
+
+  .site-nav { background: rgba(26,18,16,.82); border-bottom-color: rgba(217,139,176,.22); }
+  .camp, .step, .callout.plain, .filters .chip-btn, .filters select {
+    background: #241A17; border-color: rgba(217,139,176,.20); }
+  .callout { background: rgba(226,184,136,.10); border-left-color: var(--gold); }
+  .toc { background: #241A17; border-color: rgba(217,139,176,.20); }
+  table.facts th { background: rgba(226,184,136,.08); }
+  table.facts th, table.facts td { border-bottom-color: rgba(217,139,176,.16); }
+  .btn-ghost-lg { background: #241A17; border-color: rgba(217,139,176,.28); }
+  .bar { background: rgba(217,139,176,.18); }
+
+  /* The board goes dark and the notes stay bright — a corkboard in a dim room.
+     The notes keep their light fills deliberately: their text is dark brown, so
+     dimming them would break the contrast that makes them readable. */
+  .board { background:
+      repeating-linear-gradient(90deg, rgba(226,184,136,.05) 0 1px, transparent 1px 26px),
+      repeating-linear-gradient(0deg, rgba(226,184,136,.05) 0 1px, transparent 1px 26px),
+      #2A2018;
+    box-shadow: inset 0 2px 18px rgba(0,0,0,.45); }
+  .note { box-shadow: 2px 4px 14px rgba(0,0,0,.45); }
+  .note:hover { box-shadow: 3px 8px 22px rgba(0,0,0,.55); }
+
+  .settle { background: #3A2A32; box-shadow: 0 10px 34px rgba(0,0,0,.6); }
+  .cookie-inner, #cookie-banner { background: #241A17; }
+}
+
+/* ── RTL, for Arabic and Urdu ──────────────────────────────────────────────
+   Most of the layout already mirrors because it is flex/grid with gap, which is
+   direction-aware. These are the places that hard-coded a side. */
+[dir="rtl"] .site-nav .brand { margin-right: 0; margin-left: auto; }
+[dir="rtl"] .callout, [dir="rtl"] .callout.plain {
+  border-left: 0; border-right: 4px solid var(--gold); border-radius: 12px 0 0 12px; }
+[dir="rtl"] .callout.plain { border-right-color: var(--plum); }
+/* The tick sits top-right in LTR; in RTL that is where the eye starts reading, so
+   it moves to the opposite corner rather than covering the first word. */
+[dir="rtl"] .note .tick { right: auto; left: 9px; }
+[dir="rtl"] .toc ol, [dir="rtl"] ol.plain, [dir="rtl"] ul.plain { padding-left: 0; padding-right: 1.3rem; }
+[dir="rtl"] .filters .spacer { margin-left: 0; margin-right: auto; }
+[dir="rtl"] blockquote { border-left: 0; border-right: 3px solid var(--gold); padding-left: 0; padding-right: 1.2rem; }
+
+/* Arabic and Urdu need more leading than Latin at the same size — the diacritics
+   and descenders collide otherwise. */
+[lang="ar"], [lang="ur"] { line-height: 1.85; }
+[lang="ar"] .note .txt, [lang="ur"] .note .txt { line-height: 1.7; }
+[lang="ur"] { font-family: 'Noto Nastaliq Urdu', 'DM Sans', system-ui, sans-serif; }
+
+/* ── language switcher ─────────────────────────────────────────────────────── */
+.lang-wrap { position: relative; margin-left: 6px; }
+.lang-btn { display: inline-flex; align-items: center; gap: 6px; cursor: pointer;
+  font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;
+  color: var(--burgundy); background: transparent; border: 1px solid rgba(139,58,98,.22);
+  border-radius: 999px; padding: 5px 12px; }
+.lang-btn:hover { border-color: var(--plum); }
+.lang-menu { position: absolute; top: calc(100% + 8px); inset-inline-end: 0; z-index: 60;
+  background: var(--cream); border: 1px solid rgba(139,58,98,.20); border-radius: 12px;
+  padding: 6px; min-width: 190px; box-shadow: 0 12px 34px rgba(44,24,16,.22);
+  max-height: 60vh; overflow-y: auto; }
+@media (prefers-color-scheme: dark) { .lang-menu { background: #241A17; } }
+.lang-menu[hidden] { display: none; }
+.lang-menu a { display: block; padding: 8px 12px; border-radius: 8px; text-decoration: none;
+  color: var(--burgundy); font-size: 14.5px; }
+.lang-menu a:hover { background: rgba(212,165,116,.18); }
+.lang-menu a[aria-current="true"] { background: var(--burgundy); color: #fff; }
+
+/* First-visit suggestion. A BANNER, not a redirect: auto-redirecting a deep link
+   breaks sharing — someone in Germany sending an Arabic reader a campaign link
+   should not have it forced into German. */
+.lang-hint { background: var(--gold); color: var(--brown); padding: 10px 16px;
+  font-family: 'Inter', sans-serif; font-size: 14.5px; display: flex; gap: 14px;
+  align-items: center; justify-content: center; flex-wrap: wrap; }
+@media (prefers-color-scheme: dark) { .lang-hint { color: #1A1210; } }
+.lang-hint[hidden] { display: none; }
+.lang-hint a { color: inherit; font-weight: 700; }
+.lang-hint button { background: transparent; border: 0; cursor: pointer; color: inherit;
+  text-decoration: underline; font: inherit; opacity: .75; }

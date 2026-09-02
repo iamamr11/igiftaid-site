@@ -1,0 +1,542 @@
+{
+  "index.01": {
+    "t": "Donaciones diarias para necesidades diarias",
+    "h": "6b2402e77d8f"
+  },
+  "index.02": {
+    "t": "El nombre comercial de <strong>HEART Humanitarian Foundation</strong><br> una organización benéfica pública registrada 501(c)(3)",
+    "h": "de63c7680e4c"
+  },
+  "index.03": {
+    "t": "Qué hacemos",
+    "h": "8783c085bdc9"
+  },
+  "index.04": {
+    "t": "I Gift Aid convierte necesidades urgentes en donaciones diarias. Simplificamos el proceso de dar con exposición equitativa para cada campaña, un Muro de Necesidades Diarias y pagos más rápidos y económicos para quienes los necesitan.",
+    "h": "1370595a64b8"
+  },
+  "index.05": {
+    "t": "Nuestra misión es simple: un flujo regular y equitativo de donaciones para quienes más lo necesitan, cada día.",
+    "h": "a9c730ac3f34"
+  },
+  "index.06": {
+    "t": "Dos formas de donar",
+    "h": "db3aab023a56"
+  },
+  "index.07": {
+    "t": "<strong>Campañas</strong>",
+    "h": "e6a3ff056109"
+  },
+  "index.08": {
+    "t": "Una familia verificada que recauda fondos para una necesidad importante &mdash; tratamiento, reconstrucción, un año de escuela. Se extiende durante semanas en una plataforma de recaudación regulada.",
+    "h": "8f4d77b67389"
+  },
+  "index.09": {
+    "t": "<a href=\"/campaigns.html\">Ver campañas &rarr;</a>",
+    "h": "97648109eca0"
+  },
+  "index.10": {
+    "t": "<strong>El Muro de Necesidades Diarias</strong>",
+    "h": "2751bdd524a6"
+  },
+  "index.11": {
+    "t": "Una cosa pequeña y concreta que una familia necesita esta semana &mdash; normalmente entre $18 y $100. Se publica una vez al día y desaparece en 24 horas. Elige varias y resuélvelas juntas.",
+    "h": "b0b1aa227ee9"
+  },
+  "index.12": {
+    "t": "<a href=\"/needs.html\">Ver el muro de hoy &rarr;</a>",
+    "h": "81170cc0624f"
+  },
+  "index.13": {
+    "t": "Ninguna se clasifica por popularidad. Las campañas se ordenan aleatoriamente en cada visita y el muro muestra lo que vence más pronto, de modo que una familia que no ha recaudado nada es tan visible como una que está a punto de terminar. Eso es lo que <a href=\"/how-it-works.html\">exposición equitativa</a> significa aquí.",
+    "h": "798cc15a0b0d"
+  },
+  "index.14": {
+    "t": "Quiénes somos",
+    "h": "696ab4d5bfb5"
+  },
+  "index.15": {
+    "t": "<strong>I Gift Aid</strong> es el nombre con el que operamos. <strong>HEART Humanitarian Foundation</strong> es la organización benéfica detrás de él &mdash; una corporación sin fines de lucro registrada en Pennsylvania y reconocida por el Servicio de Impuestos Internos como organización pública exenta de impuestos bajo la 501(c)(3). Son una sola organización, no dos: HEART opera bajo el nombre comercial I Gift Aid.",
+    "h": "953e2c717bf6"
+  },
+  "index.16": {
+    "t": "Cada donación se realiza a HEART Humanitarian Foundation. Puede verificar nuestro estatus de forma independiente con el IRS usando nuestro EIN, <strong>42&#8209;2670441</strong>, en <a href=\"https://www.irs.gov/charities-non-profits/tax-exempt-organization-search\" target=\"_blank\" rel=\"noopener\">irs.gov</a>.",
+    "h": "c4f12ac715e8"
+  },
+  "index.17": {
+    "t": "Más información en <a href=\"https://hearthumanitarianfoundation.org\" target=\"_blank\" rel=\"noopener\">hearthumanitarianfoundation.org</a>.",
+    "h": "b4d0b6617472"
+  },
+  "index.18": {
+    "t": "Dónde se encuentran nuestras campañas",
+    "h": "167cbb0c67ae"
+  },
+  "index.19": {
+    "t": "Nuestras campañas están alojadas y operadas en plataformas reguladas de recaudación de fondos; estos socios se encargan del procesamiento de donantes, el cumplimiento normativo y el desembolso. Nosotros coordinamos y seleccionamos; las plataformas a continuación proporcionan la infraestructura regulada.",
+    "h": "a5619cfad9e3"
+  },
+  "index.20": {
+    "t": "<a href=\"https://chuffed.org\" target=\"_blank\" rel=\"noopener\">Chuffed.org</a>",
+    "h": "6b211c3c68af"
+  },
+  "index.21": {
+    "t": "<a href=\"https://gofundme.com\" target=\"_blank\" rel=\"noopener\">GoFundMe</a>",
+    "h": "0bf8275ded31"
+  },
+  "index.22": {
+    "t": "Nuestros valores",
+    "h": "3f106511a8e4"
+  },
+  "index.23": {
+    "t": "Generosidad en acción",
+    "h": "aded2220011a"
+  },
+  "index.24": {
+    "t": "Exposición equitativa",
+    "h": "35c3f8ec93f8"
+  },
+  "index.25": {
+    "t": "Transparencia por diseño",
+    "h": "7c0b5faac923"
+  },
+  "index.26": {
+    "t": "Inclusivo &amp; Accesible",
+    "h": "bf14c1556650"
+  },
+  "index.27": {
+    "t": "Empoderamiento",
+    "h": "0d8615fb4c4f"
+  },
+  "index.28": {
+    "t": "Contáctenos",
+    "h": "115e410f01dc"
+  },
+  "index.29": {
+    "t": "¿Solicitar apoyo o preguntar sobre una campaña? Escríbenos por WhatsApp &mdash; llega directamente a nuestro equipo, en inglés o árabe.",
+    "h": "82da79aa3aae"
+  },
+  "index.30": {
+    "t": "<!-- /chat is a redirect handled in server.js, so the number is never printed here and can change without breaking this link. --> <a class=\"chat-btn\" href=\"/chat\" rel=\"noopener\"> <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\" focusable=\"false\"> <path fill=\"currentColor\" d=\"M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z\"/> <path fill=\"currentColor\" d=\"M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23a8.19 8.19 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23z\"/> </svg> <span>Escríbenos por WhatsApp</span> </a>",
+    "h": "2b5dd3d50a40"
+  },
+  "index.31": {
+    "t": "Socios, beneficiarios y donantes también pueden contactarnos en <a href=\"mailto:hello@igiftaid.org\">hello@igiftaid.org</a>.",
+    "h": "34daceffde88"
+  },
+  "campaigns.01": {
+    "t": "Familias que hemos verificado, recaudando fondos para algo específico. Cada campaña está alojada en una plataforma de recaudación regulada que gestiona el pago; nosotros nos encargamos de la verificación y el seguimiento.",
+    "h": "92e69cb47e40"
+  },
+  "campaigns.02": {
+    "t": "<strong>Esta página se reorganiza en cada visita.</strong> Garantizamos una exposición equitativa a todas las campañas: no hay posición destacada, no hay clasificación y nada puede pagarse para obtener mejor lugar. Una campaña cerca de su meta no aparece por encima de una que no ha recaudado nada &mdash; el orden que usted ve es deliberadamente distinto al que ve cualquier otra persona. Puede ordenarlas usted mismo a continuación si lo prefiere.",
+    "h": "6658bd91f849"
+  },
+  "campaigns.03": {
+    "t": "Todas",
+    "h": "a52ace420f21"
+  },
+  "campaigns.04": {
+    "t": "Médico",
+    "h": "fec80bef0d8a"
+  },
+  "campaigns.05": {
+    "t": "Educación",
+    "h": "512ab3c6b986"
+  },
+  "campaigns.06": {
+    "t": "Refugio",
+    "h": "cfcd1f3d6aeb"
+  },
+  "campaigns.07": {
+    "t": "Alimentos &amp; Combustible",
+    "h": "faf071cae733"
+  },
+  "campaigns.08": {
+    "t": "Infantes &amp; Bebés",
+    "h": "0d3ee6ab2067"
+  },
+  "campaigns.09": {
+    "t": "Invierno",
+    "h": "1b17869e03ec"
+  },
+  "campaigns.10": {
+    "t": "Emergencia",
+    "h": "4538f2dc67b5"
+  },
+  "campaigns.11": {
+    "t": "Orden",
+    "h": "6be090825c99"
+  },
+  "campaigns.12": {
+    "t": "Aleatorio (predeterminado)",
+    "h": "2caaad646ccd"
+  },
+  "campaigns.13": {
+    "t": "Abierta más recientemente",
+    "h": "42f4be2677bc"
+  },
+  "campaigns.14": {
+    "t": "Abierta hace más tiempo",
+    "h": "62bc26ebef3b"
+  },
+  "campaigns.15": {
+    "t": "Ninguna campaña coincide con esos filtros ahora mismo.",
+    "h": "2b134eb7e1d9"
+  },
+  "needs.01": {
+    "t": "El Muro de Necesidades Diarias",
+    "h": "d8d2337e4784"
+  },
+  "needs.02": {
+    "t": "Una necesidad pequeña y concreta por familia, publicada una vez cada 24 horas. No es una campaña ni una meta &mdash; es una sola cosa que alguien necesita esta semana y lo que cuesta. Elija las que quiera y resuélvalas juntas.",
+    "h": "8abaebb05a34"
+  },
+  "needs.03": {
+    "t": "<strong>Cada nota caduca a las 24 horas.</strong> Una familia puede publicar una necesidad al día, así nadie puede saturar el muro y nada permanece aquí sin atención. Si una necesidad es financiada se retira de inmediato; si caduca sin financiación, la familia puede volver a publicarla mañana.",
+    "h": "dfe105f0b379"
+  },
+  "needs.04": {
+    "t": "<strong>Nunca ordenamos este muro por popularidad.</strong> El orden predeterminado es el de caducidad más próxima &mdash; lo más urgente, no lo más exitoso. No hay espacios destacados ni nada que pueda pagarse.",
+    "h": "c23bea5b2e06"
+  },
+  "needs.05": {
+    "t": "Monto",
+    "h": "49e96d7cdf58"
+  },
+  "needs.06": {
+    "t": "Cualquier",
+    "h": "2b505597daa7"
+  },
+  "needs.07": {
+    "t": "Menos de $40",
+    "h": "7060faef59d9"
+  },
+  "needs.08": {
+    "t": "$40 a $70",
+    "h": "7887df757f3e"
+  },
+  "needs.09": {
+    "t": "$70 o más",
+    "h": "3dfcea5a6ce7"
+  },
+  "needs.10": {
+    "t": "Ordenar",
+    "h": "bec69036aa27"
+  },
+  "how-it-works.01": {
+    "t": "Lo que ocurre entre tu donación y el momento en que una familia la recibe — incluidas las partes que aún no son perfectas.",
+    "h": "9408ec3c1e4a"
+  },
+  "how-it-works.02": {
+    "t": "La mayoría de las plataformas de donación te muestran una historia y una barra de progreso. Eso no te dice nada sobre si la persona es real, ni sobre si el dinero llega. Esta página explica lo que ocurre entre tu donación y el momento en que una familia la recibe &mdash; incluidas las partes que aún no son perfectas.",
+    "h": "2e8726b8d4e3"
+  },
+  "how-it-works.03": {
+    "t": "De la solicitud al pago",
+    "h": "300e34c808a2"
+  },
+  "how-it-works.04": {
+    "t": "Una familia presenta su solicitud",
+    "h": "bf5eeac09758"
+  },
+  "how-it-works.05": {
+    "t": "Casi siempre por WhatsApp, en árabe, desde un teléfono. Nos dicen quiénes forman el hogar, qué ha ocurrido, qué necesitan y cómo puede llegarles el dinero. Es gratuito y siempre lo será.",
+    "h": "2a7e72d5e938"
+  },
+  "how-it-works.06": {
+    "t": "Verificamos su identidad",
+    "h": "c0bdff2a4b93"
+  },
+  "how-it-works.07": {
+    "t": "Documentos de identidad, fotografías tomadas por ellos mismos en lugar de encontradas en línea, y una cartera o cuenta que coincida con la persona que hemos verificado. Las solicitudes que no pueden verificarse no se convierten en campañas.",
+    "h": "c7b55ef9ebd1"
+  },
+  "how-it-works.08": {
+    "t": "Verificamos la transferencia",
+    "h": "ddcee10ca78a"
+  },
+  "how-it-works.09": {
+    "t": "Antes de que se mueva cualquier dinero, el destinatario es verificado contra listas de sanciones. HEART es una organización benéfica estadounidense y no puede enviar fondos legalmente a una persona, entidad o jurisdicción sancionada &mdash; y no lo hace.",
+    "h": "c357e9189e8d"
+  },
+  "how-it-works.10": {
+    "t": "Se crea una campaña",
+    "h": "a9609e382100"
+  },
+  "how-it-works.11": {
+    "t": "La redactamos junto con la familia, usando sus propias palabras y sus propias fotografías. Se publica en una plataforma de recaudación regulada &mdash; Chuffed o GoFundMe &mdash; que gestiona el pago del donante bajo su propio régimen de cumplimiento.",
+    "h": "dcbf83cd2fb4"
+  },
+  "how-it-works.12": {
+    "t": "Usted dona",
+    "h": "7cfd7c1aaaa4"
+  },
+  "how-it-works.13": {
+    "t": "Su donación se realiza a HEART Humanitarian Foundation, que opera como I Gift Aid. Pasa a ser propiedad de la organización benéfica en el momento de su recepción, y la destinamos a la causa para la que usted donó.",
+    "h": "00988f2f7478"
+  },
+  "how-it-works.14": {
+    "t": "El dinero se envía y se registra",
+    "h": "93233c450ab1"
+  },
+  "how-it-works.15": {
+    "t": "Los fondos llegan a la familia por la vía que realmente funciona donde se encuentran &mdash; a menudo una billetera digital en lugar de un banco. Cada transferencia queda registrada contra la campaña de la que provino.",
+    "h": "84399d706e30"
+  },
+  "how-it-works.16": {
+    "t": "Lo que retenemos y por qué",
+    "h": "c293e72b81c2"
+  },
+  "how-it-works.17": {
+    "t": "Su donación tiene dos deducciones, y preferimos nombrarlas por separado en vez de citar un solo número que oculte la otra.",
+    "h": "ef930e483781"
+  },
+  "how-it-works.18": {
+    "t": "<strong>La comisión del proveedor de pago</strong>",
+    "h": "fda7399e2b0d"
+  },
+  "how-it-works.19": {
+    "t": "La retienen Chuffed, GoFundMe, Stripe o PayPal <em>antes</em> de que el dinero llegue a nosotros. Normalmente alrededor del 2,5% más un importe fijo por donación. Nosotros nunca la vemos y no podemos eximirla.",
+    "h": "9317136185dd"
+  },
+  "how-it-works.20": {
+    "t": "<strong>Entre el 2,5% y el 4%, retenido por la organización</strong>",
+    "h": "ed5259952500"
+  },
+  "how-it-works.21": {
+    "t": "Se aplica a lo que realmente llega. Cubre el cambio de divisa, el coste de mover dinero a un lugar donde la banca ordinaria no funciona, y el funcionamiento de la organización. Es un rango porque esos costes varían de verdad según cada transferencia. Es recuperación de costes, no beneficio.",
+    "h": "6be97d1fbd76"
+  },
+  "how-it-works.22": {
+    "t": "Donde somos honestos sobre los límites",
+    "h": "8f6e86cd84a7"
+  },
+  "how-it-works.23": {
+    "t": "<strong>Identificamos y damos visibilidad a las familias para las que recaudamos, y verificamos quiénes son.</strong> No afirmamos hacer más de lo que hacemos. Cuando una campaña ha tenido una verificación específica, la campaña indica cuál. Cuando no la ha tenido, no finge lo contrario.",
+    "h": "5d82692db757"
+  },
+  "how-it-works.24": {
+    "t": "<strong>Aprobar una solicitud no es una promesa de que recaudará nada.</strong> Algunas campañas se financian en días y otras nunca lo hacen. Se lo decimos a las familias antes de que empiecen, porque la alternativa es generar esperanza que no podemos cumplir.",
+    "h": "e067de32c94c"
+  },
+  "how-it-works.25": {
+    "t": "<strong>Podemos equivocarnos.</strong> Si crees que una campaña en este sitio no es lo que dice ser, escríbenos a <a href=\"mailto:hello@igiftaid.org\">hello@igiftaid.org</a>. Preferimos retirar algo y disculparnos que dejarlo publicado y esperar que todo vaya bien.",
+    "h": "ce742ea611f4"
+  },
+  "trust.01": {
+    "t": "Cómo verificarnos",
+    "h": "c415beaeea80"
+  },
+  "trust.02": {
+    "t": "Todo lo que aparece aquí puede verificarse en un registro gubernamental, sin necesidad de preguntarnos a nosotros.",
+    "h": "e85663afc94d"
+  },
+  "trust.03": {
+    "t": "No debería tener que fiarse de nuestra palabra. Todo lo que aparece a continuación puede verificarlo usted mismo, en un registro gubernamental, sin necesidad de preguntarnos.",
+    "h": "72ca93c0120c"
+  },
+  "trust.04": {
+    "t": "Verifíquenos usted mismo",
+    "h": "cf0b1c828a06"
+  },
+  "trust.05": {
+    "t": "<strong>Con el IRS</strong>",
+    "h": "fb26c0dbe0c3"
+  },
+  "trust.06": {
+    "t": "Busque nuestro EIN, <strong>42&#8209;2670441</strong>, en el IRS Tax Exempt Organization Search. Confirmará que somos una organización benéfica pública 501(c)(3) en regla y que las donaciones son deducibles.",
+    "h": "14531cc806de"
+  },
+  "trust.07": {
+    "t": "<a href=\"https://www.irs.gov/charities-non-profits/tax-exempt-organization-search\" target=\"_blank\" rel=\"noopener\">irs.gov &rarr;</a>",
+    "h": "0641e1d3d2e9"
+  },
+  "trust.08": {
+    "t": "<strong>Con Pennsylvania</strong>",
+    "h": "b5c1a71e0b9b"
+  },
+  "trust.09": {
+    "t": "Contamos con el Certificado de Registro <strong>124454</strong> emitido por la Oficina de Corporaciones y Organizaciones Benéficas, que es el permiso estatal para solicitar donaciones &mdash; algo distinto de la exención fiscal.",
+    "h": "4ea0550c770d"
+  },
+  "trust.10": {
+    "t": "Número de entidad corporativa <strong>0015475201</strong>.",
+    "h": "ffdd4485df1e"
+  },
+  "trust.11": {
+    "t": "I Gift Aid es el nombre comercial de <strong>HEART Humanitarian Foundation</strong> &mdash; una sola organización, dos nombres. HEART es una corporación sin fines de lucro de Pennsylvania y una organización benéfica pública registrada como 501(c)(3). Al ser una corporación sin acciones, no tiene miembros ni accionistas: nadie es su propietario y ninguna persona puede obtener beneficios económicos de ella. Sus directores figuran en el <a href=\"https://hearthumanitarianfoundation.org/about.html\" target=\"_blank\" rel=\"noopener\">sitio web de HEART</a>.",
+    "h": "0a9707af006b"
+  },
+  "trust.12": {
+    "t": "Lo que no haremos",
+    "h": "bd3a9e318b35"
+  },
+  "trust.13": {
+    "t": "<strong>Nunca cobramos nada a una familia.</strong> Ni para solicitar ayuda, ni para ser priorizados, ni para recibir fondos. Si alguien le contacta solicitando un pago en nuestro nombre, no somos nosotros &mdash; por favor, infórmenos.",
+    "h": "74ba9a10faf2"
+  },
+  "trust.14": {
+    "t": "<strong>No clasificamos por popularidad y nada puede comprarse.</strong> En este sitio no existe ningún espacio destacado ni forma alguna de adquirirlo. Las campañas se muestran en orden aleatorio en cada visita; el Muro de Necesidades Diarias muestra por defecto las que están a punto de caducar.",
+    "h": "e13038c1062a"
+  },
+  "trust.15": {
+    "t": "<strong>No enviamos fondos donde no está permitido.</strong> Los destinatarios se comprueban contra listas de sanciones antes de realizar cualquier transferencia. Esto significa que, en ocasiones, debemos rechazar a familias a las que desearíamos ayudar.",
+    "h": "7a23edfe4f9b"
+  },
+  "trust.16": {
+    "t": "<strong>No gestionamos Gift Aid del Reino Unido.</strong> Nuestro nombre incluye &ldquo;Gift Aid&rdquo; y la gente pregunta con razón. Gift Aid es una desgravación del Reino Unido que requiere una organización benéfica reconocida por HMRC; HEART es americana, por lo que no está disponible para ningún donativo aquí. Los donantes de EE. UU. sí obtienen una deducción real en virtud de la sección 170.",
+    "h": "17eb6143c2dd"
+  },
+  "trust.17": {
+    "t": "Tu dinero y tus datos",
+    "h": "75075bb7bc26"
+  },
+  "trust.18": {
+    "t": "Las donaciones son procesadas por plataformas de pago reguladas, no por nosotros &mdash; nunca vemos ni almacenamos los datos de tu tarjeta. Nuestra <a href=\"/privacy.html\">política de privacidad</a> detalla qué datos conservamos y durante cuánto tiempo, y puedes pedirnos que los eliminemos en cualquier momento a través de nuestra <a href=\"/data-deletion.html\">página de eliminación de datos</a>. Este sitio no utiliza analíticas, ni rastreadores publicitarios ni cookies de perfilado.",
+    "h": "c11b16233c18"
+  },
+  "nav.01": {
+    "t": "Campañas",
+    "h": "30e9a089397b"
+  },
+  "nav.02": {
+    "t": "Necesidades diarias",
+    "h": "0bb97f5767b6"
+  },
+  "nav.03": {
+    "t": "Cómo funciona",
+    "h": "9c870aa6e5e9"
+  },
+  "nav.04": {
+    "t": "Confianza",
+    "h": "ade9248e0132"
+  },
+  "campaigns.16": {
+    "t": "¿Busca algo más pequeño?",
+    "h": "33213293d658"
+  },
+  "campaigns.17": {
+    "t": "Una campaña es para una necesidad grande y puntual, y dura varias semanas. El <a href=\"/needs.html\">Muro de Necesidades Diarias</a> es lo contrario: una cosa pequeña que una familia necesita esta semana, normalmente entre $18 y $100, publicada una vez al día y disponible solo 24 horas.",
+    "h": "bde6fb2cfbd2"
+  },
+  "needs.11": {
+    "t": "Próximos a vencer",
+    "h": "d5ca328f0b1c"
+  },
+  "needs.12": {
+    "t": "Más recientes primero",
+    "h": "ffb6f5764bdd"
+  },
+  "needs.13": {
+    "t": "Menor cantidad",
+    "h": "4404f9cd60c1"
+  },
+  "needs.14": {
+    "t": "Nada coincide con esos filtros ahora mismo. Prueba a ampliarlos &mdash; el muro cambia a lo largo del día.",
+    "h": "d3990b7fa152"
+  },
+  "needs.15": {
+    "t": "De dónde vienen estas publicaciones",
+    "h": "642dff85e29e"
+  },
+  "needs.16": {
+    "t": "Las familias que ya han sido verificadas mediante nuestro proceso de solicitud pueden publicar una necesidad enviándonosla por WhatsApp. Como nos escriben desde el número con el que las verificamos, sabemos quién publica, y el límite de una publicación por día se aplica contra su propio registro, no mediante un sistema de confianza. Cada nota se revisa antes de aparecer aquí.",
+    "h": "78260951fcfe"
+  },
+  "needs.17": {
+    "t": "Las notas las escribe la propia familia y se traducen cuando es necesario. Las acortamos para el muro; no las embellecemos.",
+    "h": "1df7235646ac"
+  },
+  "ui.chip.medical": {
+    "t": "Médico",
+    "h": "fec80bef0d8a"
+  },
+  "ui.chip.education": {
+    "t": "Educación",
+    "h": "512ab3c6b986"
+  },
+  "ui.chip.shelter": {
+    "t": "Refugio",
+    "h": "cfcd1f3d6aeb"
+  },
+  "ui.chip.food": {
+    "t": "Comida y combustible",
+    "h": "7bb932ef1f2a"
+  },
+  "ui.chip.infant": {
+    "t": "Bebés e infantes",
+    "h": "3596a63024f0"
+  },
+  "ui.chip.winter": {
+    "t": "Invierno",
+    "h": "1b17869e03ec"
+  },
+  "ui.chip.emergency": {
+    "t": "Emergencia",
+    "h": "4538f2dc67b5"
+  },
+  "ui.expired": {
+    "t": "vencido",
+    "h": "fa64ea1e82e1"
+  },
+  "ui.minsLeft": {
+    "t": "{n} min restantes",
+    "h": "841b292256e4"
+  },
+  "ui.hoursLeft": {
+    "t": "{n}h restantes",
+    "h": "99e0b6cfd9e1"
+  },
+  "ui.needsOnWall.one": {
+    "t": "{n} necesidad en el muro",
+    "h": "e8a7590135c2"
+  },
+  "ui.needsOnWall.other": {
+    "t": "{n} necesidades en el muro",
+    "h": "092f94d1023b"
+  },
+  "ui.selected.one": {
+    "t": "{n} necesidad",
+    "h": "0c534af5769c"
+  },
+  "ui.selected.other": {
+    "t": "{n} necesidades",
+    "h": "ce14c33a808a"
+  },
+  "ui.clear": {
+    "t": "Borrar",
+    "h": "83b12c2216ef"
+  },
+  "ui.fund": {
+    "t": "Financiar estos",
+    "h": "479faab13799"
+  },
+  "ui.campaigns.one": {
+    "t": "{n} campaña",
+    "h": "e7fa0a991e49"
+  },
+  "ui.campaigns.other": {
+    "t": "{n} campañas",
+    "h": "fdf67094c0f5"
+  },
+  "ui.raised": {
+    "t": "${n} recaudados",
+    "h": "5e99b509772e"
+  },
+  "ui.ofGoal": {
+    "t": "de ${n}",
+    "h": "15c54f9834a9"
+  },
+  "ui.support": {
+    "t": "Apoyar a esta familia",
+    "h": "af9ab7b075d1"
+  },
+  "ui.verified": {
+    "t": "Identidad verificada",
+    "h": "99b52fb41be2"
+  },
+  "ui.selectNote": {
+    "t": "Seleccionar: {who}, {what}, ${amount}",
+    "h": "e6d200645a58"
+  }
+}

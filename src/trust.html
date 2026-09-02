@@ -10,19 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="alternate" hreflang="x-default" href="https://www.igiftaid.org/trust.html">
-  <link rel="alternate" hreflang="en" href="https://www.igiftaid.org/trust.html">
-  <link rel="alternate" hreflang="ar" href="https://www.igiftaid.org/ar/trust.html">
-  <link rel="alternate" hreflang="ur" href="https://www.igiftaid.org/ur/trust.html">
-  <link rel="alternate" hreflang="fr" href="https://www.igiftaid.org/fr/trust.html">
-  <link rel="alternate" hreflang="es" href="https://www.igiftaid.org/es/trust.html">
-  <link rel="alternate" hreflang="de" href="https://www.igiftaid.org/de/trust.html">
-  <link rel="alternate" hreflang="it" href="https://www.igiftaid.org/it/trust.html">
-  <link rel="alternate" hreflang="tr" href="https://www.igiftaid.org/tr/trust.html">
-  <link rel="alternate" hreflang="ru" href="https://www.igiftaid.org/ru/trust.html">
-  <link rel="alternate" hreflang="ko" href="https://www.igiftaid.org/ko/trust.html">
-  <link rel="alternate" hreflang="id" href="https://www.igiftaid.org/id/trust.html">
-  <link rel="alternate" hreflang="ms" href="https://www.igiftaid.org/ms/trust.html">
   <link rel="stylesheet" href="/styles.css?v=7">
 </head>
 <body>
@@ -34,7 +21,6 @@
     <a class="navlink" href="/needs.html">Daily Needs</a>
     <a class="navlink" href="/how-it-works.html">How it works</a>
     <a class="navlink" href="/trust.html" aria-current="page">Trust</a>
-    <details class="lang-wrap"><summary class="lang-btn" aria-label="Change language">&#127760; English</summary><div class="lang-menu"><a href="/index.html" hreflang="en" lang="en" aria-current="true">English</a><a href="/ar/index.html" hreflang="ar" lang="ar">العربية</a><a href="/ur/index.html" hreflang="ur" lang="ur">اردو</a><a href="/fr/index.html" hreflang="fr" lang="fr">Français</a><a href="/es/index.html" hreflang="es" lang="es">Español</a><a href="/de/index.html" hreflang="de" lang="de">Deutsch</a><a href="/it/index.html" hreflang="it" lang="it">Italiano</a><a href="/tr/index.html" hreflang="tr" lang="tr">Türkçe</a><a href="/ru/index.html" hreflang="ru" lang="ru">Русский</a><a href="/ko/index.html" hreflang="ko" lang="ko">한국어</a><a href="/id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a><a href="/ms/index.html" hreflang="ms" lang="ms">Bahasa Melayu</a></div></details>
   </div>
 </nav>
 <main id="main" class="wrap">
@@ -117,44 +103,5 @@
     Contributions are tax-deductible to the extent allowed by law.</p>
   <p class="copy">&copy; 2026 HEART Humanitarian Foundation</p>
 </footer>
-<div class="lang-hint" id="langHint" hidden>
-  <span id="langHintText"></span>
-  <button type="button" id="langHintNo">No thanks</button>
-</div>
-<script>
-(function () {
-  // SUGGEST, never redirect. Auto-redirecting on browser language breaks a shared
-  // link: someone in Germany sending an Arabic reader a campaign URL should not have
-  // it forced into German. So this offers, once, and remembers being dismissed.
-  var LANGS = ["en", "ar", "ur", "fr", "es", "de", "it", "tr", "ru", "ko", "id", "ms"], HERE = 'en';
-  var NATIVE = {"en": "English", "ar": "العربية", "ur": "اردو", "fr": "Français", "es": "Español", "de": "Deutsch", "it": "Italiano", "tr": "Türkçe", "ru": "Русский", "ko": "한국어", "id": "Bahasa Indonesia", "ms": "Bahasa Melayu"}, OFFER = {"en": "View this page in", "ar": "اعرض هذه الصفحة بـ", "ur": "یہ صفحہ دیکھیں", "fr": "Voir cette page en", "es": "Ver esta página en", "de": "Diese Seite ansehen auf", "it": "Vedi questa pagina in", "tr": "Bu sayfayı şu dilde görüntüle", "ru": "Посмотреть эту страницу на", "ko": "이 페이지를 다음 언어로 보기", "id": "Lihat halaman ini dalam", "ms": "Lihat halaman ini dalam"};
-  try {
-    if (localStorage.getItem('iga_lang_set')) return;
-  } catch (e) { return; }
-  var want = null;
-  (navigator.languages || [navigator.language || '']).some(function (l) {
-    var c = String(l).slice(0, 2).toLowerCase();
-    if (LANGS.indexOf(c) !== -1) { want = c; return true; }
-    return false;
-  });
-  if (!want || want === HERE) return;
-  var bar = document.getElementById('langHint');
-  document.getElementById('langHintText').innerHTML =
-    OFFER[want] + ' <a href="' + (want === 'en' ? '/' : '/' + want + '/') +
-    '" onclick="try{localStorage.setItem(\'iga_lang_set\',\'1\')}catch(e){}">' +
-    NATIVE[want] + '</a>';
-  bar.hidden = false;
-  document.getElementById('langHintNo').addEventListener('click', function () {
-    try { localStorage.setItem('iga_lang_set', '1'); } catch (e) {}
-    bar.hidden = true;
-  });
-  // An explicit pick from the switcher is remembered too, so the offer stops.
-  document.querySelectorAll('.lang-menu a').forEach(function (a) {
-    a.addEventListener('click', function () {
-      try { localStorage.setItem('iga_lang_set', '1'); } catch (e) {}
-    });
-  });
-})();
-</script>
 </body>
 </html>
