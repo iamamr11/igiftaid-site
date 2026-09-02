@@ -24,7 +24,7 @@
   <link rel="alternate" hreflang="ko" href="https://www.igiftaid.org/ko/needs.html">
   <link rel="alternate" hreflang="id" href="https://www.igiftaid.org/id/needs.html">
   <link rel="alternate" hreflang="ms" href="https://www.igiftaid.org/ms/needs.html">
-  <link rel="stylesheet" href="/styles.css?v=8">
+  <link rel="stylesheet" href="/styles.css?v=9">
   <script>window.I18N={"ui.chip.medical": "Tıbbi", "ui.chip.education": "Eğitim", "ui.chip.shelter": "Barınak", "ui.chip.food": "Gıda &amp; Yakıt", "ui.chip.infant": "Bebek &amp; Çocuk", "ui.chip.winter": "Kış", "ui.chip.emergency": "Acil", "ui.expired": "süresi doldu", "ui.minsLeft": "{n} dk kaldı", "ui.hoursLeft": "{n} sa kaldı", "ui.needsOnWall.one": "Duvarda {n} ihtiyaç", "ui.needsOnWall.other": "Duvarda {n} ihtiyaç", "ui.selected.one": "{n} ihtiyaç", "ui.selected.other": "{n} ihtiyaç", "ui.clear": "Temizle", "ui.fund": "Bunları destekle", "ui.campaigns.one": "{n} kampanya", "ui.campaigns.other": "{n} kampanya", "ui.raised": "${n} toplandı", "ui.ofGoal": "${n} hedefinin", "ui.support": "Bu aileyi destekle", "ui.verified": "Kimlik doğrulandı", "ui.selectNote": "Seç: {who}, {what}, ${amount}", "ui.turnOver": "Çevir", "ui.expiredKept": "Süresi doldu — seçiminizde kalıyor"};</script>
 </head>
 <body>
@@ -264,18 +264,20 @@
             '<p class="meta"><span class="chip chip-' + c + '">' +
               '<span class="chip-emo" aria-hidden="true">' + EMOJI[c] + '</span>' +
               t('ui.chip.' + c) + '</span>' +
-            '<span class="clock' + (h < 4 ? ' soon' : '') + '">' + left(n.expires) + '</span></p>' +
+            '<span class="clock' + (h < 4 ? ' soon' : '') + '">' + left(n.expires) + '</span>' +
+            // In the row, not floating over it. See the note above .note .turn.
+            '<button type="button" class="turn" aria-pressed="false" aria-label="' +
+              esc(t('ui.turnOver')) + '">' + TURN_SVG + '</button></p>' +
           '</div>' +
-          '<div class="note-face note-back">' + backFace(n, c) + '</div>' +
+          '<div class="note-face note-back">' + backFace(n, c) +
+            '<button type="button" class="turn-back" aria-label="' +
+            esc(t('ui.turnOver')) + '"></button></div>' +
         '</div>' +
-        // Both controls live OUTSIDE .note-flip so they never turn away from the
-        // reader, and stay clickable and focusable in either face.
+        // The tick stays outside the flipper: it must work on either face.
         '<label class="tickwrap"><input class="tick" type="checkbox" id="t-' + n.id +
           '" data-id="' + n.id + '"' + (picked.has(n.id) ? ' checked' : '') +
           ' aria-label="' + esc(t('ui.selectNote', { who: n.family, what: n.need, amount: n.amount })) +
           '"></label>' +
-        '<button type="button" class="turn" aria-pressed="false" aria-label="' +
-          esc(t('ui.turnOver')) + '">' + TURN_SVG + '</button>' +
         '</article>';
     }).join('');
     empty.hidden = list.length > 0;
@@ -309,7 +311,7 @@
     r.art.classList.add('is-expired');
     r.flip.removeAttribute('data-face');
     r.flip.removeAttribute('data-peek');
-    var turn = r.art.querySelector('.turn'); if (turn) turn.disabled = true;
+    r.art.querySelectorAll('.turn, .turn-back').forEach(function (b) { b.disabled = true; });
     // An expired note that is NOT selected becomes inert. One that IS selected keeps
     // its tick: the 24-hour window is a posting-rate rule, not a funding deadline, and
     // silently deleting money a donor has already allocated is the worse failure.
@@ -382,11 +384,17 @@
   // aria-pressed; hover uses a separate data-peek so a passing mouse never leaves the
   // button claiming to be pressed.
   wall.addEventListener('click', function (e) {
-    var b = e.target.closest('.turn'); if (!b) return;
-    var f = b.closest('.note').querySelector('.note-flip');
+    var b = e.target.closest('.turn, .turn-back'); if (!b) return;
+    var note = b.closest('.note'), f = note.querySelector('.note-flip');
     var on = f.getAttribute('data-face') === 'image';
     if (on) f.removeAttribute('data-face'); else f.setAttribute('data-face', 'image');
-    b.setAttribute('aria-pressed', String(!on));
+    // aria-pressed lives on the front-face button only — it is the one that describes
+    // the note's state. The back-face control is a plain "go back".
+    note.querySelector('.turn').setAttribute('aria-pressed', String(!on));
+    // Focus follows the face, or a keyboard user is left on a control that has just
+    // become visibility:hidden and their place in the page is lost.
+    var next = on ? note.querySelector('.turn') : note.querySelector('.turn-back');
+    if (next) setTimeout(function () { next.focus(); }, on ? 280 : 280);
   });
 
   // Hover-peek, behind BOTH a media query and this JS guard. Without the pointer
