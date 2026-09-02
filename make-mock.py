@@ -67,6 +67,13 @@ NEEDS = [
     ("Zain",   "Exam fees so Lina can sit her final year",               75, "education"),
     ("Huda",   "Plastic sheeting to divide one room for privacy",        30, "shelter"),
     ("Bilal",  "Emergency stipend while waiting on a delayed transfer",  90, "emergency"),
+    ("Sana",   "A fortnight of baby milk while her mother recovers",      52, "infant"),
+    ("Adel",   "Two thermal blankets and a paraffin heater refill",       47, "winter"),
+    ("Wafa",   "Bus fare to the hospital for six dialysis appointments",  34, "medical"),
+    ("Jamil",  "Notebooks and pens for a class of thirty",                26, "education"),
+    ("Rania",  "Rice, sugar and tinned fish to last the month",           44, "food"),
+    ("Basel",  "Timber to prop a wall that shifted in the last strike",   68, "shelter"),
+    ("Noor",   "Emergency fund after a lost identity card froze her aid", 72, "emergency"),
 ]
 
 CAMPAIGNS = [

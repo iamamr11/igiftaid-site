@@ -519,9 +519,9 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
    The callout was the real defect — 1032px and ~115 characters per line. At 763 it
    is ~83, which is the same as the body prose on every other page on this site.
    Bringing the whole site under 75 is a separate, site-wide job. */
-.wall-page { --read: 763px; }
+.wrap { --read: 763px; }
 .wall-page .page-head { padding: 56px 0 0; }
-.wall-page .page-head .dek { max-width: var(--read); }
+.wrap .page-head .dek { max-width: var(--read); }
 .wall-page .callout   { margin: 32px 0 0; }
 .wall-page .wall-sect { margin-top: 56px; }
 .wall-page .filters   { border-top: 1px solid rgba(139,58,98,.16);
@@ -541,7 +541,12 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
    Cap the BOX, not the paragraphs: capping the text would leave ~360px of empty
    gold tint to the right of every line, which reads as a rendering bug.
    The rhythm this establishes: ~640px is what you read, 1032px is what you use. */
-.wall-page .callout { max-width: var(--read); }
+/* Every page in .wrap, not only the wall. campaigns.html carried the identical
+   full-width callout at ~115 characters per line, and matching the two pages by
+   widening this one back to 1032px would have kept the defect and doubled it.
+   trust and how-it-works are untouched: their callouts sit in a .two-col grid at
+   505px, which is already inside the range. */
+.wrap > .callout { max-width: var(--read); }
 
 /* The section heading. Restores plum, which is the site's own h2 colour on
    .block h2 and .policy-page h2 — the platform pages diverged to burgundy via

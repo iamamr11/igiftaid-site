@@ -29,6 +29,43 @@ app.get('/chat', (_req, res) => {
   res.redirect(302, `https://wa.me/${WHATSAPP_NUMBER}`);
 });
 
+// ─── the Daily Needs Wall's timestamps ───────────────────────────────────────
+//
+// The mock notes carry absolute `posted` and `expires` times and a note lives for
+// 24 hours, so a file generated yesterday leaves an almost-empty wall today — it
+// had 18 notes and showed 3. Regenerating the file only resets that clock; it does
+// not stop it.
+//
+// So the window slides at serve time. Every timestamp is shifted by the age of the
+// file, which preserves the SPREAD the generator built — some notes nearly fresh,
+// some close to expiry, which is the whole point of the "expiring soonest" default
+// — while anchoring it to now. The file on disk stays the fixture; only what is
+// served moves.
+//
+// This is mock data. When real needs arrive from the bot this route goes away and
+// the timestamps are whatever the family's message actually carried.
+const fs = require('fs');
+const NEEDS_JSON = path.join(__dirname, 'public', 'data', 'needs.json');
+
+app.get('/data/needs.json', (_req, res) => {
+  let doc;
+  try {
+    doc = JSON.parse(fs.readFileSync(NEEDS_JSON, 'utf8'));
+  } catch (e) {
+    return res.status(500).json({ items: [] });
+  }
+  const gen = Date.parse(doc.generated);
+  const shift = Number.isFinite(gen) ? Date.now() - gen : 0;
+  if (shift > 0) {
+    const move = (iso) => new Date(Date.parse(iso) + shift).toISOString().replace(/\.\d{3}Z$/, 'Z');
+    doc.generated = move(doc.generated);
+    doc.items = (doc.items || []).map((n) => ({ ...n, posted: move(n.posted), expires: move(n.expires) }));
+  }
+  // No caching: the whole point is that the answer depends on when you asked.
+  res.setHeader('Cache-Control', 'no-store');
+  res.json(doc);
+});
+
 app.use(express.static(path.join(__dirname, 'public'), {
   maxAge: '60s',
   setHeaders: (res, filePath) => {
