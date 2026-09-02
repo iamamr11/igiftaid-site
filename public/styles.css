@@ -505,23 +505,15 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
 
    Scoped to .wall-page so the shared .callout / .board / .cta-row rules do not
    move on campaigns, trust or how-it-works. */
-/* ⚠ ONE reading rail, in px, for all three prose blocks — and it is the SITE's
-   rail, not a new one. Every other platform page sets its lede to `62ch`, which at
-   18px resolves to 763px, so that is the width the top of a page is expected to be
-   here. An earlier pass capped this page to 640px on readability grounds alone and
-   made it visibly narrower than campaigns, trust and how-it-works.
+/* NO reading-width cap. An earlier pass capped the callout to make its measure
+   comfortable; it changed the look of every page and was reverted at the client's
+   request. The callout runs full width, as it always has, and the lede keeps its
+   original `.page-head .dek { max-width: 62ch }`.
 
-   In px rather than ch because `ch` is the width of the digit "0", not of an average
-   character: the same `62ch` gives 763px on the 18px lede and a different width on
-   17px body copy, which is how the page ended up with three different measures in
-   the first place. One number, applied to all three blocks.
-
-   The callout was the real defect — 1032px and ~115 characters per line. At 763 it
-   is ~83, which is the same as the body prose on every other page on this site.
-   Bringing the whole site under 75 is a separate, site-wide job. */
-.wrap { --read: 763px; }
+   Recorded rather than re-argued: the callout is ~115 characters per line, above
+   the 45-75 comfortable range. That is a deliberate, informed choice about how the
+   site looks, not an oversight — do not "fix" it without asking. */
 .wall-page .page-head { padding: 56px 0 0; }
-.wrap .page-head .dek { max-width: var(--read); }
 .wall-page .callout   { margin: 32px 0 0; }
 .wall-page .wall-sect { margin-top: 56px; }
 .wall-page .filters   { border-top: 1px solid rgba(139,58,98,.16);
@@ -532,7 +524,7 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
    fence around something already fenced. Space and a heading, no rule. */
 .wall-page .board     { margin: 0 0 96px; }
 .wall-page .outro h2  { margin: 0 0 14px; }
-.wall-page .outro p   { max-width: var(--read); margin: 0 0 18px; }
+.wall-page .outro p   { max-width: 66ch; margin: 0 0 18px; }
 .wall-page .cta-row   { margin: 40px 0 0; }
 
 /* ⚠ ONE TEXT COLUMN. The callout ran at ~115 characters per line — the widest and
@@ -541,13 +533,6 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
    Cap the BOX, not the paragraphs: capping the text would leave ~360px of empty
    gold tint to the right of every line, which reads as a rendering bug.
    The rhythm this establishes: ~640px is what you read, 1032px is what you use. */
-/* Every page in .wrap, not only the wall. campaigns.html carried the identical
-   full-width callout at ~115 characters per line, and matching the two pages by
-   widening this one back to 1032px would have kept the defect and doubled it.
-   trust and how-it-works are untouched: their callouts sit in a .two-col grid at
-   505px, which is already inside the range. */
-.wrap > .callout { max-width: var(--read); }
-
 /* The section heading. Restores plum, which is the site's own h2 colour on
    .block h2 and .policy-page h2 — the platform pages diverged to burgundy via
    inline styles. 26px because Inter's larger x-height makes a 22px heading read
