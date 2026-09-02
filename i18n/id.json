@@ -200,28 +200,28 @@
     "h": "c23bea5b2e06"
   },
   "needs.05": {
+    "t": "Di dinding hari ini",
+    "h": "884976d0f628"
+  },
+  "needs.06": {
     "t": "Jumlah",
     "h": "49e96d7cdf58"
   },
-  "needs.06": {
+  "needs.07": {
     "t": "Semua",
     "h": "2b505597daa7"
   },
-  "needs.07": {
+  "needs.08": {
     "t": "Di bawah $40",
     "h": "7060faef59d9"
   },
-  "needs.08": {
+  "needs.09": {
     "t": "$40 hingga $70",
     "h": "7887df757f3e"
   },
-  "needs.09": {
+  "needs.10": {
     "t": "$70 ke atas",
     "h": "3dfcea5a6ce7"
-  },
-  "needs.10": {
-    "t": "Urutkan",
-    "h": "bec69036aa27"
   },
   "how-it-works.01": {
     "t": "Apa yang terjadi antara pemberian Anda dan penerimaan oleh keluarga &mdash; termasuk bagian yang masih belum sempurna.",
@@ -420,32 +420,32 @@
     "h": "bde6fb2cfbd2"
   },
   "needs.11": {
+    "t": "Urutkan",
+    "h": "bec69036aa27"
+  },
+  "needs.12": {
     "t": "Segera berakhir",
     "h": "d5ca328f0b1c"
   },
-  "needs.12": {
+  "needs.13": {
     "t": "Terbaru dulu",
     "h": "ffb6f5764bdd"
   },
-  "needs.13": {
+  "needs.14": {
     "t": "Jumlah terkecil",
     "h": "4404f9cd60c1"
   },
-  "needs.14": {
-    "t": "Tidak ada yang cocok dengan filter tersebut saat ini. Coba perluas filternya &mdash; daftar ini berubah sepanjang hari.",
+  "needs.15": {
+    "t": "Tidak ada yang cocok dengan filter tersebut saat ini. Coba perluas filter &mdash; dinding ini berubah sepanjang hari.",
     "h": "d3990b7fa152"
   },
-  "needs.15": {
-    "t": "Dari mana ini berasal",
+  "needs.16": {
+    "t": "Asal-usul informasi ini",
     "h": "642dff85e29e"
   },
-  "needs.16": {
-    "t": "Keluarga yang sudah diverifikasi melalui proses pengajuan kami dapat memposting kebutuhan dengan mengirimkannya kepada kami melalui WhatsApp. Karena mereka mengirim pesan dari nomor yang kami gunakan untuk memverifikasi mereka, kami tahu siapa yang memposting, dan batas satu kali sehari diberlakukan berdasarkan catatan mereka sendiri, bukan sistem kepercayaan. Setiap catatan diperiksa sebelum muncul di sini.",
-    "h": "78260951fcfe"
-  },
   "needs.17": {
-    "t": "Catatan ditulis oleh keluarga dan diterjemahkan jika diperlukan. Kami mempersingkatnya untuk ditampilkan di halaman; kami tidak memperindahnya.",
-    "h": "1df7235646ac"
+    "t": "Keluarga yang telah diverifikasi melalui proses pendaftaran kami dapat mengirimkan kebutuhan mereka dengan mengirim pesan kepada kami di WhatsApp. Karena mereka mengirim pesan dari nomor yang kami verifikasi, kami tahu siapa yang mengirim, dan batas satu kali sehari diterapkan berdasarkan catatan mereka sendiri, bukan sistem kepercayaan. Setiap catatan diperiksa sebelum ditampilkan di sini.",
+    "h": "78260951fcfe"
   },
   "ui.chip.medical": {
     "t": "Medis",
@@ -546,5 +546,9 @@
   "ui.expiredKept": {
     "t": "Kedaluwarsa — masih dalam pilihan Anda",
     "h": "3a23053a594a"
+  },
+  "needs.18": {
+    "t": "Catatan ditulis oleh keluarga dan diterjemahkan bila diperlukan. Kami mempersingkatnya untuk dinding ini; kami tidak menambahkan apapun.",
+    "h": "1df7235646ac"
   }
 }

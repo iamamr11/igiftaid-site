@@ -24,7 +24,7 @@
   <link rel="alternate" hreflang="ko" href="https://www.igiftaid.org/ko/needs.html">
   <link rel="alternate" hreflang="id" href="https://www.igiftaid.org/id/needs.html">
   <link rel="alternate" hreflang="ms" href="https://www.igiftaid.org/ms/needs.html">
-  <link rel="stylesheet" href="/styles.css?v=9">
+  <link rel="stylesheet" href="/styles.css?v=10">
   <script>window.I18N={"ui.chip.medical": "Медицина", "ui.chip.education": "Образование", "ui.chip.shelter": "Жильё", "ui.chip.food": "Еда &amp; Топливо", "ui.chip.infant": "Младенцы &amp; Дети", "ui.chip.winter": "Зима", "ui.chip.emergency": "Экстренная помощь", "ui.expired": "истёк", "ui.minsLeft": "{n} мин осталось", "ui.hoursLeft": "{n} ч осталось", "ui.needsOnWall.one": "{n} запрос на стене", "ui.needsOnWall.other": "{n} запросов на стене", "ui.selected.one": "{n} запрос", "ui.selected.other": "{n} запросов", "ui.clear": "Очистить", "ui.fund": "Финансировать", "ui.campaigns.one": "{n} кампания", "ui.campaigns.other": "{n} кампании", "ui.raised": "Собрано ${n}", "ui.ofGoal": "из ${n}", "ui.support": "Поддержать эту семью", "ui.verified": "Личность подтверждена", "ui.selectNote": "Выбрано: {who}, {what}, ${amount}", "ui.turnOver": "Перевернуть", "ui.expiredKept": "Истёк срок — всё ещё в вашем выборе"};</script>
 </head>
 <body>
@@ -41,7 +41,7 @@
   </div>
 </nav>
 
-<main id="main" class="wrap">
+<main id="main" class="wrap wall-page">
   <div class="page-head">
     <h1>Стена ежедневных нужд</h1>
     <p class="dek">Одна небольшая, конкретная нужда на семью, публикуется раз в 24 часа. Не кампания, не цель &mdash; одна вещь, которая нужна кому-то на этой неделе, и сумма, которую она стоит. Выбирайте сколько угодно и оплачивайте всё сразу.</p>
@@ -52,7 +52,10 @@
     <p style="margin-bottom:0"><strong>Мы никогда не сортируем эту стену по популярности.</strong> По умолчанию сначала идут те, у которых раньше истекает срок &mdash; самые срочные, а не самые успешные. Нет никаких рекламных мест, и ничто не может быть оплачено.</p>
   </div>
 
-  <section class="filters" aria-label="Filter needs">
+  <section class="wall-sect" aria-labelledby="wall-h">
+  <h2 class="wrap-h2" id="wall-h">Сегодня на стене</h2>
+  <div class="filters">
+    <div class="chip-row">
     <button type="button" class="chip-btn" data-chip="all" aria-pressed="true">Все</button>
     <button type="button" class="chip-btn" data-chip="medical" aria-pressed="false">Медицина</button>
     <button type="button" class="chip-btn" data-chip="education" aria-pressed="false">Образование</button>
@@ -61,31 +64,36 @@
     <button type="button" class="chip-btn" data-chip="infant" aria-pressed="false">Младенцы &amp; Дети</button>
     <button type="button" class="chip-btn" data-chip="winter" aria-pressed="false">Зима</button>
     <button type="button" class="chip-btn" data-chip="emergency" aria-pressed="false">Экстренная помощь</button>
-    <span class="spacer"></span>
+    </div>
+    <div class="filter-controls">
     <span class="ctl"><label for="amt">Сумма</label>
       <select id="amt">
         <option value="all">Любая</option>
         <option value="0-40">До $40</option>
         <option value="40-70">От $40 до $70</option>
-        <option value="70-9999">$70 и выше</option>
+        <option value="70-9999">От $70 и выше</option>
       </select></span>
     <span class="ctl"><label for="sort">Сортировка</label>
       <select id="sort">
-        <option value="expiring">Сначала истекающие</option>
+        <option value="expiring">Скоро истекают</option>
         <option value="newest">Сначала новые</option>
         <option value="smallest">Наименьшая сумма</option>
       </select></span>
-  </section>
+    </div>
+  </div>
   <p class="result-count" id="count" role="status" aria-live="polite"></p>
 
   <div class="board">
     <div class="wall" id="wall"></div>
-    <p class="empty" id="empty" hidden>По этим фильтрам ничего нет прямо сейчас. Попробуйте расширить их &mdash; список меняется в течение дня.</p>
+    <p class="empty" id="empty" hidden>Ничего не совпадает с этими фильтрами прямо сейчас. Попробуйте расширить их &mdash; стена меняется в течение дня.</p>
   </div>
+  </section>
 
-  <h2 style="font-family:'Inter',sans-serif;color:var(--burgundy);font-size:22px">Откуда это берётся</h2>
-  <p style="max-width:66ch">Семьи, прошедшие верификацию через нашу процедуру подачи заявки, могут опубликовать запрос, отправив его нам в WhatsApp. Поскольку они пишут с номера, по которому мы их верифицировали, мы знаем, кто именно пишет, а ограничение в один запрос в день применяется к их личной записи, а не строится на доверии. Каждое сообщение проверяется перед тем, как появиться здесь.</p>
-  <p style="max-width:66ch">Записки написаны самими семьями и при необходимости переведены. Мы сокращаем их для публикации на стене и не приукрашиваем.</p>
+  <div class="outro">
+  <h2>Откуда это берётся</h2>
+  <p>Семьи, уже прошедшие проверку через наш процесс подачи заявки, могут опубликовать запрос, отправив его нам через WhatsApp. Поскольку они пишут с номера, по которому мы их верифицировали, мы знаем, кто публикует, а ограничение в один запрос в день применяется к их собственной записи, а не держится на системе доверия. Каждое сообщение проверяется перед тем, как появиться здесь.</p>
+  <p>Записи составляются семьями и при необходимости переводятся. Мы сокращаем их для стены; мы не приукрашиваем их.</p>
+  </div>
 
   <div class="cta-row">
     <a class="btn-lg btn-ghost-lg" href="/ru/how-it-works.html">How the whole thing works</a>
@@ -120,7 +128,7 @@
      Internal <symbol>s (not an external file) because cross-document <use> does
      not inherit currentColor or custom properties — and the art has to tint
      itself against seven different pastels. -->
-<svg class="illu-sprite" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs><g id="tz1" fill="var(--illu-soft)"><path d="M12.0 80.0L13.1 84.3L16.9 82.1L14.7 85.9L19.0 87.0L14.7 88.1L16.9 91.9L13.1 89.7L12.0 94.0L10.9 89.7L7.1 91.9L9.3 88.1L5.0 87.0L9.3 85.9L7.1 82.1L10.9 84.3z"/><path d="M31.0 80.0L32.1 84.3L35.9 82.1L33.7 85.9L38.0 87.0L33.7 88.1L35.9 91.9L32.1 89.7L31.0 94.0L29.9 89.7L26.1 91.9L28.3 88.1L24.0 87.0L28.3 85.9L26.1 82.1L29.9 84.3z"/><path d="M50.0 80.0L51.1 84.3L54.9 82.1L52.7 85.9L57.0 87.0L52.7 88.1L54.9 91.9L51.1 89.7L50.0 94.0L48.9 89.7L45.1 91.9L47.3 88.1L43.0 87.0L47.3 85.9L45.1 82.1L48.9 84.3z"/><path d="M69.0 80.0L70.1 84.3L73.9 82.1L71.7 85.9L76.0 87.0L71.7 88.1L73.9 91.9L70.1 89.7L69.0 94.0L67.9 89.7L64.1 91.9L66.3 88.1L62.0 87.0L66.3 85.9L64.1 82.1L67.9 84.3z"/><path d="M88.0 80.0L89.1 84.3L92.9 82.1L90.7 85.9L95.0 87.0L90.7 88.1L92.9 91.9L89.1 89.7L88.0 94.0L86.9 89.7L83.1 91.9L85.3 88.1L81.0 87.0L85.3 85.9L83.1 82.1L86.9 84.3z"/></g><g id="tz2" fill="var(--illu-soft)"><path d="M6 90l5-8 5 8z"/><path d="M8 96l3-5 3 5z"/><path d="M21 90l5-8 5 8z"/><path d="M23 96l3-5 3 5z"/><path d="M36 90l5-8 5 8z"/><path d="M38 96l3-5 3 5z"/><path d="M51 90l5-8 5 8z"/><path d="M53 96l3-5 3 5z"/><path d="M66 90l5-8 5 8z"/><path d="M68 96l3-5 3 5z"/><path d="M81 90l5-8 5 8z"/><path d="M83 96l3-5 3 5z"/><path d="M96 90l5-8 5 8z"/><path d="M98 96l3-5 3 5z"/></g><g id="tz3" fill="var(--illu-soft)"><path d="M8 86l5-5 5 5-5 5z"/><path d="M25 86l5-5 5 5-5 5z"/><path d="M42 86l5-5 5 5-5 5z"/><path d="M59 86l5-5 5 5-5 5z"/><path d="M76 86l5-5 5 5-5 5z"/><path d="M93 86l5-5 5 5-5 5z"/></g></defs><symbol id="illu-medical-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M42 22h16v10h10v16H58v10H42V48H32V32h10z"/></g></symbol><symbol id="illu-medical-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><rect x="38" y="20" width="24" height="12" rx="2"/><path d="M42 32v26a8 8 0 0016 0V32"/><path d="M44 44h12"/></g></symbol><symbol id="illu-medical-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M34 20v14a16 16 0 0032 0V20"/><path d="M50 50v8a10 10 0 0020 0v-4"/><circle cx="70" cy="52" r="5"/></g></symbol><symbol id="illu-education-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M26 34l24-10 24 10-24 10z"/><path d="M36 40v14c0 4 28 4 28 0V40"/></g></symbol><symbol id="illu-education-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M28 26h18a6 6 0 016 6v28a6 6 0 00-6-6H28z"/><path d="M72 26H54a6 6 0 00-6 6v28a6 6 0 016-6h18z"/></g></symbol><symbol id="illu-education-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><rect x="32" y="30" width="36" height="28" rx="4"/><path d="M42 30v-6h16v6"/><path d="M32 42h36"/></g></symbol><symbol id="illu-shelter-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 20L24 44h8v22h36V44h8z"/><path d="M44 66V52h12v14"/></g></symbol><symbol id="illu-shelter-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 24L28 68h44z"/><path d="M50 24v44"/><path d="M50 48q7 10 7 20"/><path d="M50 48q-7 10-7 20"/><path d="M28 68l-8 6M72 68l8 6"/></g></symbol><symbol id="illu-shelter-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 40q28-16 56 0"/><path d="M22 40v24h56V40"/><path d="M36 64V50h12v14"/></g></symbol><symbol id="illu-food-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 42h40v8a20 20 0 01-40 0z"/><path d="M26 42h48"/><path d="M30 50h-6a4 4 0 000 8h6M70 50h6a4 4 0 010 8h-6"/><path d="M50 34v8"/></g></symbol><symbol id="illu-food-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><rect x="38" y="26" width="24" height="40" rx="10"/><path d="M46 26v-6h8v6"/><path d="M38 42h24"/></g></symbol><symbol id="illu-food-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M38 30q12-8 24 0l6 36H32z"/><path d="M38 30q6 6 12 0t12 0"/><path d="M40 48h20"/></g></symbol><symbol id="illu-infant-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M42 22h16v8H42z"/><path d="M40 30h20v28a10 10 0 01-20 0z"/><path d="M46 12v10"/></g></symbol><symbol id="illu-infant-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M40 26h20l10 8-6 8-4-3v25H40V39l-4 3-6-8z"/><path d="M44 64v-8h12v8"/></g></symbol><symbol id="illu-infant-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="46" r="16"/><circle cx="34" cy="28" r="8"/><circle cx="66" cy="28" r="8"/><path d="M44 44h.01M56 44h.01"/><path d="M45 54q5 4 10 0"/></g></symbol><symbol id="illu-winter-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M38 24h24l6 14-8 4v22H40V42l-8-4z"/></g></symbol><symbol id="illu-winter-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M38 24h18v30h10a8 8 0 018 8v6H38z"/><path d="M38 34h18"/><path d="M38 62h36"/></g></symbol><symbol id="illu-winter-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 18v20M50 62v20M32 30l36 40M68 30L32 70"/><path d="M28 50h44"/></g></symbol><symbol id="illu-emergency-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 18l30 52H20z"/><path d="M50 38v16M50 60v4"/></g></symbol><symbol id="illu-emergency-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M36 30h28v8H36z"/><path d="M40 38v24h20V38"/><path d="M50 44v12M44 50h12"/></g></symbol><symbol id="illu-emergency-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><rect x="24" y="34" width="52" height="32" rx="3"/><circle cx="50" cy="50" r="8"/><path d="M32 42h.01M68 58h.01"/></g></symbol></svg>
+<svg class="illu-sprite" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute"><defs><g id="tz1"><path fill="#2B2B2B" fill-opacity="0.42" d="M12.0 80.0L13.1 84.3L16.9 82.1L14.7 85.9L19.0 87.0L14.7 88.1L16.9 91.9L13.1 89.7L12.0 94.0L10.9 89.7L7.1 91.9L9.3 88.1L5.0 87.0L9.3 85.9L7.1 82.1L10.9 84.3z"/><path fill="#FFFFFF" fill-opacity="0.78" stroke="rgba(44,24,16,.30)" stroke-width="0.9" d="M31.0 80.0L32.1 84.3L35.9 82.1L33.7 85.9L38.0 87.0L33.7 88.1L35.9 91.9L32.1 89.7L31.0 94.0L29.9 89.7L26.1 91.9L28.3 88.1L24.0 87.0L28.3 85.9L26.1 82.1L29.9 84.3z"/><path fill="#0E7A43" fill-opacity="0.44" d="M50.0 80.0L51.1 84.3L54.9 82.1L52.7 85.9L57.0 87.0L52.7 88.1L54.9 91.9L51.1 89.7L50.0 94.0L48.9 89.7L45.1 91.9L47.3 88.1L43.0 87.0L47.3 85.9L45.1 82.1L48.9 84.3z"/><path fill="#B8232F" fill-opacity="0.4" d="M69.0 80.0L70.1 84.3L73.9 82.1L71.7 85.9L76.0 87.0L71.7 88.1L73.9 91.9L70.1 89.7L69.0 94.0L67.9 89.7L64.1 91.9L66.3 88.1L62.0 87.0L66.3 85.9L64.1 82.1L67.9 84.3z"/><path fill="#2B2B2B" fill-opacity="0.42" d="M88.0 80.0L89.1 84.3L92.9 82.1L90.7 85.9L95.0 87.0L90.7 88.1L92.9 91.9L89.1 89.7L88.0 94.0L86.9 89.7L83.1 91.9L85.3 88.1L81.0 87.0L85.3 85.9L83.1 82.1L86.9 84.3z"/></g><g id="tz2"><path fill="#2B2B2B" fill-opacity="0.42" d="M6 90l5-8 5 8z"/><path fill="#2B2B2B" fill-opacity="0.42" d="M8 96l3-5 3 5z"/><path fill="#FFFFFF" fill-opacity="0.78" stroke="rgba(44,24,16,.30)" stroke-width="0.9" d="M21 90l5-8 5 8z"/><path fill="#FFFFFF" fill-opacity="0.78" stroke="rgba(44,24,16,.30)" stroke-width="0.9" d="M23 96l3-5 3 5z"/><path fill="#0E7A43" fill-opacity="0.44" d="M36 90l5-8 5 8z"/><path fill="#0E7A43" fill-opacity="0.44" d="M38 96l3-5 3 5z"/><path fill="#B8232F" fill-opacity="0.4" d="M51 90l5-8 5 8z"/><path fill="#B8232F" fill-opacity="0.4" d="M53 96l3-5 3 5z"/><path fill="#2B2B2B" fill-opacity="0.42" d="M66 90l5-8 5 8z"/><path fill="#2B2B2B" fill-opacity="0.42" d="M68 96l3-5 3 5z"/><path fill="#FFFFFF" fill-opacity="0.78" stroke="rgba(44,24,16,.30)" stroke-width="0.9" d="M81 90l5-8 5 8z"/><path fill="#FFFFFF" fill-opacity="0.78" stroke="rgba(44,24,16,.30)" stroke-width="0.9" d="M83 96l3-5 3 5z"/><path fill="#0E7A43" fill-opacity="0.44" d="M96 90l5-8 5 8z"/><path fill="#0E7A43" fill-opacity="0.44" d="M98 96l3-5 3 5z"/></g><g id="tz3"><path fill="#2B2B2B" fill-opacity="0.42" d="M8 86l5-5 5 5-5 5z"/><path fill="#FFFFFF" fill-opacity="0.78" stroke="rgba(44,24,16,.30)" stroke-width="0.9" d="M25 86l5-5 5 5-5 5z"/><path fill="#0E7A43" fill-opacity="0.44" d="M42 86l5-5 5 5-5 5z"/><path fill="#B8232F" fill-opacity="0.4" d="M59 86l5-5 5 5-5 5z"/><path fill="#2B2B2B" fill-opacity="0.42" d="M76 86l5-5 5 5-5 5z"/><path fill="#FFFFFF" fill-opacity="0.78" stroke="rgba(44,24,16,.30)" stroke-width="0.9" d="M93 86l5-5 5 5-5 5z"/></g></defs><symbol id="illu-medical-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M42 22h16v10h10v16H58v10H42V48H32V32h10z"/></g></symbol><symbol id="illu-medical-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><rect x="38" y="20" width="24" height="12" rx="2"/><path d="M42 32v26a8 8 0 0016 0V32"/><path d="M44 44h12"/></g></symbol><symbol id="illu-medical-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M34 20v14a16 16 0 0032 0V20"/><path d="M50 50v8a10 10 0 0020 0v-4"/><circle cx="70" cy="52" r="5"/></g></symbol><symbol id="illu-education-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M26 34l24-10 24 10-24 10z"/><path d="M36 40v14c0 4 28 4 28 0V40"/></g></symbol><symbol id="illu-education-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M28 26h18a6 6 0 016 6v28a6 6 0 00-6-6H28z"/><path d="M72 26H54a6 6 0 00-6 6v28a6 6 0 016-6h18z"/></g></symbol><symbol id="illu-education-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><rect x="32" y="30" width="36" height="28" rx="4"/><path d="M42 30v-6h16v6"/><path d="M32 42h36"/></g></symbol><symbol id="illu-shelter-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 20L24 44h8v22h36V44h8z"/><path d="M44 66V52h12v14"/></g></symbol><symbol id="illu-shelter-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 24L28 68h44z"/><path d="M50 24v44"/><path d="M50 48q7 10 7 20"/><path d="M50 48q-7 10-7 20"/><path d="M28 68l-8 6M72 68l8 6"/></g></symbol><symbol id="illu-shelter-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 40q28-16 56 0"/><path d="M22 40v24h56V40"/><path d="M36 64V50h12v14"/></g></symbol><symbol id="illu-food-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M30 42h40v8a20 20 0 01-40 0z"/><path d="M26 42h48"/><path d="M30 50h-6a4 4 0 000 8h6M70 50h6a4 4 0 010 8h-6"/><path d="M50 34v8"/></g></symbol><symbol id="illu-food-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><rect x="38" y="26" width="24" height="40" rx="10"/><path d="M46 26v-6h8v6"/><path d="M38 42h24"/></g></symbol><symbol id="illu-food-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M38 30q12-8 24 0l6 36H32z"/><path d="M38 30q6 6 12 0t12 0"/><path d="M40 48h20"/></g></symbol><symbol id="illu-infant-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M42 22h16v8H42z"/><path d="M40 30h20v28a10 10 0 01-20 0z"/><path d="M46 12v10"/></g></symbol><symbol id="illu-infant-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M40 26h20l10 8-6 8-4-3v25H40V39l-4 3-6-8z"/><path d="M44 64v-8h12v8"/></g></symbol><symbol id="illu-infant-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="46" r="16"/><circle cx="34" cy="28" r="8"/><circle cx="66" cy="28" r="8"/><path d="M44 44h.01M56 44h.01"/><path d="M45 54q5 4 10 0"/></g></symbol><symbol id="illu-winter-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M38 24h24l6 14-8 4v22H40V42l-8-4z"/></g></symbol><symbol id="illu-winter-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M38 24h18v30h10a8 8 0 018 8v6H38z"/><path d="M38 34h18"/><path d="M38 62h36"/></g></symbol><symbol id="illu-winter-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 18v20M50 62v20M32 30l36 40M68 30L32 70"/><path d="M28 50h44"/></g></symbol><symbol id="illu-emergency-1" viewBox="0 0 100 100"><use href="#tz1"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 18l30 52H20z"/><path d="M50 38v16M50 60v4"/></g></symbol><symbol id="illu-emergency-2" viewBox="0 0 100 100"><use href="#tz2"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M36 30h28v8H36z"/><path d="M40 38v24h20V38"/><path d="M50 44v12M44 50h12"/></g></symbol><symbol id="illu-emergency-3" viewBox="0 0 100 100"><use href="#tz3"/><g fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><rect x="24" y="34" width="52" height="32" rx="3"/><circle cx="50" cy="50" r="8"/><path d="M32 42h.01M68 58h.01"/></g></symbol></svg>
 
 <script>
 (function () {
@@ -284,6 +292,7 @@
     count.textContent = t(list.length === 1 ? 'ui.needsOnWall.one' : 'ui.needsOnWall.other',
                           { n: list.length });
     index(list);
+    scheduleBreath();
     if (entering) enter();
     firstPaint = false;
     bar();
@@ -297,8 +306,10 @@
     live = [];
     var arts = wall.querySelectorAll('.note');
     for (var i = 0; i < arts.length && i < list.length; i++) {
-      live.push({ n: list[i], art: arts[i], clock: arts[i].querySelector('.clock'),
-                  flip: arts[i].querySelector('.note-flip'), last: null });
+      var clk = arts[i].querySelector('.clock');
+      live.push({ n: list[i], art: arts[i], clock: clk,
+                  flip: arts[i].querySelector('.note-flip'),
+                  last: clk ? clk.textContent : null });
     }
   }
 
@@ -343,6 +354,38 @@
   setInterval(tick, 15000);
   document.addEventListener('visibilitychange', function () { if (!document.hidden) tick(); });
   window.addEventListener('pageshow', tick);
+
+  // ── the pulse ─────────────────────────────────────────────────────────────
+  // One note at a time, 8-15s apart, 1.5% — enough that the page is not dead,
+  // little enough that it never competes with reading. Skips any note the reader
+  // is already engaged with: hovered, turned over, selected, or expired.
+  var breathT = null;
+  function scheduleBreath() {
+    clearTimeout(breathT);
+    if (CALM.matches) return;
+    breathT = setTimeout(function () {
+      // Never while the tab is hidden — it would queue up and fire in a burst.
+      if (!document.hidden && live.length) {
+        var free = live.filter(function (r) {
+          return !r.art.classList.contains('is-expired') &&
+                 !r.art.classList.contains('picked') &&
+                 !r.art.classList.contains('breathing') &&
+                 !r.flip.hasAttribute('data-face') &&
+                 !r.flip.hasAttribute('data-peek') &&
+                 !r.art.matches(':hover');
+        });
+        if (free.length) {
+          var pick = free[Math.floor(Math.random() * free.length)];
+          pick.art.classList.add('breathing');
+          setTimeout(function () { pick.art.classList.remove('breathing'); }, 2200);
+        }
+      }
+      scheduleBreath();
+    }, 8000 + Math.random() * 7000);
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) clearTimeout(breathT); else scheduleBreath();
+  });
 
   // The flip IS the entrance: notes arrive image-side and turn to the text once
   // settled. Scoped to the first ENTRY_MAX notes — eighteen simultaneous preserve-3d

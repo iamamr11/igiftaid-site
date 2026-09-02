@@ -200,28 +200,28 @@
     "h": "c23bea5b2e06"
   },
   "needs.05": {
+    "t": "Di dinding hari ini",
+    "h": "884976d0f628"
+  },
+  "needs.06": {
     "t": "Jumlah",
     "h": "49e96d7cdf58"
   },
-  "needs.06": {
+  "needs.07": {
     "t": "Mana-mana",
     "h": "2b505597daa7"
   },
-  "needs.07": {
+  "needs.08": {
     "t": "Bawah $40",
     "h": "7060faef59d9"
   },
-  "needs.08": {
+  "needs.09": {
     "t": "$40 hingga $70",
     "h": "7887df757f3e"
   },
-  "needs.09": {
+  "needs.10": {
     "t": "$70 dan ke atas",
     "h": "3dfcea5a6ce7"
-  },
-  "needs.10": {
-    "t": "Susun",
-    "h": "bec69036aa27"
   },
   "how-it-works.01": {
     "t": "Apa yang berlaku antara pemberian anda dan penerimaan sesebuah keluarga — termasuk bahagian-bahagian yang masih belum sempurna.",
@@ -420,32 +420,32 @@
     "h": "bde6fb2cfbd2"
   },
   "needs.11": {
-    "t": "Tamat paling awal",
-    "h": "d5ca328f0b1c"
+    "t": "Isih",
+    "h": "bec69036aa27"
   },
   "needs.12": {
+    "t": "Tamat tempoh terdahulu",
+    "h": "d5ca328f0b1c"
+  },
+  "needs.13": {
     "t": "Terbaru dahulu",
     "h": "ffb6f5764bdd"
   },
-  "needs.13": {
+  "needs.14": {
     "t": "Jumlah terkecil",
     "h": "4404f9cd60c1"
   },
-  "needs.14": {
+  "needs.15": {
     "t": "Tiada yang sepadan dengan penapis tersebut buat masa ini. Cuba perluaskan penapis &mdash; senarai ini berubah sepanjang hari.",
     "h": "d3990b7fa152"
   },
-  "needs.15": {
-    "t": "Dari mana ia datang",
+  "needs.16": {
+    "t": "Dari mana ini datang",
     "h": "642dff85e29e"
   },
-  "needs.16": {
-    "t": "Keluarga yang telah disahkan melalui proses permohonan kami boleh menghantar keperluan dengan menghantarnya kepada kami melalui WhatsApp. Kerana mereka menghantar mesej dari nombor yang kami gunakan untuk mengesahkan mereka, kami tahu siapa yang menghantar, dan had satu sehari dikuatkuasakan berdasarkan rekod mereka sendiri dan bukan sistem amanah. Setiap nota disemak sebelum ia muncul di sini.",
-    "h": "78260951fcfe"
-  },
   "needs.17": {
-    "t": "Nota ditulis oleh keluarga itu sendiri dan diterjemahkan apabila perlu. Kami memendekkannya untuk papan dinding; kami tidak menghias-hiasnya.",
-    "h": "1df7235646ac"
+    "t": "Keluarga yang telah disahkan melalui proses permohonan kami boleh menghantar keperluan dengan menghantarnya kepada kami melalui WhatsApp. Kerana mereka menghantar mesej daripada nombor yang kami gunakan untuk mengesahkan mereka, kami tahu siapa yang menghantar, dan had satu sehari dikuatkuasakan berdasarkan rekod mereka sendiri bukan sistem amanah. Setiap nota disemak sebelum ia muncul di sini.",
+    "h": "78260951fcfe"
   },
   "ui.chip.medical": {
     "t": "Perubatan",
@@ -546,5 +546,9 @@
   "ui.expiredKept": {
     "t": "Tamat tempoh — masih dalam pilihan anda",
     "h": "3a23053a594a"
+  },
+  "needs.18": {
+    "t": "Nota ditulis oleh keluarga dan diterjemahkan jika perlu. Kami memendekkannya untuk senarai ini; kami tidak menghiasnya.",
+    "h": "1df7235646ac"
   }
 }

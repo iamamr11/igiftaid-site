@@ -50,6 +50,22 @@ OBJECTS = {
  ],
 }
 
+# The Palestinian flag, muted to thread tones. Woven, not a decal: at full strength
+# the red vibrates badly against the pink notes (.note-medical #FFD9DE and
+# .note-infant #FFD6EE), and — more importantly — it would sit close enough to
+# #9A2020, the "expiring soon" colour, that the warning would stop reading as a
+# warning on every note that carries one.
+#
+# White needs a hairline or it disappears into the pastel; black is softened to a
+# warm charcoal so it does not out-weigh the object glyph drawn over it.
+FLAG = [
+    ("#2B2B2B", 0.42),   # black
+    ("#FFFFFF", 0.78),   # white  — outlined below
+    ("#0E7A43", 0.44),   # green
+    ("#B8232F", 0.40),   # red    — deliberately clear of #9A2020
+]
+
+
 def band(v):
     o = []
     if v == 1:
@@ -69,11 +85,34 @@ def band(v):
     else:
         for x in range(8, 100, 17):
             o.append(f'<path d="M{x} 86l5-5 5 5-5 5z"/>')
-    return "".join(o)
+    # Returns the LIST, not a joined string — paint() colours each motif separately,
+    # and iterating a joined string would enumerate its characters instead. It did
+    # exactly that silently: every band rendered default black.
+    return o
 
 # The three bands are defined ONCE and referenced, not repeated into 21 symbols —
 # that alone was 60% of the sprite.
-defs = "".join(f'<g id="tz{v}" fill="var(--illu-soft)">{band(v)}</g>' for v in (1, 2, 3))
+def paint(v):
+    """Colour the band's motifs in the flag sequence.
+
+    They used to share one `fill="var(--illu-soft)"` on the group, which harmonised
+    the band with each category's ink. Per-motif colour means the fill moves onto
+    each path, and the group can no longer carry it."""
+    paths, out = band(v), []
+    for i, d in enumerate(paths):
+        hexc, alpha = FLAG[i % len(FLAG)]
+        extra = ''
+        if hexc == "#FFFFFF":
+            # A white motif on a pastel is invisible without an edge.
+            extra = ' stroke="rgba(44,24,16,.30)" stroke-width="0.9"'
+        # Replace EVERY path in the motif, not just the first. The cypress motif is
+        # two paths in one element, and colouring only the first left its small
+        # triangle rendering default black under a coloured one.
+        out.append(d.replace('<path ', f'<path fill="{hexc}" fill-opacity="{alpha}"{extra} '))
+    return "".join(out)
+
+
+defs = "".join(f'<g id="tz{v}">{paint(v)}</g>' for v in (1, 2, 3))
 sym = []
 for chip, variants in OBJECTS.items():
     for i, obj in enumerate(variants, 1):

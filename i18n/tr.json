@@ -200,28 +200,28 @@
     "h": "c23bea5b2e06"
   },
   "needs.05": {
+    "t": "Bugün gündemde",
+    "h": "884976d0f628"
+  },
+  "needs.06": {
     "t": "Tutar",
     "h": "49e96d7cdf58"
   },
-  "needs.06": {
-    "t": "Herhangi biri",
+  "needs.07": {
+    "t": "Herhangi",
     "h": "2b505597daa7"
   },
-  "needs.07": {
+  "needs.08": {
     "t": "$40 altı",
     "h": "7060faef59d9"
   },
-  "needs.08": {
+  "needs.09": {
     "t": "$40 ile $70 arası",
     "h": "7887df757f3e"
   },
-  "needs.09": {
+  "needs.10": {
     "t": "$70 ve üzeri",
     "h": "3dfcea5a6ce7"
-  },
-  "needs.10": {
-    "t": "Sırala",
-    "h": "bec69036aa27"
   },
   "how-it-works.01": {
     "t": "Bağış yapmanızdan bir ailenin parayı almasına kadar ne olduğu — hâlâ kusurlu olan kısımlar dahil.",
@@ -420,32 +420,32 @@
     "h": "bde6fb2cfbd2"
   },
   "needs.11": {
-    "t": "En yakın sona erenler",
-    "h": "d5ca328f0b1c"
+    "t": "Sırala",
+    "h": "bec69036aa27"
   },
   "needs.12": {
-    "t": "En yeniler önce",
-    "h": "ffb6f5764bdd"
+    "t": "En yakın bitiş",
+    "h": "d5ca328f0b1c"
   },
   "needs.13": {
-    "t": "En küçük miktar",
-    "h": "4404f9cd60c1"
+    "t": "Önce en yeniler",
+    "h": "ffb6f5764bdd"
   },
   "needs.14": {
-    "t": "Şu an bu filtrelere uyan hiçbir şey yok. Filtreleri genişletmeyi deneyin &mdash; liste gün içinde değişiyor.",
-    "h": "d3990b7fa152"
+    "t": "En küçük tutar",
+    "h": "4404f9cd60c1"
   },
   "needs.15": {
+    "t": "Şu an bu filtrelere uyan bir şey yok. Filtreleri genişletmeyi deneyin &mdash; duvar gün içinde değişiyor.",
+    "h": "d3990b7fa152"
+  },
+  "needs.16": {
     "t": "Bunlar nereden geliyor",
     "h": "642dff85e29e"
   },
-  "needs.16": {
-    "t": "Başvuru sürecimizden geçip doğrulanmış aileler, ihtiyaçlarını WhatsApp üzerinden bize göndererek yayınlayabilir. Doğrulama sırasında kaydettiğimiz numaradan mesaj attıkları için kimin paylaşım yaptığını biliyoruz; günlük bir paylaşım sınırı, onur sistemine değil, ailenin kendi kaydına karşı uygulanıyor. Her not, burada yayınlanmadan önce kontrol ediliyor.",
-    "h": "78260951fcfe"
-  },
   "needs.17": {
-    "t": "Notlar aile tarafından yazılmış olup gerektiğinde çevrilmektedir. Duvarda yayımlamak için kısaltıyoruz; süsleme yapmıyoruz.",
-    "h": "1df7235646ac"
+    "t": "Başvuru sürecimizde zaten doğrulanmış aileler, bir ihtiyacı bize WhatsApp üzerinden göndererek duvara ekleyebilir. Doğruladığımız numaradan mesaj attıkları için kimin paylaştığını biliyoruz; günde bir paylaşım sınırı onur sistemine değil, kendi kayıtlarına karşı uygulanıyor. Her not burada görünmeden önce kontrol edilir.",
+    "h": "78260951fcfe"
   },
   "ui.chip.medical": {
     "t": "Tıbbi",
@@ -546,5 +546,9 @@
   "ui.expiredKept": {
     "t": "Süresi doldu — seçiminizde kalıyor",
     "h": "3a23053a594a"
+  },
+  "needs.18": {
+    "t": "Notlar aileler tarafından yazılır, gerektiğinde çevrilir. Duvar için kısaltırız; süsleme yapmayız.",
+    "h": "1df7235646ac"
   }
 }

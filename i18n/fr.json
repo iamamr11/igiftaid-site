@@ -200,28 +200,28 @@
     "h": "c23bea5b2e06"
   },
   "needs.05": {
+    "t": "Affiché aujourd'hui",
+    "h": "884976d0f628"
+  },
+  "needs.06": {
     "t": "Montant",
     "h": "49e96d7cdf58"
   },
-  "needs.06": {
+  "needs.07": {
     "t": "Tous",
     "h": "2b505597daa7"
   },
-  "needs.07": {
+  "needs.08": {
     "t": "Moins de $40",
     "h": "7060faef59d9"
   },
-  "needs.08": {
+  "needs.09": {
     "t": "$40 à $70",
     "h": "7887df757f3e"
   },
-  "needs.09": {
+  "needs.10": {
     "t": "$70 et plus",
     "h": "3dfcea5a6ce7"
-  },
-  "needs.10": {
-    "t": "Trier",
-    "h": "bec69036aa27"
   },
   "how-it-works.01": {
     "t": "Ce qui se passe entre votre don et la réception par une famille &mdash; y compris les parties qui restent imparfaites.",
@@ -420,32 +420,32 @@
     "h": "bde6fb2cfbd2"
   },
   "needs.11": {
+    "t": "Trier",
+    "h": "bec69036aa27"
+  },
+  "needs.12": {
     "t": "Expirant bientôt",
     "h": "d5ca328f0b1c"
   },
-  "needs.12": {
-    "t": "Plus récents d'abord",
+  "needs.13": {
+    "t": "Les plus récents d'abord",
     "h": "ffb6f5764bdd"
   },
-  "needs.13": {
+  "needs.14": {
     "t": "Montant le plus bas",
     "h": "4404f9cd60c1"
   },
-  "needs.14": {
+  "needs.15": {
     "t": "Aucun résultat ne correspond à ces filtres pour l'instant. Essayez de les élargir &mdash; le tableau change au fil de la journée.",
     "h": "d3990b7fa152"
   },
-  "needs.15": {
-    "t": "D'où viennent ces demandes",
+  "needs.16": {
+    "t": "D'où viennent ces messages",
     "h": "642dff85e29e"
   },
-  "needs.16": {
-    "t": "Les familles déjà vérifiées par notre processus de candidature peuvent publier un besoin en nous l'envoyant sur WhatsApp. Comme elles envoient leurs messages depuis le numéro sur lequel nous les avons vérifiées, nous savons qui publie, et la limite d'une demande par jour est appliquée sur la base de leur propre dossier plutôt que sur un système de confiance. Chaque message est contrôlé avant d'apparaître ici.",
-    "h": "78260951fcfe"
-  },
   "needs.17": {
-    "t": "Les notes sont rédigées par la famille et traduites si nécessaire. Nous les raccourcissons pour le mur&nbsp;; nous ne les enjolivons pas.",
-    "h": "1df7235646ac"
+    "t": "Les familles déjà vérifiées par notre processus de candidature peuvent publier un besoin en nous l'envoyant sur WhatsApp. Comme elles écrivent depuis le numéro sur lequel nous les avons vérifiées, nous savons qui publie, et la limite d'un message par jour est appliquée à leur propre dossier plutôt qu'à un système basé sur la confiance. Chaque message est vérifié avant d'apparaître ici.",
+    "h": "78260951fcfe"
   },
   "ui.chip.medical": {
     "t": "Médical",
@@ -546,5 +546,9 @@
   "ui.expiredKept": {
     "t": "Expiré — toujours dans votre sélection",
     "h": "3a23053a594a"
+  },
+  "needs.18": {
+    "t": "Les messages sont rédigés par la famille et traduits si nécessaire. Nous les raccourcissons pour le tableau ; nous ne les enjolivons pas.",
+    "h": "1df7235646ac"
   }
 }

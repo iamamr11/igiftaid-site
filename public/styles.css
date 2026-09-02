@@ -490,6 +490,75 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border-radius: 3px; }
 
 .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* ── the wall page's structure ───────────────────────────────────────────────
+   The page is THREE sections, not nine: what this is | the tool and the wall |
+   where the notes come from. Everything between the filter bar and the board is
+   one instrument, and ruling between a filter bar and its own result count would
+   fence a label off from its number.
+
+   Before this, every gap on the page sat between 17px and 52px. A 3x range cannot
+   encode a three-level hierarchy, and it was inverted: the jump to a brand-new
+   topic was 40px while the lede to its own footnote was 52px. The scale below runs
+   10 -> 96 and the single largest gap is the one place the subject actually
+   changes.
+
+   Scoped to .wall-page so the shared .callout / .board / .cta-row rules do not
+   move on campaigns, trust or how-it-works. */
+/* ⚠ ONE reading rail, in px, for all three prose blocks.
+   `ch` is the width of the digit "0", not of an average character, so in a
+   proportional face it badly overestimates: the dek's `62ch` rendered as 763px and
+   70 real characters per line, and the outro's `66ch` as 767px and 83 — over the
+   75 limit and, after the callout was capped, the widest text on the page. Measured
+   characters, not ch units, is the only way to know. */
+.wall-page { --read: 640px; }
+.wall-page .page-head { padding: 56px 0 0; }
+.wall-page .page-head .dek { max-width: var(--read); }
+.wall-page .callout   { margin: 32px 0 0; }
+.wall-page .wall-sect { margin-top: 56px; }
+.wall-page .filters   { border-top: 1px solid rgba(139,58,98,.16);
+                        padding: 16px 0 8px; margin-top: 0; }
+.wall-page .result-count { margin: 20px 0 16px; }
+/* 96px, and it must stay the largest gap in <main>. The board is a filled panel
+   with an inset shadow, so it terminates itself — a hairline here would be a second
+   fence around something already fenced. Space and a heading, no rule. */
+.wall-page .board     { margin: 0 0 96px; }
+.wall-page .outro h2  { margin: 0 0 14px; }
+.wall-page .outro p   { max-width: var(--read); margin: 0 0 18px; }
+.wall-page .cta-row   { margin: 40px 0 0; }
+
+/* ⚠ ONE TEXT COLUMN. The callout ran at ~115 characters per line — the widest and
+   only tinted block on the page, at the top, where the lede above it is 62ch and
+   the prose below is 66ch. The column jumped 62 -> 115 -> 66 as you scrolled.
+   Cap the BOX, not the paragraphs: capping the text would leave ~360px of empty
+   gold tint to the right of every line, which reads as a rendering bug.
+   The rhythm this establishes: ~640px is what you read, 1032px is what you use. */
+.wall-page .callout { max-width: var(--read); }
+
+/* The section heading. Restores plum, which is the site's own h2 colour on
+   .block h2 and .policy-page h2 — the platform pages diverged to burgundy via
+   inline styles. 26px because Inter's larger x-height makes a 22px heading read
+   about 2px bigger than body copy, and because 22px collided with the 21px dollar
+   amount on the notes directly above it. */
+.wall-page .wrap-h2, .wall-page .outro h2 {
+  font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 600;
+  color: var(--plum); line-height: 1.25; letter-spacing: -.01em; margin: 0 0 16px; }
+
+@media (max-width: 480px) {
+  /* ⚠ `main { padding }` for mobile has never applied: (0,0,1) loses to
+     `.wrap { padding: 0 24px }` at (0,1,0), regardless of source order. So the
+     vertical rhythm at 390px was byte-identical to 1440px. Match the specificity
+     rather than reaching for !important. */
+  .wrap { padding: 0 18px; }
+  .wall-page .page-head { padding: 32px 0 0; }
+  .wall-page .callout   { margin: 24px 0 0; }
+  .wall-page .wall-sect { margin-top: 28px; }
+  .wall-page .filters   { padding: 14px 0 6px; }
+  .wall-page .result-count { margin: 16px 0 12px; }
+  .wall-page .board     { margin: 0 0 64px; }
+  .wall-page .cta-row   { margin: 32px 0 0; }
+  .wall-page .wrap-h2, .wall-page .outro h2 { font-size: 22px; }
+}
 .page-head { padding: 46px 0 26px; }
 .page-head h1 { font-family: 'Inter', sans-serif; font-size: clamp(28px, 4.4vw, 40px);
   color: var(--burgundy); margin: 0 0 10px; letter-spacing: -.02em; }
@@ -514,15 +583,31 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
 /* ── filter bar ────────────────────────────────────────────────────────────── */
 .filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
   padding: 16px 0 6px; }
+/* Two rows at every width: the taxonomy, then the two controls. One flex
+   container holding both and asking flex-wrap to sort it out is what made the
+   phone layout ~197px of undifferentiated pills. */
+.wall-page .filters { flex-direction: column; align-items: stretch; }
+.chip-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+/* ⚠ min-width: 0. As a flex item this defaults to min-width: auto and refuses to
+   shrink below its content — two nowrap label+select pairs — so it measured 678px
+   inside a 390px viewport. Third time this exact default has bitten on this page. */
+.filter-controls { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center;
+  min-width: 0; }
+.filters .ctl { min-width: 0; }
 .filters .chip-btn { cursor: pointer; background: #fff; border: 1px solid rgba(139,58,98,.2);
   font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--burgundy);
   padding: 6px 13px; border-radius: 999px; transition: all .15s; }
 .filters .chip-btn:hover { border-color: var(--plum); }
-.filters .chip-btn[aria-pressed="true"] { background: var(--burgundy); color: #fff;
-  border-color: var(--burgundy); }
+/* Plum, not burgundy. `.note.picked` already uses burgundy for "I am funding this",
+   so an active filter chip in the same colour put two different meanings of
+   "selected" on one screen. Filter state = plum, donation selection = burgundy.
+   White on #8B3A62 is 7.3:1. */
+.filters .chip-btn[aria-pressed="true"] { background: var(--plum); color: #fff;
+  border-color: var(--plum); }
 .filters select { font-family: 'Inter', sans-serif; font-size: 13px; padding: 7px 11px;
   border-radius: 8px; border: 1px solid rgba(139,58,98,.2); background: #fff; color: var(--burgundy); }
-.filters .spacer { margin-left: auto; }
+/* .spacer is gone: it existed to push the Amount/Sort controls to the right of
+   the chip row, and chips and controls are now separate rows. */
 .filter-note { font-size: 13.5px; color: var(--muted); margin: 6px 0 0; }
 .result-count { font-family: 'Inter', sans-serif; font-size: 14px; color: var(--muted);
   margin: 14px 0 4px; }
@@ -718,7 +803,31 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
    the tilt — a CSS animation beats a normal declaration — and reintroduce the very
    collision the three-element split exists to prevent. The motion is the flip. */
 @keyframes noteIn { from { opacity: 0; } to { opacity: 1; } }
-@keyframes tickflash { 0%, 100% { opacity: 1; } 30% { opacity: .3; } }
+/* Amplitude and duration, NOT hue. A colour flash would collide with .soon
+   (#9A2020), which is a STATE — "this note expires within four hours" — and an
+   event that borrows a state's colour stops both from meaning anything. The dip is
+   deeper and slower than it was, plus a small scale bump, because at 12px on a
+   label that changes once a minute the original was easy to miss entirely. */
+@keyframes tickflash {
+  0%, 100% { opacity: 1;   scale: 1; }
+  22%      { opacity: .15; scale: 1.14; }
+  55%      { opacity: 1;   scale: 1; }
+}
+
+/* ── the pulse ───────────────────────────────────────────────────────────────
+   ⚠ This animates `scale`, which is an INDEPENDENT property, never `transform`.
+   A CSS animation beats a normal declaration, so a transform keyframe here would
+   override the inline --tilt and flatten every note on the wall into a plain grid
+   — the same trap the three-element split exists to avoid.
+
+   A breath, not a shake. A shake is the UI convention for an ERROR; it is what a
+   rejected password does. On a note about a family's need that is the wrong signal
+   entirely. The existing prefers-reduced-motion block suppresses this for free. */
+@keyframes breathe {
+  0%, 100% { scale: 1; }
+  50%      { scale: 1.015; }
+}
+.note.breathing { animation: breathe 2.1s ease-in-out; }
 .wall.is-priming .note-flip { transition: none; }
 .wall.is-entering .note { animation: noteIn .34s ease-out backwards;
   animation-delay: calc(var(--i, 0) * 55ms); }
@@ -730,7 +839,7 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
    the flip's own delay plus half its .52s duration. */
 .wall.is-entering .note-back,
 .wall.is-entering .note-front { transition-delay: calc(var(--i, 0) * 55ms + 620ms + .26s); }
-.note .clock.flash { animation: tickflash .5s ease; }
+.note .clock.flash { animation: tickflash .85s ease; display: inline-block; }
 
 .empty { text-align: center; padding: 46px 20px; color: var(--muted); font-size: 16px; }
 
@@ -782,9 +891,56 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
 .filters .ctl { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
 .filters .ctl label { font-size: 13px; color: var(--muted); }
 @media (max-width: 700px) {
-  .filters .spacer { display: none; }
   .filters { gap: 8px; }
+
+  /* ── the filter bar on a phone ─────────────────────────────────────────────
+     It was ~197px of undifferentiated pills with no background, border, heading or
+     rule, wedged between two filled surfaces — it read as debris that had fallen
+     between two objects. The eight chips become one horizontal strip and the two
+     selects pair up beneath, which is ~130px in two legible rows.
+
+     The bleed is the affordance: the strip runs to the screen edge so a half-cut
+     chip says "there is more", rather than ending tidily inside the gutter and
+     looking complete. margin-inline/padding-inline are direction-aware, so this
+     needs no RTL mirror — a `to right` gradient mask would have pointed the wrong
+     way in Arabic and Urdu. */
+  .wall-page .filters { flex-direction: column; align-items: stretch; gap: 10px; }
+  /* ⚠ min-width: 0 on BOTH. A flex item defaults to min-width:auto and will not go
+     below its content width, so `overflow-x: auto` never engaged — the strip simply
+     grew to 714px and took the page with it. An overflow container that cannot be
+     made narrower than its contents is not a scroll container, it is just wide. */
+  .wall-page .chip-row, .wall-page .filter-controls { min-width: 0; max-width: 100%; }
+  .chip-row { display: flex; flex-wrap: nowrap; gap: 8px; overflow-x: auto;
+    overscroll-behavior-x: contain; scroll-snap-type: x proximity;
+    scrollbar-width: none; -ms-overflow-style: none;
+    padding: 2px 0 8px; margin-inline: -18px; padding-inline: 18px; }
+  .chip-row::-webkit-scrollbar { display: none; }
+  .chip-row .chip-btn { flex: 0 0 auto; scroll-snap-align: start;
+    min-height: 40px; padding: 9px 14px; font-size: 14px; }
+  .wall-page .filter-controls { display: flex; gap: 10px; flex-wrap: nowrap; }
+  .wall-page .filters .ctl { flex: 1 1 0; min-width: 0; display: flex;
+    align-items: center; gap: 8px; }
+  /* ⚠ These selects were 31px tall — under every touch-target guideline, on the
+     page's only two dropdowns, in a stylesheet that already gave the note tick a
+     44x44 wrapper. */
+  .wall-page .filters select { flex: 1; min-width: 0; width: 100%;
+    font-size: 15px; padding: 10px 12px; min-height: 44px; }
 }
+
+/* ⚠ The settle bar's contents overflowed it below ~380px: 339px of content inside a
+   288-328px pill, so "Fund these" spilled outside the rounded end on a 360px phone.
+   It fits English by about 3px; "Fund these" -> "Diese finanzieren" would have
+   broken a container that cannot grow, and this stylesheet has failed in exactly
+   German and Arabic three times already. */
+@media (max-width: 480px) {
+  .settle { flex-wrap: wrap; justify-content: center; row-gap: 8px;
+    border-radius: 22px; padding: 12px 16px; }
+  .settle .n { width: 100%; text-align: center; }
+}
+
+/* The bar is position:fixed and nothing reserved room for it, so it sat on top of
+   the CTA row and the top of the footer. Static reserve — no JS, no :has(). */
+.wall-page ~ footer { padding-bottom: 116px; }
 
 /* ═══════════════════════════════════════════════════════════════════════════
    DARK MODE + RTL — added 2026-09-02 with localisation.
@@ -819,6 +975,7 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
   .btn-ghost-lg { background: #241A17; border-color: rgba(217,139,176,.28); }
   .bar { background: rgba(217,139,176,.18); }
 
+
   /* The board goes dark and the notes stay bright — a corkboard in a dim room.
      The notes keep their light fills deliberately: their text is dark brown, so
      dimming them would break the contrast that makes them readable. */
@@ -845,7 +1002,6 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
    it moves to the opposite corner rather than covering the first word. */
 [dir="rtl"] .note .tickwrap { right: auto; left: 2px; }
 [dir="rtl"] .toc ol, [dir="rtl"] ol.plain, [dir="rtl"] ul.plain { padding-left: 0; padding-right: 1.3rem; }
-[dir="rtl"] .filters .spacer { margin-left: 0; margin-right: auto; }
 [dir="rtl"] blockquote { border-left: 0; border-right: 3px solid var(--gold); padding-left: 0; padding-right: 1.2rem; }
 
 /* Arabic and Urdu need more leading than Latin at the same size — the diacritics
@@ -883,3 +1039,27 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
 .lang-hint a { color: inherit; font-weight: 700; }
 .lang-hint button { background: transparent; border: 0; cursor: pointer; color: inherit;
   text-decoration: underline; font: inherit; opacity: .75; }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   DARK MODE: filled controls
+   ⚠ MUST BE LAST IN THE FILE. These selectors tie on specificity with the
+   component rules they correct, so source order decides — an earlier copy of this
+   block silently lost to `.lang-menu a[aria-current="true"]` 50 lines below it.
+
+   The cause is the same foreground/surface split that had to be fixed on the
+   sibling site: --plum, --burgundy and --gold all lift to light values for dark
+   mode, which is correct where they are TEXT and wrong where they are a SURFACE.
+   Every control below carries a baked-in light label, so lifting the fill under it
+   left white on pale pink — 1.3:1 on the language switcher, 2.5:1 on the primary
+   buttons. A token used for both roles cannot be flipped once and be right in both.
+   ═══════════════════════════════════════════════════════════════════════════ */
+@media (prefers-color-scheme: dark) {
+  .filters .chip-btn[aria-pressed="true"],
+  .lang-menu a[aria-current="true"],
+  .skip-link,
+  .btn-primary-lg,
+  .camp .go,
+  .settle button:not(.clear) { color: #2A1520; }
+  .settle .n { color: var(--brown); }
+  .lang-btn { color: var(--brown); }
+}

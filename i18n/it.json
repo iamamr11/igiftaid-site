@@ -200,28 +200,28 @@
     "h": "c23bea5b2e06"
   },
   "needs.05": {
+    "t": "In bacheca oggi",
+    "h": "884976d0f628"
+  },
+  "needs.06": {
     "t": "Importo",
     "h": "49e96d7cdf58"
   },
-  "needs.06": {
+  "needs.07": {
     "t": "Qualsiasi",
     "h": "2b505597daa7"
   },
-  "needs.07": {
+  "needs.08": {
     "t": "Meno di $40",
     "h": "7060faef59d9"
   },
-  "needs.08": {
+  "needs.09": {
     "t": "Da $40 a $70",
     "h": "7887df757f3e"
   },
-  "needs.09": {
+  "needs.10": {
     "t": "$70 e oltre",
     "h": "3dfcea5a6ce7"
-  },
-  "needs.10": {
-    "t": "Ordina",
-    "h": "bec69036aa27"
   },
   "how-it-works.01": {
     "t": "Cosa succede tra il momento in cui fai una donazione e quello in cui una famiglia la riceve — comprese le parti che sono ancora imperfette.",
@@ -420,32 +420,32 @@
     "h": "bde6fb2cfbd2"
   },
   "needs.11": {
+    "t": "Ordina",
+    "h": "bec69036aa27"
+  },
+  "needs.12": {
     "t": "In scadenza prima",
     "h": "d5ca328f0b1c"
   },
-  "needs.12": {
+  "needs.13": {
     "t": "Più recenti prima",
     "h": "ffb6f5764bdd"
   },
-  "needs.13": {
-    "t": "Importo minore",
+  "needs.14": {
+    "t": "Importo più basso",
     "h": "4404f9cd60c1"
   },
-  "needs.14": {
-    "t": "Nessun risultato corrisponde a questi filtri al momento. Prova ad ampliarli &mdash; il pannello cambia durante la giornata.",
+  "needs.15": {
+    "t": "Nessun risultato corrisponde a questi filtri al momento. Prova ad allargarli &mdash; il pannello cambia nel corso della giornata.",
     "h": "d3990b7fa152"
   },
-  "needs.15": {
+  "needs.16": {
     "t": "Da dove provengono",
     "h": "642dff85e29e"
   },
-  "needs.16": {
-    "t": "Le famiglie già verificate tramite il nostro processo di domanda possono pubblicare una necessità inviandocela su WhatsApp. Poiché ci scrivono dal numero con cui le abbiamo verificate, sappiamo chi sta pubblicando, e il limite di una al giorno viene applicato al loro singolo profilo anziché a un sistema basato sulla fiducia. Ogni nota viene controllata prima di apparire qui.",
-    "h": "78260951fcfe"
-  },
   "needs.17": {
-    "t": "Le note sono scritte dalla famiglia e tradotte dove necessario. Le accorciamo per la bacheca; non le abbellimo.",
-    "h": "1df7235646ac"
+    "t": "Le famiglie già verificate attraverso il nostro processo di candidatura possono inviare una necessità mandandocela su WhatsApp. Poiché scrivono dal numero con cui le abbiamo verificate, sappiamo chi sta pubblicando, e il limite di un messaggio al giorno viene applicato al loro record anziché basarsi su un sistema di fiducia. Ogni nota viene controllata prima di apparire qui.",
+    "h": "78260951fcfe"
   },
   "ui.chip.medical": {
     "t": "Medico",
@@ -546,5 +546,9 @@
   "ui.expiredKept": {
     "t": "Scaduto — ancora nella tua selezione",
     "h": "3a23053a594a"
+  },
+  "needs.18": {
+    "t": "Le note sono scritte dalle famiglie e tradotte dove necessario. Le accorciamo per il pannello; non le abbellimo.",
+    "h": "1df7235646ac"
   }
 }

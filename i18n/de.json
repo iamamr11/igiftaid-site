@@ -200,28 +200,28 @@
     "h": "c23bea5b2e06"
   },
   "needs.05": {
+    "t": "Heute an der Wand",
+    "h": "884976d0f628"
+  },
+  "needs.06": {
     "t": "Betrag",
     "h": "49e96d7cdf58"
   },
-  "needs.06": {
+  "needs.07": {
     "t": "Beliebig",
     "h": "2b505597daa7"
   },
-  "needs.07": {
+  "needs.08": {
     "t": "Unter $40",
     "h": "7060faef59d9"
   },
-  "needs.08": {
+  "needs.09": {
     "t": "$40 bis $70",
     "h": "7887df757f3e"
   },
-  "needs.09": {
+  "needs.10": {
     "t": "$70 und mehr",
     "h": "3dfcea5a6ce7"
-  },
-  "needs.10": {
-    "t": "Sortieren",
-    "h": "bec69036aa27"
   },
   "how-it-works.01": {
     "t": "Was zwischen Ihrer Spende und dem Erhalt durch eine Familie passiert – einschließlich der Teile, die noch nicht einwandfrei funktionieren.",
@@ -420,32 +420,32 @@
     "h": "bde6fb2cfbd2"
   },
   "needs.11": {
-    "t": "Läuft zuerst ab",
-    "h": "d5ca328f0b1c"
+    "t": "Sortieren",
+    "h": "bec69036aa27"
   },
   "needs.12": {
+    "t": "Bald ablaufend",
+    "h": "d5ca328f0b1c"
+  },
+  "needs.13": {
     "t": "Neueste zuerst",
     "h": "ffb6f5764bdd"
   },
-  "needs.13": {
+  "needs.14": {
     "t": "Kleinster Betrag",
     "h": "4404f9cd60c1"
   },
-  "needs.14": {
-    "t": "Derzeit passt nichts zu diesen Filtern. Versuche sie zu erweitern &mdash; die Pinnwand ändert sich im Laufe des Tages.",
+  "needs.15": {
+    "t": "Aktuell entspricht nichts diesen Filtern. Versuche, sie zu erweitern &mdash; die Pinnwand ändert sich im Laufe des Tages.",
     "h": "d3990b7fa152"
   },
-  "needs.15": {
-    "t": "Woher diese stammen",
+  "needs.16": {
+    "t": "Woher diese kommen",
     "h": "642dff85e29e"
   },
-  "needs.16": {
-    "t": "Familien, die bereits unser Antragsverfahren durchlaufen haben, können einen Bedarf einstellen, indem sie ihn uns per WhatsApp schicken. Da sie von der Nummer schreiben, unter der wir sie verifiziert haben, wissen wir, wer postet; das Tageslimit von einem Eintrag wird anhand ihres eigenen Datensatzes durchgesetzt und beruht nicht auf einem Vertrauenssystem. Jeder Eintrag wird geprüft, bevor er hier erscheint.",
-    "h": "78260951fcfe"
-  },
   "needs.17": {
-    "t": "Die Notizen werden von der Familie verfasst und bei Bedarf übersetzt. Wir kürzen sie für die Pinnwand; wir schmücken sie nicht aus.",
-    "h": "1df7235646ac"
+    "t": "Familien, die bereits unser Bewerbungsverfahren durchlaufen haben, können einen Bedarf eintragen, indem sie ihn uns per WhatsApp schicken. Da sie von der Nummer aus schreiben, mit der wir sie verifiziert haben, wissen wir, wer postet; das Tageslimit von einem Eintrag wird anhand ihres eigenen Datensatzes durchgesetzt und beruht nicht auf gegenseitigem Vertrauen. Jede Nachricht wird geprüft, bevor sie hier erscheint.",
+    "h": "78260951fcfe"
   },
   "ui.chip.medical": {
     "t": "Medizinisch",
@@ -546,5 +546,9 @@
   "ui.expiredKept": {
     "t": "Abgelaufen — noch in Ihrer Auswahl",
     "h": "3a23053a594a"
+  },
+  "needs.18": {
+    "t": "Die Nachrichten werden von den Familien verfasst und bei Bedarf übersetzt. Wir kürzen sie für die Pinnwand; wir schmücken sie nicht aus.",
+    "h": "1df7235646ac"
   }
 }
