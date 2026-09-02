@@ -460,15 +460,15 @@
     "h": "cfcd1f3d6aeb"
   },
   "ui.chip.food": {
-    "t": "식품 & 연료",
+    "t": "식품 &amp; 연료",
     "h": "7bb932ef1f2a"
   },
   "ui.chip.infant": {
-    "t": "영유아",
+    "t": "영·유아",
     "h": "3596a63024f0"
   },
   "ui.chip.winter": {
-    "t": "월동",
+    "t": "겨울",
     "h": "1b17869e03ec"
   },
   "ui.chip.emergency": {
@@ -538,5 +538,13 @@
   "ui.selectNote": {
     "t": "선택: {who}, {what}, ${amount}",
     "h": "e6d200645a58"
+  },
+  "ui.turnOver": {
+    "t": "뒤집기",
+    "h": "b6bfcfb7bb52"
+  },
+  "ui.expiredKept": {
+    "t": "만료됨 — 선택 항목에 유지됨",
+    "h": "3a23053a594a"
   }
 }

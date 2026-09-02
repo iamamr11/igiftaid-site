@@ -448,7 +448,7 @@
     "h": "1df7235646ac"
   },
   "ui.chip.medical": {
-    "t": "Sağlık",
+    "t": "Tıbbi",
     "h": "fec80bef0d8a"
   },
   "ui.chip.education": {
@@ -460,11 +460,11 @@
     "h": "cfcd1f3d6aeb"
   },
   "ui.chip.food": {
-    "t": "Gıda & Yakıt",
+    "t": "Gıda &amp; Yakıt",
     "h": "7bb932ef1f2a"
   },
   "ui.chip.infant": {
-    "t": "Bebek & Çocuk",
+    "t": "Bebek &amp; Çocuk",
     "h": "3596a63024f0"
   },
   "ui.chip.winter": {
@@ -538,5 +538,13 @@
   "ui.selectNote": {
     "t": "Seç: {who}, {what}, ${amount}",
     "h": "e6d200645a58"
+  },
+  "ui.turnOver": {
+    "t": "Çevir",
+    "h": "b6bfcfb7bb52"
+  },
+  "ui.expiredKept": {
+    "t": "Süresi doldu — seçiminizde kalıyor",
+    "h": "3a23053a594a"
   }
 }

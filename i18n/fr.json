@@ -456,15 +456,15 @@
     "h": "512ab3c6b986"
   },
   "ui.chip.shelter": {
-    "t": "Logement",
+    "t": "Hébergement",
     "h": "cfcd1f3d6aeb"
   },
   "ui.chip.food": {
-    "t": "Nourriture & Carburant",
+    "t": "Nourriture &amp; Carburant",
     "h": "7bb932ef1f2a"
   },
   "ui.chip.infant": {
-    "t": "Nourrisson & Bébé",
+    "t": "Nourrisson &amp; Bébé",
     "h": "3596a63024f0"
   },
   "ui.chip.winter": {
@@ -538,5 +538,13 @@
   "ui.selectNote": {
     "t": "Sélectionner&nbsp;: {who}, {what}, ${amount}",
     "h": "e6d200645a58"
+  },
+  "ui.turnOver": {
+    "t": "Retourner",
+    "h": "b6bfcfb7bb52"
+  },
+  "ui.expiredKept": {
+    "t": "Expiré — toujours dans votre sélection",
+    "h": "3a23053a594a"
   }
 }

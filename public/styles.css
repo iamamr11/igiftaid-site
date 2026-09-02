@@ -562,27 +562,110 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
   border-radius: 16px; padding: 26px 20px 34px; margin: 18px 0 40px;
   box-shadow: inset 0 2px 14px rgba(44,24,16,.10); }
 .wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(216px, 1fr)); gap: 22px; }
-.note { position: relative; padding: 17px 16px 14px; border-radius: 2px; min-height: 178px;
-  display: flex; flex-direction: column; gap: 9px; color: var(--note-ink);
+/* THREE ELEMENTS, THREE TRANSFORMS, so none of them fight.
+     .note       tilt + hover lift
+     .note-flip  rotateY, and NOTHING else, ever
+     .note-back  a static rotateY(180deg)
+   Before this split, the tilt was an inline `transform` and .note:hover needed
+   `!important` just to beat it. Adding a flip would have made three rules compete
+   for one property on one element.
+
+   ⚠ Why --rot exists rather than .note:hover { --tilt: 0deg }: an INLINE custom
+   property beats any non-!important stylesheet rule on the same element, so setting
+   --tilt in a hover rule silently loses to the inline one. --tilt is only ever set
+   inline; --rot is only ever set here. They never contend. */
+.note { position: relative; border-radius: 2px; min-height: 178px;
+  display: grid; color: var(--note-ink);
+  --rot: var(--tilt, 0deg); --lift: 0px;
+  transform: rotate(var(--rot)) translateY(var(--lift));
+  perspective: 900px;
   box-shadow: 2px 4px 10px rgba(44,24,16,.20); transition: transform .16s, box-shadow .16s; }
-.note:hover { transform: rotate(0deg) translateY(-3px) !important; box-shadow: 3px 8px 18px rgba(44,24,16,.26); }
+.note:hover { --rot: 0deg; --lift: -3px; box-shadow: 3px 8px 18px rgba(44,24,16,.26); }
 .note.picked { outline: 3px solid var(--burgundy); outline-offset: 2px; }
-.note-medical   { background: #FFD9DE; }
-.note-education { background: #CFE4FF; }
-.note-shelter   { background: #DCD4FB; }
-.note-food      { background: #CFF5D8; }
-.note-infant    { background: #FFD6EE; }
-.note-winter    { background: #CCEEF6; }
-.note-emergency { background: #FFDCC0; }
+
+/* ⚠ .note-flip may carry `transform` and `transform-style` and NOTHING ELSE.
+   opacity, filter, overflow, clip-path and mask are all grouping properties that
+   flatten preserve-3d — set any of them here and both faces stack on top of each
+   other. The expired state's filter goes on .note, not here. */
+.note-flip { --faceY: 0deg; position: relative; display: grid;
+  transform-style: preserve-3d; transform: rotateY(var(--faceY));
+  transition: transform .52s cubic-bezier(.2,.8,.25,1); }
+.note-flip[data-face="image"], .note-flip[data-peek] { --faceY: 180deg; }
+
+/* The front face is IN FLOW and defines the height — need strings vary a lot, and
+   two absolute faces would collapse the note to min-height and spill long text.
+   The back is inset:0 over it, so the height is identical in both states and the
+   flip causes no reflow. */
+/* ⚠ min-width:0 is load-bearing. A grid item defaults to min-width:auto, so it
+   refuses to shrink below its content and overflows its track instead — the front
+   face measured 250px inside a 232px note, which pushed the meta row's reserved
+   gutter off the edge and put the turn button back on top of the countdown. It only
+   showed up in Arabic, Urdu, German and Russian, i.e. the longer strings. */
+.note-flip, .note-face { min-width: 0; }
+.note-face { border-radius: 2px; backface-visibility: hidden; }
+.note-front { display: flex; flex-direction: column; gap: 9px; padding: 17px 16px 14px; }
+.note-back { position: absolute; inset: 0; transform: rotateY(180deg);
+  display: grid; overflow: hidden; }
+
+/* Hiding pixels is not hiding content: backface-visibility leaves the away face in
+   the accessibility tree and, in some engines, still hit-testable. `visibility`
+   removes it from both. Delayed to the halfway point so it does not pop mid-turn. */
+.note-back  { visibility: hidden;  transition: visibility 0s linear .26s; }
+.note-front { visibility: visible; transition: visibility 0s linear .26s; }
+.note-flip[data-face="image"] .note-back,  .note-flip[data-peek] .note-back  { visibility: visible; }
+.note-flip[data-face="image"] .note-front, .note-flip[data-peek] .note-front { visibility: hidden; }
+.note-medical   { background: #FFD9DE; --illu-ink: #A3132A; --illu-soft: rgba(163,19,42,.15); }
+.note-education { background: #CFE4FF; --illu-ink: #1B4C88; --illu-soft: rgba(27,76,136,.15); }
+.note-shelter   { background: #DCD4FB; --illu-ink: #4327A0; --illu-soft: rgba(67,39,160,.15); }
+.note-food      { background: #CFF5D8; --illu-ink: #136B32; --illu-soft: rgba(19,107,50,.15); }
+.note-infant    { background: #FFD6EE; --illu-ink: #9C1567; --illu-soft: rgba(156,21,103,.15); }
+.note-winter    { background: #CCEEF6; --illu-ink: #0F5C73; --illu-soft: rgba(15,92,115,.15); }
+.note-emergency { background: #FFDCC0; --illu-ink: #98430B; --illu-soft: rgba(152,67,11,.15); }
 .note .fam { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14.5px; margin: 0; }
 .note .txt { font-size: 14.5px; line-height: 1.45; margin: 0; flex: 1; }
 .note .amt { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 21px; margin: 0; }
 .note .meta { font-size: 12px; color: rgba(44,24,16,.72); margin: 0;
-  display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+  display: flex; justify-content: space-between; gap: 8px; align-items: center;
+  /* Reserve the corner the turn button occupies. The button sits OUTSIDE the flipper
+     and so cannot be laid out by this row — without the gutter it lands on top of the
+     countdown, which is the first thing a reader looks at. */
+  padding-inline-end: 34px; }
 .note .soon { color: #9A2020; font-weight: 600; }
-.note .tick { position: absolute; top: 9px; right: 9px; width: 24px; height: 24px;
-  cursor: pointer; margin: 0; accent-color: var(--burgundy); }
-.note label.hit { position: absolute; inset: 0; cursor: pointer; border-radius: 2px; }
+/* The countdown never wraps. Arabic and Urdu render "3 hours left" long enough to
+   break onto a second line inside a 216px note, which pushed the meta row out of
+   alignment on exactly the languages least likely to get looked at. */
+.note .clock { white-space: nowrap; flex-shrink: 0; }
+.note .chip { min-width: 0; }
+/* Both controls sit OUTSIDE .note-flip. A control inside a backface-hidden face is
+   still in the a11y tree and, in some engines, still clickable while facing away.
+   Keeping them out here also means they do not mirror when the note turns.
+
+   The 44x44 wrappers fix a real WCAG 2.5.5 failure: the tick was a 24px box, and it
+   was the only clickable thing on a note — the whole point of the page. */
+.note .tickwrap { position: absolute; top: 2px; right: 2px; width: 44px; height: 44px;
+  display: grid; place-items: center; cursor: pointer; z-index: 2; }
+.note .tick { width: 24px; height: 24px; cursor: pointer; margin: 0;
+  accent-color: var(--burgundy); }
+.note .turn { position: absolute; bottom: 0; right: 0; width: 44px; height: 44px;
+  z-index: 2; display: grid; place-items: center; padding: 0; border: 0;
+  background: transparent; cursor: pointer; color: rgba(44,24,16,.55); border-radius: 999px; }
+.note .turn:hover { color: var(--note-ink); background: rgba(44,24,16,.07); }
+.note .turn svg { width: 17px; height: 17px; pointer-events: none; }
+.note.is-expired .turn { pointer-events: none; opacity: .4; }
+.note.is-expired { filter: grayscale(.45); opacity: .74; }
+.note.is-expired .note-flip { pointer-events: none; }
+.note .kept { font-size: 11.5px; font-weight: 600; color: #9A2020; margin: 0; }
+
+/* The emoji is a real element with aria-hidden, NOT a CSS ::before — pseudo-element
+   content IS exposed in the a11y tree in Chrome and Safari, and there is no way to
+   hide it from a screen reader. The colour dot is suppressed on notes only: the
+   pastel fill already encodes the category across the whole card, so dot + emoji +
+   word would be three tokens for one fact. Campaign cards keep the dot. */
+.note .chip::before { display: none; }
+.chip-emo { font-size: 13px; line-height: 1; }
+.note-back .illu { width: 100%; height: 100%; display: block; color: var(--illu-ink); }
+.note-back img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%;
+  display: block; }
 
 /* ── floating settle bar ───────────────────────────────────────────────────
    Chosen over a basket page: these are $18–$100 gifts, and sending someone to a
@@ -602,6 +685,24 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
 .settle .clear { background: transparent; color: rgba(255,255,255,.8); padding: 8px;
   font-weight: 500; text-decoration: underline; }
 .settle .clear:hover { background: transparent; color: #fff; }
+
+/* The entrance touches OPACITY ONLY. A transform keyframe on .note would override
+   the tilt — a CSS animation beats a normal declaration — and reintroduce the very
+   collision the three-element split exists to prevent. The motion is the flip. */
+@keyframes noteIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes tickflash { 0%, 100% { opacity: 1; } 30% { opacity: .3; } }
+.wall.is-priming .note-flip { transition: none; }
+.wall.is-entering .note { animation: noteIn .34s ease-out backwards;
+  animation-delay: calc(var(--i, 0) * 55ms); }
+.wall.is-entering .note-flip { transition-delay: calc(var(--i, 0) * 55ms + 620ms); }
+/* ⚠ The visibility swap has to be delayed with the flip, not independently of it.
+   Without this the back face hid at its own 260ms while the flipper was still waiting
+   out its 620ms stagger — so every note that had not started turning yet rendered as
+   a blank rectangle. The face swap belongs at the HALFWAY point of the turn, which is
+   the flip's own delay plus half its .52s duration. */
+.wall.is-entering .note-back,
+.wall.is-entering .note-front { transition-delay: calc(var(--i, 0) * 55ms + 620ms + .26s); }
+.note .clock.flash { animation: tickflash .5s ease; }
 
 .empty { text-align: center; padding: 46px 20px; color: var(--muted); font-size: 16px; }
 
@@ -635,6 +736,18 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
   .note { transform: none !important; }
+  /* A deliberate no-3D path rather than relying on the rule above not matching.
+     The faces become an instant swap driven by the SAME attributes the 3D path
+     uses, so there is one state model, not two. Degrades to: no animation, text
+     face by default, image still reachable through the turn button. */
+  .note { perspective: none; }
+  .note-flip { transform-style: flat; transform: none !important; }
+  .note-face { backface-visibility: visible; transform: none !important; }
+  .note-back { visibility: hidden; }
+  .note-flip[data-face="image"] .note-back,
+  .note-flip[data-peek]         .note-back  { visibility: visible; }
+  .note-flip[data-face="image"] .note-front,
+  .note-flip[data-peek]         .note-front { visibility: hidden; }
 }
 /* Keep a label and its select together — they were wrapping apart, leaving an
    orphaned "Sort" at the end of one line and its dropdown on the next. */
@@ -702,7 +815,8 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
 [dir="rtl"] .callout.plain { border-right-color: var(--plum); }
 /* The tick sits top-right in LTR; in RTL that is where the eye starts reading, so
    it moves to the opposite corner rather than covering the first word. */
-[dir="rtl"] .note .tick { right: auto; left: 9px; }
+[dir="rtl"] .note .tickwrap { right: auto; left: 2px; }
+[dir="rtl"] .note .turn { right: auto; left: 0; }
 [dir="rtl"] .toc ol, [dir="rtl"] ol.plain, [dir="rtl"] ul.plain { padding-left: 0; padding-right: 1.3rem; }
 [dir="rtl"] .filters .spacer { margin-left: 0; margin-right: auto; }
 [dir="rtl"] blockquote { border-left: 0; border-right: 3px solid var(--gold); padding-left: 0; padding-right: 1.2rem; }

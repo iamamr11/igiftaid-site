@@ -460,11 +460,11 @@
     "h": "cfcd1f3d6aeb"
   },
   "ui.chip.food": {
-    "t": "Makanan & Bahan Api",
+    "t": "Makanan &amp; Bahan Api",
     "h": "7bb932ef1f2a"
   },
   "ui.chip.infant": {
-    "t": "Bayi & Kanak-kanak",
+    "t": "Bayi &amp; Kanak-kanak",
     "h": "3596a63024f0"
   },
   "ui.chip.winter": {
@@ -538,5 +538,13 @@
   "ui.selectNote": {
     "t": "Pilih: {who}, {what}, ${amount}",
     "h": "e6d200645a58"
+  },
+  "ui.turnOver": {
+    "t": "Balikkan",
+    "h": "b6bfcfb7bb52"
+  },
+  "ui.expiredKept": {
+    "t": "Tamat tempoh — masih dalam pilihan anda",
+    "h": "3a23053a594a"
   }
 }

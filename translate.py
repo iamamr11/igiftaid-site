@@ -14,14 +14,16 @@ build retranslates it. A translation can never outlive its source. This is the s
 discipline as whatsapp-bot/translations.js, which caches the intake questions the
 same way and for the same reason.
 
-    python3 translate.py            # fill any gaps
-    python3 translate.py --force    # retranslate everything
-    python3 translate.py --lang ar  # one language
+    python3 translate.py                        # igiftaid.org, fill any gaps
+    python3 translate.py --i18n <dir>           # another site's catalogue
+    python3 translate.py --force                # retranslate everything
+    python3 translate.py --lang ar              # one language
 
 Needs ANTHROPIC_API_KEY. Reads it from the environment, or from
 ../../whatsapp-bot/.env if that is where it lives.
 """
 import hashlib
+import html as _html
 import json
 import os
 import re
@@ -30,6 +32,11 @@ import urllib.error
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+# Set by --i18n. This file translates BOTH sites: igiftaid.org's own copy and, via
+# --i18n ../../crypto-payout-system/heart-site/i18n, HEART's. It is deliberately not
+# duplicated — build_i18n.py and extract.py already shared a regex that diverged once
+# and silently left every dropdown in English, and a second copy of the translator
+# would be that mistake in a larger form.
 I18N = os.path.join(HERE, "i18n")
 SRC = os.path.join(I18N, "en.json")
 
@@ -142,6 +149,25 @@ def run(only=None, force=False):
         # A stale entry is one whose stored hash no longer matches the English.
         todo = {k: v for k, v in src.items()
                 if cache.get(k, {}).get("h") != h12(v)}
+
+        # ⚠ TWO KEYS WITH THE SAME ENGLISH MUST GET THE SAME TRANSLATION.
+        # They did not, and it shipped: igiftaid's Arabic needs page showed the filter
+        # button as "طعام & وقود" and the note chip for the same category as
+        # "غذاء ووقود" — two translations of "Food & Fuel" on one page. The cause is
+        # that the button's extracted text is `Food &amp; Fuel` (an HTML entity) while
+        # the UI key is `Food & Fuel`, so they were never even recognised as the same
+        # string. Five of the seven categories collided this way.
+        #
+        # So: group by the ENTITY-DECODED text, translate one representative per group,
+        # and give every key in the group that same answer. This also cuts the bill.
+        groups = {}
+        for k, v in todo.items():
+            groups.setdefault(_html.unescape(v).strip(), []).append(k)
+        reps = {ks[0]: todo[ks[0]] for ks in groups.values()}
+        dupes = sum(len(ks) - 1 for ks in groups.values())
+        if dupes:
+            print(f"      {dupes} duplicate string(s) share a translation")
+        todo = reps
         # Entries whose English key has been deleted should not linger.
         for gone in [k for k in cache if k not in src]:
             del cache[gone]
@@ -170,7 +196,10 @@ def run(only=None, force=False):
                         print(f"        still failing: {k}")
             for k, en in chunk.items():
                 if k in got and isinstance(got[k], str) and got[k].strip():
-                    cache[k] = {"t": got[k].strip(), "h": h12(en)}
+                    # Write the representative's answer to every key that shares its
+                    # English, so the page cannot show two translations of one word.
+                    for sib in groups.get(_html.unescape(en).strip(), [k]):
+                        cache[sib] = {"t": got[k].strip(), "h": h12(src[sib])}
             print(f"      {min(i + BATCH, len(items))}/{len(items)}")
 
         missing = [k for k in src if k not in cache]
@@ -180,6 +209,50 @@ def run(only=None, force=False):
             json.dump(cache, fh, ensure_ascii=False, indent=2)
             fh.write("\n")
         print(f"      wrote {path}")
+
+
+def unify():
+    """Force every key that shares its English to share its translation.
+
+    The grouping in run() only covers strings being translated NOW. Entries already
+    cached from before that change keep whatever they were given individually — which
+    is exactly the state that shipped two Arabic translations of "Food & Fuel" on one
+    page. This repairs them in place, with no API calls.
+
+    Tie-break is the alphabetically first key, so the result is deterministic and does
+    not depend on dict ordering or on which site is being built.
+    """
+    src = json.load(open(SRC, encoding="utf-8"))
+    groups = {}
+    for k, v in src.items():
+        groups.setdefault(_html.unescape(v).strip(), []).append(k)
+    groups = {t: sorted(ks) for t, ks in groups.items() if len(ks) > 1}
+    if not groups:
+        return
+    total = 0
+    for code in LANGS:
+        path = os.path.join(I18N, f"{code}.json")
+        if not os.path.exists(path):
+            continue
+        cache = json.load(open(path, encoding="utf-8"))
+        fixed = 0
+        for text, keys in groups.items():
+            have = [k for k in keys if k in cache]
+            if len(have) < 2:
+                continue
+            win = cache[have[0]]["t"]
+            for k in have[1:]:
+                if cache[k]["t"] != win:
+                    cache[k] = {"t": win, "h": h12(src[k])}
+                    fixed += 1
+        if fixed:
+            with open(path, "w", encoding="utf-8") as fh:
+                json.dump(cache, fh, ensure_ascii=False, indent=2)
+                fh.write("\n")
+            print(f"  {code}: unified {fixed} duplicate translation(s)")
+            total += fixed
+    if total == 0:
+        print(f"  {len(groups)} duplicated English string(s), all already consistent")
 
 
 def report():
@@ -198,6 +271,13 @@ def report():
 
 if __name__ == "__main__":
     args = sys.argv[1:]
+    if "--i18n" in args:
+        I18N = os.path.abspath(args[args.index("--i18n") + 1])
+        SRC = os.path.join(I18N, "en.json")
+        if not os.path.exists(SRC):
+            sys.exit(f"no en.json in {I18N} — run that site's extractor first")
+        print(f"catalogue: {I18N}")
     only = args[args.index("--lang") + 1] if "--lang" in args else None
     run(only=only, force="--force" in args)
+    unify()
     report()

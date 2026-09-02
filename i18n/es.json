@@ -460,11 +460,11 @@
     "h": "cfcd1f3d6aeb"
   },
   "ui.chip.food": {
-    "t": "Comida y combustible",
+    "t": "Alimentos &amp; Combustible",
     "h": "7bb932ef1f2a"
   },
   "ui.chip.infant": {
-    "t": "Bebés e infantes",
+    "t": "Infantes &amp; Bebés",
     "h": "3596a63024f0"
   },
   "ui.chip.winter": {
@@ -538,5 +538,13 @@
   "ui.selectNote": {
     "t": "Seleccionar: {who}, {what}, ${amount}",
     "h": "e6d200645a58"
+  },
+  "ui.turnOver": {
+    "t": "Voltear",
+    "h": "b6bfcfb7bb52"
+  },
+  "ui.expiredKept": {
+    "t": "Caducado &mdash; aún en tu selección",
+    "h": "3a23053a594a"
   }
 }

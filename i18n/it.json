@@ -460,11 +460,11 @@
     "h": "cfcd1f3d6aeb"
   },
   "ui.chip.food": {
-    "t": "Cibo e carburante",
+    "t": "Cibo &amp; Carburante",
     "h": "7bb932ef1f2a"
   },
   "ui.chip.infant": {
-    "t": "Neonati e bambini",
+    "t": "Neonati &amp; Bambini",
     "h": "3596a63024f0"
   },
   "ui.chip.winter": {
@@ -538,5 +538,13 @@
   "ui.selectNote": {
     "t": "Seleziona: {who}, {what}, ${amount}",
     "h": "e6d200645a58"
+  },
+  "ui.turnOver": {
+    "t": "Gira",
+    "h": "b6bfcfb7bb52"
+  },
+  "ui.expiredKept": {
+    "t": "Scaduto — ancora nella tua selezione",
+    "h": "3a23053a594a"
   }
 }

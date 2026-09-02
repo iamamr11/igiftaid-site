@@ -448,7 +448,7 @@
     "h": "1df7235646ac"
   },
   "ui.chip.medical": {
-    "t": "Medizin",
+    "t": "Medizinisch",
     "h": "fec80bef0d8a"
   },
   "ui.chip.education": {
@@ -460,11 +460,11 @@
     "h": "cfcd1f3d6aeb"
   },
   "ui.chip.food": {
-    "t": "Lebensmittel & Brennstoff",
+    "t": "Lebensmittel &amp; Brennstoff",
     "h": "7bb932ef1f2a"
   },
   "ui.chip.infant": {
-    "t": "Kleinkind & Baby",
+    "t": "Säugling &amp; Baby",
     "h": "3596a63024f0"
   },
   "ui.chip.winter": {
@@ -538,5 +538,13 @@
   "ui.selectNote": {
     "t": "Auswählen: {who}, {what}, ${amount}",
     "h": "e6d200645a58"
+  },
+  "ui.turnOver": {
+    "t": "Umdrehen",
+    "h": "b6bfcfb7bb52"
+  },
+  "ui.expiredKept": {
+    "t": "Abgelaufen — noch in Ihrer Auswahl",
+    "h": "3a23053a594a"
   }
 }

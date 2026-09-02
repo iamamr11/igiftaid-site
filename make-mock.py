@@ -98,8 +98,31 @@ CAMPAIGNS = [
 
 
 def build_needs():
+    """Emits one entry per need.
+
+    The `image` key is OPTIONAL and appears only where a photo actually exists. Its
+    absence is meaningful: the client falls through to a generated illustration, so a
+    need with no photograph is a normal state rather than a missing asset.
+
+    Add one by giving a NEEDS row a 5th element:
+
+        ("Aisha", "Baby formula ...", 45, "infant",
+         {"kind": "need", "src": "/img/needs/need-1000.jpg",
+          "alt": "Two tins of infant formula and a pack of nappies"})
+
+    `kind` is "need" or "family". Prefer "need" — a photograph of the thing being
+    funded carries the tangibility that drives giving, without publishing an
+    identifiable person from an active conflict zone. Use "family" only where the
+    family has offered it and is comfortable with it.
+
+    `alt` is CONTENT, like `need` itself, and is not routed through the i18n
+    catalogue — translating descriptions of photographs nobody has taken yet would
+    cost 12 languages per image for no reader benefit.
+    """
     out = []
-    for i, (family, need, amount, chip) in enumerate(NEEDS):
+    for i, row in enumerate(NEEDS):
+        family, need, amount, chip = row[:4]
+        image = row[4] if len(row) > 4 else None
         # Spread across the last 22 hours so the board always has a mix of fresh notes
         # and ones close to expiry — that spread is what the "expiring soonest" default
         # sort exists to surface.
@@ -116,6 +139,8 @@ def build_needs():
             # One per household per 24 hours, so expiry is always posted + 24h.
             "expires": iso(posted + timedelta(hours=24)),
         })
+        if image:
+            out[-1]["image"] = image
     return out
 
 

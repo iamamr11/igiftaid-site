@@ -460,11 +460,11 @@
     "h": "cfcd1f3d6aeb"
   },
   "ui.chip.food": {
-    "t": "غذاء ووقود",
+    "t": "طعام &amp; وقود",
     "h": "7bb932ef1f2a"
   },
   "ui.chip.infant": {
-    "t": "رضّع وأطفال",
+    "t": "رضّع &amp; أطفال",
     "h": "3596a63024f0"
   },
   "ui.chip.winter": {
@@ -472,7 +472,7 @@
     "h": "1b17869e03ec"
   },
   "ui.chip.emergency": {
-    "t": "طارئ",
+    "t": "طوارئ",
     "h": "4538f2dc67b5"
   },
   "ui.expired": {
@@ -538,5 +538,13 @@
   "ui.selectNote": {
     "t": "تحديد: {who}، {what}، ${amount}",
     "h": "e6d200645a58"
+  },
+  "ui.turnOver": {
+    "t": "اقلب",
+    "h": "b6bfcfb7bb52"
+  },
+  "ui.expiredKept": {
+    "t": "منتهية الصلاحية — لا تزال في تحديدك",
+    "h": "3a23053a594a"
   }
 }

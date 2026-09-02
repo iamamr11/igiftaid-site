@@ -31,6 +31,8 @@ UI = {
     "ui.raised": "${n} raised", "ui.ofGoal": "of ${n}",
     "ui.support": "Support this family", "ui.verified": "Identity verified",
     "ui.selectNote": "Select: {who}, {what}, ${amount}",
+    "ui.turnOver": "Turn over",
+    "ui.expiredKept": "Expired \u2014 still in your selection",
 }
 
 
