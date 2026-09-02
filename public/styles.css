@@ -505,13 +505,21 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
 
    Scoped to .wall-page so the shared .callout / .board / .cta-row rules do not
    move on campaigns, trust or how-it-works. */
-/* ⚠ ONE reading rail, in px, for all three prose blocks.
-   `ch` is the width of the digit "0", not of an average character, so in a
-   proportional face it badly overestimates: the dek's `62ch` rendered as 763px and
-   70 real characters per line, and the outro's `66ch` as 767px and 83 — over the
-   75 limit and, after the callout was capped, the widest text on the page. Measured
-   characters, not ch units, is the only way to know. */
-.wall-page { --read: 640px; }
+/* ⚠ ONE reading rail, in px, for all three prose blocks — and it is the SITE's
+   rail, not a new one. Every other platform page sets its lede to `62ch`, which at
+   18px resolves to 763px, so that is the width the top of a page is expected to be
+   here. An earlier pass capped this page to 640px on readability grounds alone and
+   made it visibly narrower than campaigns, trust and how-it-works.
+
+   In px rather than ch because `ch` is the width of the digit "0", not of an average
+   character: the same `62ch` gives 763px on the 18px lede and a different width on
+   17px body copy, which is how the page ended up with three different measures in
+   the first place. One number, applied to all three blocks.
+
+   The callout was the real defect — 1032px and ~115 characters per line. At 763 it
+   is ~83, which is the same as the body prose on every other page on this site.
+   Bringing the whole site under 75 is a separate, site-wide job. */
+.wall-page { --read: 763px; }
 .wall-page .page-head { padding: 56px 0 0; }
 .wall-page .page-head .dek { max-width: var(--read); }
 .wall-page .callout   { margin: 32px 0 0; }
