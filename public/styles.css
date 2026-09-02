@@ -694,11 +694,24 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
 
 /* Hiding pixels is not hiding content: backface-visibility leaves the away face in
    the accessibility tree and, in some engines, still hit-testable. `visibility`
-   removes it from both. Delayed to the halfway point so it does not pop mid-turn. */
-.note-back  { visibility: hidden;  transition: visibility 0s linear .26s; }
-.note-front { visibility: visible; transition: visibility 0s linear .26s; }
-.note-flip[data-face="image"] .note-back,  .note-flip[data-peek] .note-back  { visibility: visible; }
-.note-flip[data-face="image"] .note-front, .note-flip[data-peek] .note-front { visibility: hidden; }
+   removes it from both.
+
+   ⚠ THE DELAY IS DIRECTIONAL, and it has to be. Swapping both at the flip's halfway
+   point looked right and produced a ~190ms window where the note was BLANK: the
+   easing is cubic-bezier(.2,.8,.25,1), which is front-loaded, so the rotation passes
+   90deg at 71ms — not at 260ms. Past 90deg backface-visibility stops painting the
+   back, while `visibility` still said the front was hidden. Three notes rendered as
+   empty rectangles during the entrance on the live site.
+
+   So: the INCOMING face appears immediately (0s) and the OUTGOING one stays until
+   the flip finishes (.52s). backface-visibility decides what is painted in between,
+   which makes this correct for any easing rather than for one hand-tuned curve. */
+.note-back  { visibility: hidden;  transition: visibility 0s linear .52s; }
+.note-front { visibility: visible; transition: visibility 0s linear 0s; }
+.note-flip[data-face="image"] .note-back,  .note-flip[data-peek] .note-back  {
+  visibility: visible; transition-delay: 0s; }
+.note-flip[data-face="image"] .note-front, .note-flip[data-peek] .note-front {
+  visibility: hidden; transition-delay: .52s; }
 .note-medical   { background: #FFD9DE; --illu-ink: #A3132A; --illu-soft: rgba(163,19,42,.15); }
 .note-education { background: #CFE4FF; --illu-ink: #1B4C88; --illu-soft: rgba(27,76,136,.15); }
 .note-shelter   { background: #DCD4FB; --illu-ink: #4327A0; --illu-soft: rgba(67,39,160,.15); }
@@ -832,13 +845,10 @@ label:focus-within { outline: 3px solid var(--plum); outline-offset: 2px; border
 .wall.is-entering .note { animation: noteIn .34s ease-out backwards;
   animation-delay: calc(var(--i, 0) * 55ms); }
 .wall.is-entering .note-flip { transition-delay: calc(var(--i, 0) * 55ms + 620ms); }
-/* ⚠ The visibility swap has to be delayed with the flip, not independently of it.
-   Without this the back face hid at its own 260ms while the flipper was still waiting
-   out its 620ms stagger — so every note that had not started turning yet rendered as
-   a blank rectangle. The face swap belongs at the HALFWAY point of the turn, which is
-   the flip's own delay plus half its .52s duration. */
-.wall.is-entering .note-back,
-.wall.is-entering .note-front { transition-delay: calc(var(--i, 0) * 55ms + 620ms + .26s); }
+/* During the entrance the flip is staggered, so the outgoing back face must stay
+   until ITS flip has finished — otherwise it hides while the flipper is still
+   waiting out the stagger and the note is blank until its turn comes. */
+.wall.is-entering .note-back { transition-delay: calc(var(--i, 0) * 55ms + 620ms + .52s); }
 .note .clock.flash { animation: tickflash .85s ease; display: inline-block; }
 
 .empty { text-align: center; padding: 46px 20px; color: var(--muted); font-size: 16px; }
