@@ -1,0 +1,194 @@
+{
+  "generated": "2026-09-02T01:23:31Z",
+  "chips": [
+    "medical",
+    "education",
+    "shelter",
+    "food",
+    "infant",
+    "winter",
+    "emergency"
+  ],
+  "items": [
+    {
+      "id": "need-1000",
+      "family": "Aisha",
+      "need": "Baby formula and nappies for one month",
+      "amount": 45,
+      "currency": "USD",
+      "chip": "infant",
+      "posted": "2026-09-01T04:35:31Z",
+      "expires": "2026-09-02T04:35:31Z"
+    },
+    {
+      "id": "need-1001",
+      "family": "Mahmoud",
+      "need": "Insulin and test strips, four weeks",
+      "amount": 60,
+      "currency": "USD",
+      "chip": "medical",
+      "posted": "2026-09-01T10:29:31Z",
+      "expires": "2026-09-02T10:29:31Z"
+    },
+    {
+      "id": "need-1002",
+      "family": "Rana",
+      "need": "School bags and books for three children",
+      "amount": 38,
+      "currency": "USD",
+      "chip": "education",
+      "posted": "2026-09-01T19:41:31Z",
+      "expires": "2026-09-02T19:41:31Z"
+    },
+    {
+      "id": "need-1003",
+      "family": "Yousef",
+      "need": "Tarpaulin and rope to close the roof before the rain",
+      "amount": 55,
+      "currency": "USD",
+      "chip": "shelter",
+      "posted": "2026-09-01T19:53:31Z",
+      "expires": "2026-09-02T19:53:31Z"
+    },
+    {
+      "id": "need-1004",
+      "family": "Layla",
+      "need": "Flour, oil and lentils for a family of seven",
+      "amount": 50,
+      "currency": "USD",
+      "chip": "food",
+      "posted": "2026-09-01T12:41:31Z",
+      "expires": "2026-09-02T12:41:31Z"
+    },
+    {
+      "id": "need-1005",
+      "family": "Ibrahim",
+      "need": "Blankets and two winter coats for the children",
+      "amount": 64,
+      "currency": "USD",
+      "chip": "winter",
+      "posted": "2026-09-01T19:05:31Z",
+      "expires": "2026-09-02T19:05:31Z"
+    },
+    {
+      "id": "need-1006",
+      "family": "Nour",
+      "need": "Antibiotics for a chest infection, and the clinic fare",
+      "amount": 32,
+      "currency": "USD",
+      "chip": "medical",
+      "posted": "2026-09-01T20:59:31Z",
+      "expires": "2026-09-02T20:59:31Z"
+    },
+    {
+      "id": "need-1007",
+      "family": "Samir",
+      "need": "Cooking gas cylinder refill",
+      "amount": 28,
+      "currency": "USD",
+      "chip": "food",
+      "posted": "2026-09-01T17:53:31Z",
+      "expires": "2026-09-02T17:53:31Z"
+    },
+    {
+      "id": "need-1008",
+      "family": "Hiba",
+      "need": "Replacement glasses so Adam can see the board at school",
+      "amount": 42,
+      "currency": "USD",
+      "chip": "education",
+      "posted": "2026-09-01T09:11:31Z",
+      "expires": "2026-09-02T09:11:31Z"
+    },
+    {
+      "id": "need-1009",
+      "family": "Khalil",
+      "need": "One month of rent arrears to avoid eviction",
+      "amount": 100,
+      "currency": "USD",
+      "chip": "shelter",
+      "posted": "2026-09-01T03:29:31Z",
+      "expires": "2026-09-02T03:29:31Z"
+    },
+    {
+      "id": "need-1010",
+      "family": "Maryam",
+      "need": "Infant paracetamol and a thermometer",
+      "amount": 18,
+      "currency": "USD",
+      "chip": "infant",
+      "posted": "2026-09-01T17:47:31Z",
+      "expires": "2026-09-02T17:47:31Z"
+    },
+    {
+      "id": "need-1011",
+      "family": "Tariq",
+      "need": "Emergency stipend after the family's income stopped",
+      "amount": 85,
+      "currency": "USD",
+      "chip": "emergency",
+      "posted": "2026-09-01T11:53:31Z",
+      "expires": "2026-09-02T11:53:31Z"
+    },
+    {
+      "id": "need-1012",
+      "family": "Dalia",
+      "need": "Warm sleeping mats for two elderly parents",
+      "amount": 58,
+      "currency": "USD",
+      "chip": "winter",
+      "posted": "2026-09-01T07:17:31Z",
+      "expires": "2026-09-02T07:17:31Z"
+    },
+    {
+      "id": "need-1013",
+      "family": "Omar",
+      "need": "Wound dressings and antiseptic for a healing burn",
+      "amount": 36,
+      "currency": "USD",
+      "chip": "medical",
+      "posted": "2026-09-01T15:17:31Z",
+      "expires": "2026-09-02T15:17:31Z"
+    },
+    {
+      "id": "need-1014",
+      "family": "Fatima",
+      "need": "Drinking water for two weeks",
+      "amount": 40,
+      "currency": "USD",
+      "chip": "food",
+      "posted": "2026-09-01T19:23:31Z",
+      "expires": "2026-09-02T19:23:31Z"
+    },
+    {
+      "id": "need-1015",
+      "family": "Zain",
+      "need": "Exam fees so Lina can sit her final year",
+      "amount": 75,
+      "currency": "USD",
+      "chip": "education",
+      "posted": "2026-09-01T20:05:31Z",
+      "expires": "2026-09-02T20:05:31Z"
+    },
+    {
+      "id": "need-1016",
+      "family": "Huda",
+      "need": "Plastic sheeting to divide one room for privacy",
+      "amount": 30,
+      "currency": "USD",
+      "chip": "shelter",
+      "posted": "2026-09-01T23:11:31Z",
+      "expires": "2026-09-02T23:11:31Z"
+    },
+    {
+      "id": "need-1017",
+      "family": "Bilal",
+      "need": "Emergency stipend while waiting on a delayed transfer",
+      "amount": 90,
+      "currency": "USD",
+      "chip": "emergency",
+      "posted": "2026-09-01T20:47:31Z",
+      "expires": "2026-09-02T20:47:31Z"
+    }
+  ]
+}

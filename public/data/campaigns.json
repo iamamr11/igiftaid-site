@@ -1,0 +1,109 @@
+{
+  "generated": "2026-09-02T01:23:31Z",
+  "chips": [
+    "medical",
+    "education",
+    "shelter",
+    "food",
+    "infant",
+    "winter",
+    "emergency"
+  ],
+  "items": [
+    {
+      "id": "camp-200",
+      "slug": "rebuilding-after-the-strike-on-nuseirat",
+      "family": "The Haddad family",
+      "title": "Rebuilding after the strike on Nuseirat",
+      "summary": "Eight people sharing two rooms since their building came down. They need materials to make it weatherproof before winter, and food while the father looks for work.",
+      "chips": [
+        "shelter",
+        "food"
+      ],
+      "goalUsd": 4200,
+      "raisedUsd": 1180,
+      "url": "https://chuffed.org/",
+      "verification": "identity",
+      "opened": "2026-08-08T01:23:31Z"
+    },
+    {
+      "id": "camp-201",
+      "slug": "cancer-treatment-and-the-journey-to-reach-it",
+      "family": "Amal and her four children",
+      "title": "Cancer treatment and the journey to reach it",
+      "summary": "Amal's treatment is available, but the travel and the permits cost more than the treatment does. This covers both, and the months she cannot work.",
+      "chips": [
+        "medical"
+      ],
+      "goalUsd": 6500,
+      "raisedUsd": 3900,
+      "url": "https://chuffed.org/",
+      "verification": "identity",
+      "opened": "2026-08-17T01:23:31Z"
+    },
+    {
+      "id": "camp-202",
+      "slug": "keeping-three-children-in-school",
+      "family": "The Zaqout family",
+      "title": "Keeping three children in school",
+      "summary": "All three were in school before. Fees, books and transport are what stand between them and going back.",
+      "chips": [
+        "education",
+        "food"
+      ],
+      "goalUsd": 2800,
+      "raisedUsd": 640,
+      "url": "https://chuffed.org/",
+      "verification": "identity",
+      "opened": "2026-08-25T01:23:31Z"
+    },
+    {
+      "id": "camp-203",
+      "slug": "a-winter-that-has-already-started",
+      "family": "Nadia's household",
+      "title": "A winter that has already started",
+      "summary": "Six people, one of them ninety-one. Heating, bedding and closing the gaps in the walls before the temperature drops further.",
+      "chips": [
+        "winter",
+        "shelter"
+      ],
+      "goalUsd": 3100,
+      "raisedUsd": 2750,
+      "url": "https://chuffed.org/",
+      "verification": "identity",
+      "opened": "2026-08-18T01:23:31Z"
+    },
+    {
+      "id": "camp-204",
+      "slug": "insulin-and-a-fridge-to-keep-it-in",
+      "family": "The Barghouti family",
+      "title": "Insulin, and a fridge to keep it in",
+      "summary": "Two diabetic adults in a house with intermittent power. The cost is the medicine, and a way to store it safely.",
+      "chips": [
+        "medical",
+        "emergency"
+      ],
+      "goalUsd": 1900,
+      "raisedUsd": 210,
+      "url": "https://chuffed.org/",
+      "verification": "identity",
+      "opened": "2026-08-05T01:23:31Z"
+    },
+    {
+      "id": "camp-205",
+      "slug": "rent-arrears-and-a-way-back-to-steady-ground",
+      "family": "Reem and her mother",
+      "title": "Rent arrears and a way back to steady ground",
+      "summary": "Reem was the only earner until the workshop closed. They are four months behind and have been given notice.",
+      "chips": [
+        "shelter",
+        "emergency"
+      ],
+      "goalUsd": 2400,
+      "raisedUsd": 1990,
+      "url": "https://chuffed.org/",
+      "verification": "identity",
+      "opened": "2026-07-26T01:23:31Z"
+    }
+  ]
+}
