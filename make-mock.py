@@ -52,7 +52,9 @@ NEEDS = [
     ("Aisha",  "Baby formula and nappies for one month",                 45, "infant"),
     ("Mahmoud","Insulin and test strips, four weeks",                    60, "medical"),
     ("Rana",   "School bags and books for three children",               38, "education"),
-    ("Yousef", "Tarpaulin and rope to close the roof before the rain",   55, "shelter"),
+    ("Yousef", "Tarpaulin and rope to close the roof before the rain",   55, "shelter",
+     {"kind": "need", "src": "/images/needs/tarpaulin.jpg",
+      "alt": "Plastic sheeting stretched over a frame as a makeshift roof"}),
     ("Layla",  "Flour, oil and lentils for a family of seven",           50, "food"),
     ("Ibrahim","Blankets and two winter coats for the children",         64, "winter"),
     ("Nour",   "Antibiotics for a chest infection, and the clinic fare", 32, "medical"),
@@ -65,15 +67,25 @@ NEEDS = [
     ("Omar",   "Wound dressings and antiseptic for a healing burn",      36, "medical"),
     ("Fatima", "Drinking water for two weeks",                           40, "food"),
     ("Zain",   "Exam fees so Lina can sit her final year",               75, "education"),
-    ("Huda",   "Plastic sheeting to divide one room for privacy",        30, "shelter"),
+    ("Huda",   "Plastic sheeting to divide one room for privacy",        30, "shelter",
+     {"kind": "need", "src": "/images/needs/sheeting.jpg",
+      "alt": "Sheeting and blankets hung to partition a shelter"}),
     ("Bilal",  "Emergency stipend while waiting on a delayed transfer",  90, "emergency"),
     ("Sana",   "A fortnight of baby milk while her mother recovers",      52, "infant"),
     ("Adel",   "Two thermal blankets and a paraffin heater refill",       47, "winter"),
     ("Wafa",   "Bus fare to the hospital for six dialysis appointments",  34, "medical"),
     ("Jamil",  "Notebooks and pens for a class of thirty",                26, "education"),
     ("Rania",  "Rice, sugar and tinned fish to last the month",           44, "food"),
-    ("Basel",  "Timber to prop a wall that shifted in the last strike",   68, "shelter"),
+    ("Basel",  "Timber to prop a wall that shifted in the last strike",   68, "shelter",
+     {"kind": "need", "src": "/images/needs/rubble.jpg",
+      "alt": "Broken concrete and twisted reinforcing bar where a wall came down"}),
     ("Noor",   "Emergency fund after a lost identity card froze her aid", 72, "emergency"),
+    ("Nadia",  "A replacement tent before the rains begin",               80, "shelter",
+     {"kind": "need", "src": "/images/needs/tent.jpg",
+      "alt": "A canvas tent pitched on bare ground"}),
+    ("Fadi",   "Emergency stipend after the family was displaced again",  66, "emergency",
+     {"kind": "need", "src": "/images/needs/camp.jpg",
+      "alt": "A row of shelters along a dirt track in a displacement camp"}),
 ]
 
 CAMPAIGNS = [
@@ -125,6 +137,29 @@ def build_needs():
     `alt` is CONTENT, like `need` itself, and is not routed through the i18n
     catalogue — translating descriptions of photographs nobody has taken yet would
     cost 12 languages per image for no reader benefit.
+
+    ⚠ SOURCING PHOTOGRAPHS — read before adding any.
+    The five here came from ~/Documents/Chuffed.org, which is campaign VERIFICATION
+    material for 344 named people, not a photo library. A ~70-image sample of it
+    held an identity record with a legal name and date of birth, a live TRON wallet
+    address, a chest X-ray, medical reports, a payment record with a transaction ID,
+    signed and stamped letters, and photographs of identifiable and injured children.
+
+    Nothing from it is safe to use without looking at it AT FULL SIZE. Three separate
+    rounds of inspection each disqualified images that had looked fine one zoom level
+    out:
+      - a 25kg flour sack, perfect for a food need, turned out to be soaked in blood
+      - a tent interior had people sitting in it
+      - a "blankets" photo was a Bybit/Binance promo card with a scannable QR code
+      - a tent carried "13/05/2024 07:14  REDMI NOTE 11" burned into the PIXELS,
+        which stripping EXIF does nothing about
+      - a camp shot had a person standing between the shelters
+
+    So: full-size review, strip metadata by rewriting the JPEG segments (sips
+    re-encodes and writes its OWN EXIF back in), and crop out anything burned in.
+    And none of this carries a consent record for publication on igiftaid.org — it
+    was given for Chuffed. Real photographs should arrive from the family, for this
+    purpose, with consent recorded.
     """
     out = []
     for i, row in enumerate(NEEDS):

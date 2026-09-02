@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T20:16:05Z",
+  "generated": "2026-09-02T23:41:20Z",
   "chips": [
     "medical",
     "education",
@@ -24,7 +24,7 @@
       "raisedUsd": 1180,
       "url": "https://chuffed.org/",
       "verification": "identity",
-      "opened": "2026-07-29T20:16:05Z"
+      "opened": "2026-07-25T23:41:20Z"
     },
     {
       "id": "camp-201",
@@ -39,7 +39,7 @@
       "raisedUsd": 3900,
       "url": "https://chuffed.org/",
       "verification": "identity",
-      "opened": "2026-07-25T20:16:05Z"
+      "opened": "2026-08-24T23:41:20Z"
     },
     {
       "id": "camp-202",
@@ -55,7 +55,7 @@
       "raisedUsd": 640,
       "url": "https://chuffed.org/",
       "verification": "identity",
-      "opened": "2026-08-24T20:16:05Z"
+      "opened": "2026-08-21T23:41:20Z"
     },
     {
       "id": "camp-203",
@@ -71,7 +71,7 @@
       "raisedUsd": 2750,
       "url": "https://chuffed.org/",
       "verification": "identity",
-      "opened": "2026-08-21T20:16:05Z"
+      "opened": "2026-07-24T23:41:20Z"
     },
     {
       "id": "camp-204",
@@ -87,7 +87,7 @@
       "raisedUsd": 210,
       "url": "https://chuffed.org/",
       "verification": "identity",
-      "opened": "2026-07-24T20:16:05Z"
+      "opened": "2026-07-29T23:41:20Z"
     },
     {
       "id": "camp-205",
@@ -103,7 +103,7 @@
       "raisedUsd": 1990,
       "url": "https://chuffed.org/",
       "verification": "identity",
-      "opened": "2026-07-29T20:16:05Z"
+      "opened": "2026-08-01T23:41:20Z"
     }
   ]
 }

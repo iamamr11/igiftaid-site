@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T20:16:05Z",
+  "generated": "2026-09-02T23:41:20Z",
   "chips": [
     "medical",
     "education",
@@ -17,8 +17,8 @@
       "amount": 45,
       "currency": "USD",
       "chip": "infant",
-      "posted": "2026-09-01T23:28:05Z",
-      "expires": "2026-09-02T23:28:05Z"
+      "posted": "2026-09-02T02:53:20Z",
+      "expires": "2026-09-03T02:53:20Z"
     },
     {
       "id": "need-1001",
@@ -27,8 +27,8 @@
       "amount": 60,
       "currency": "USD",
       "chip": "medical",
-      "posted": "2026-09-02T05:22:05Z",
-      "expires": "2026-09-03T05:22:05Z"
+      "posted": "2026-09-02T08:47:20Z",
+      "expires": "2026-09-03T08:47:20Z"
     },
     {
       "id": "need-1002",
@@ -37,8 +37,8 @@
       "amount": 38,
       "currency": "USD",
       "chip": "education",
-      "posted": "2026-09-02T14:34:05Z",
-      "expires": "2026-09-03T14:34:05Z"
+      "posted": "2026-09-02T17:59:20Z",
+      "expires": "2026-09-03T17:59:20Z"
     },
     {
       "id": "need-1003",
@@ -47,8 +47,13 @@
       "amount": 55,
       "currency": "USD",
       "chip": "shelter",
-      "posted": "2026-09-02T14:46:05Z",
-      "expires": "2026-09-03T14:46:05Z"
+      "posted": "2026-09-02T18:11:20Z",
+      "expires": "2026-09-03T18:11:20Z",
+      "image": {
+        "kind": "need",
+        "src": "/images/needs/tarpaulin.jpg",
+        "alt": "Plastic sheeting stretched over a frame as a makeshift roof"
+      }
     },
     {
       "id": "need-1004",
@@ -57,8 +62,8 @@
       "amount": 50,
       "currency": "USD",
       "chip": "food",
-      "posted": "2026-09-02T07:34:05Z",
-      "expires": "2026-09-03T07:34:05Z"
+      "posted": "2026-09-02T10:59:20Z",
+      "expires": "2026-09-03T10:59:20Z"
     },
     {
       "id": "need-1005",
@@ -67,8 +72,8 @@
       "amount": 64,
       "currency": "USD",
       "chip": "winter",
-      "posted": "2026-09-02T13:58:05Z",
-      "expires": "2026-09-03T13:58:05Z"
+      "posted": "2026-09-02T17:23:20Z",
+      "expires": "2026-09-03T17:23:20Z"
     },
     {
       "id": "need-1006",
@@ -77,8 +82,8 @@
       "amount": 32,
       "currency": "USD",
       "chip": "medical",
-      "posted": "2026-09-02T15:52:05Z",
-      "expires": "2026-09-03T15:52:05Z"
+      "posted": "2026-09-02T19:17:20Z",
+      "expires": "2026-09-03T19:17:20Z"
     },
     {
       "id": "need-1007",
@@ -87,8 +92,8 @@
       "amount": 28,
       "currency": "USD",
       "chip": "food",
-      "posted": "2026-09-02T12:46:05Z",
-      "expires": "2026-09-03T12:46:05Z"
+      "posted": "2026-09-02T16:11:20Z",
+      "expires": "2026-09-03T16:11:20Z"
     },
     {
       "id": "need-1008",
@@ -97,8 +102,8 @@
       "amount": 42,
       "currency": "USD",
       "chip": "education",
-      "posted": "2026-09-02T04:04:05Z",
-      "expires": "2026-09-03T04:04:05Z"
+      "posted": "2026-09-02T07:29:20Z",
+      "expires": "2026-09-03T07:29:20Z"
     },
     {
       "id": "need-1009",
@@ -107,8 +112,8 @@
       "amount": 100,
       "currency": "USD",
       "chip": "shelter",
-      "posted": "2026-09-01T22:22:05Z",
-      "expires": "2026-09-02T22:22:05Z"
+      "posted": "2026-09-02T01:47:20Z",
+      "expires": "2026-09-03T01:47:20Z"
     },
     {
       "id": "need-1010",
@@ -117,8 +122,8 @@
       "amount": 18,
       "currency": "USD",
       "chip": "infant",
-      "posted": "2026-09-02T12:40:05Z",
-      "expires": "2026-09-03T12:40:05Z"
+      "posted": "2026-09-02T16:05:20Z",
+      "expires": "2026-09-03T16:05:20Z"
     },
     {
       "id": "need-1011",
@@ -127,8 +132,8 @@
       "amount": 85,
       "currency": "USD",
       "chip": "emergency",
-      "posted": "2026-09-02T06:46:05Z",
-      "expires": "2026-09-03T06:46:05Z"
+      "posted": "2026-09-02T10:11:20Z",
+      "expires": "2026-09-03T10:11:20Z"
     },
     {
       "id": "need-1012",
@@ -137,8 +142,8 @@
       "amount": 58,
       "currency": "USD",
       "chip": "winter",
-      "posted": "2026-09-02T02:10:05Z",
-      "expires": "2026-09-03T02:10:05Z"
+      "posted": "2026-09-02T05:35:20Z",
+      "expires": "2026-09-03T05:35:20Z"
     },
     {
       "id": "need-1013",
@@ -147,8 +152,8 @@
       "amount": 36,
       "currency": "USD",
       "chip": "medical",
-      "posted": "2026-09-02T10:10:05Z",
-      "expires": "2026-09-03T10:10:05Z"
+      "posted": "2026-09-02T13:35:20Z",
+      "expires": "2026-09-03T13:35:20Z"
     },
     {
       "id": "need-1014",
@@ -157,8 +162,8 @@
       "amount": 40,
       "currency": "USD",
       "chip": "food",
-      "posted": "2026-09-02T14:16:05Z",
-      "expires": "2026-09-03T14:16:05Z"
+      "posted": "2026-09-02T17:41:20Z",
+      "expires": "2026-09-03T17:41:20Z"
     },
     {
       "id": "need-1015",
@@ -167,8 +172,8 @@
       "amount": 75,
       "currency": "USD",
       "chip": "education",
-      "posted": "2026-09-02T14:58:05Z",
-      "expires": "2026-09-03T14:58:05Z"
+      "posted": "2026-09-02T18:23:20Z",
+      "expires": "2026-09-03T18:23:20Z"
     },
     {
       "id": "need-1016",
@@ -177,8 +182,13 @@
       "amount": 30,
       "currency": "USD",
       "chip": "shelter",
-      "posted": "2026-09-02T18:04:05Z",
-      "expires": "2026-09-03T18:04:05Z"
+      "posted": "2026-09-02T21:29:20Z",
+      "expires": "2026-09-03T21:29:20Z",
+      "image": {
+        "kind": "need",
+        "src": "/images/needs/sheeting.jpg",
+        "alt": "Sheeting and blankets hung to partition a shelter"
+      }
     },
     {
       "id": "need-1017",
@@ -187,8 +197,8 @@
       "amount": 90,
       "currency": "USD",
       "chip": "emergency",
-      "posted": "2026-09-02T15:40:05Z",
-      "expires": "2026-09-03T15:40:05Z"
+      "posted": "2026-09-02T19:05:20Z",
+      "expires": "2026-09-03T19:05:20Z"
     },
     {
       "id": "need-1018",
@@ -197,8 +207,8 @@
       "amount": 52,
       "currency": "USD",
       "chip": "infant",
-      "posted": "2026-09-02T12:28:05Z",
-      "expires": "2026-09-03T12:28:05Z"
+      "posted": "2026-09-02T15:53:20Z",
+      "expires": "2026-09-03T15:53:20Z"
     },
     {
       "id": "need-1019",
@@ -207,8 +217,8 @@
       "amount": 47,
       "currency": "USD",
       "chip": "winter",
-      "posted": "2026-09-02T00:58:05Z",
-      "expires": "2026-09-03T00:58:05Z"
+      "posted": "2026-09-02T04:23:20Z",
+      "expires": "2026-09-03T04:23:20Z"
     },
     {
       "id": "need-1020",
@@ -217,8 +227,8 @@
       "amount": 34,
       "currency": "USD",
       "chip": "medical",
-      "posted": "2026-09-02T05:40:05Z",
-      "expires": "2026-09-03T05:40:05Z"
+      "posted": "2026-09-02T09:05:20Z",
+      "expires": "2026-09-03T09:05:20Z"
     },
     {
       "id": "need-1021",
@@ -227,8 +237,8 @@
       "amount": 26,
       "currency": "USD",
       "chip": "education",
-      "posted": "2026-09-02T18:22:05Z",
-      "expires": "2026-09-03T18:22:05Z"
+      "posted": "2026-09-02T21:47:20Z",
+      "expires": "2026-09-03T21:47:20Z"
     },
     {
       "id": "need-1022",
@@ -237,8 +247,8 @@
       "amount": 44,
       "currency": "USD",
       "chip": "food",
-      "posted": "2026-09-02T16:04:05Z",
-      "expires": "2026-09-03T16:04:05Z"
+      "posted": "2026-09-02T19:29:20Z",
+      "expires": "2026-09-03T19:29:20Z"
     },
     {
       "id": "need-1023",
@@ -247,8 +257,13 @@
       "amount": 68,
       "currency": "USD",
       "chip": "shelter",
-      "posted": "2026-09-01T23:52:05Z",
-      "expires": "2026-09-02T23:52:05Z"
+      "posted": "2026-09-02T03:17:20Z",
+      "expires": "2026-09-03T03:17:20Z",
+      "image": {
+        "kind": "need",
+        "src": "/images/needs/rubble.jpg",
+        "alt": "Broken concrete and twisted reinforcing bar where a wall came down"
+      }
     },
     {
       "id": "need-1024",
@@ -257,8 +272,38 @@
       "amount": 72,
       "currency": "USD",
       "chip": "emergency",
-      "posted": "2026-09-02T12:16:05Z",
-      "expires": "2026-09-03T12:16:05Z"
+      "posted": "2026-09-02T15:41:20Z",
+      "expires": "2026-09-03T15:41:20Z"
+    },
+    {
+      "id": "need-1025",
+      "family": "Nadia",
+      "need": "A replacement tent before the rains begin",
+      "amount": 80,
+      "currency": "USD",
+      "chip": "shelter",
+      "posted": "2026-09-02T04:35:20Z",
+      "expires": "2026-09-03T04:35:20Z",
+      "image": {
+        "kind": "need",
+        "src": "/images/needs/tent.jpg",
+        "alt": "A canvas tent pitched on bare ground"
+      }
+    },
+    {
+      "id": "need-1026",
+      "family": "Fadi",
+      "need": "Emergency stipend after the family was displaced again",
+      "amount": 66,
+      "currency": "USD",
+      "chip": "emergency",
+      "posted": "2026-09-02T09:59:20Z",
+      "expires": "2026-09-03T09:59:20Z",
+      "image": {
+        "kind": "need",
+        "src": "/images/needs/camp.jpg",
+        "alt": "A row of shelters along a dirt track in a displacement camp"
+      }
     }
   ]
 }
