@@ -28,200 +28,96 @@
     "h": "e6a3ff056109"
   },
   "index.08": {
-    "t": "Una famiglia verificata che raccoglie fondi per un bisogno di grande entità &mdash; cure mediche, ricostruzione, un anno di scuola. Si svolge per settimane su una piattaforma di raccolta fondi regolamentata.",
-    "h": "8f4d77b67389"
+    "t": "Una famiglia verificata che raccoglie fondi per un'unica necessità importante &mdash; cure mediche, ricostruzione, un anno di scuola. Ogni campagna durerà alcune settimane su una piattaforma di raccolta fondi regolamentata.",
+    "h": "9afef119517f"
   },
   "index.09": {
-    "t": "<a href=\"/campaigns.html\">Sfoglia le campagne &rarr;</a>",
-    "h": "97648109eca0"
+    "t": "Apertura da ottobre.",
+    "h": "8632bb3f25ad"
   },
   "index.10": {
     "t": "<strong>Il Muro dei Bisogni Quotidiani</strong>",
     "h": "2751bdd524a6"
   },
   "index.11": {
-    "t": "Una cosa piccola e specifica di cui una famiglia ha bisogno questa settimana &mdash; di solito da $18 a $100. Pubblicata una volta al giorno, sparisce in 24 ore. Scegline più di una e sistemale insieme.",
-    "h": "b0b1aa227ee9"
+    "t": "Una cosa piccola e specifica di cui una famiglia ha bisogno questa settimana &mdash; di solito da $18 a $100. Pubblicata una volta al giorno, sparisce in 24 ore. Potrai sceglierne diverse e saldarle insieme.",
+    "h": "abdc88a65de9"
   },
   "index.12": {
-    "t": "<a href=\"/needs.html\">Vedi il muro di oggi &rarr;</a>",
-    "h": "81170cc0624f"
-  },
-  "index.13": {
-    "t": "Nessuno dei due è classificato per popolarità. Le campagne vengono mescolate a ogni visita e il muro mostra ciò che scade prima, quindi una famiglia che non ha raccolto nulla è visibile quanto una che ha quasi terminato. Questo è ciò che <a href=\"/how-it-works.html\">visibilità equa</a> significa qui.",
+    "t": "Nessuna delle due è classificata per popolarità. Le campagne vengono mescolate ad ogni visita e la bacheca mostra quelle in scadenza prima, così una famiglia che non ha ancora raccolto nulla è visibile quanto una che è quasi alla fine. Questo è il significato di <a href=\"/how-it-works.html\">visibilità equa</a> qui.",
     "h": "798cc15a0b0d"
   },
-  "index.14": {
+  "index.13": {
     "t": "Chi siamo",
     "h": "696ab4d5bfb5"
   },
-  "index.15": {
-    "t": "<strong>I Gift Aid</strong> è il nome con cui operiamo. <strong>HEART Humanitarian Foundation</strong> è l'ente di beneficenza che ne è alla base &mdash; una società nonprofit registrata in Pennsylvania e riconosciuta dall'Internal Revenue Service come ente pubblico di beneficenza esente da tasse 501(c)(3). Sono un'unica organizzazione, non due: HEART opera con il nome I Gift Aid.",
+  "index.14": {
+    "t": "<strong>I Gift Aid</strong> è il nome con cui operiamo. <strong>HEART Humanitarian Foundation</strong> è l'ente benefico che sta dietro &mdash; una società nonprofit registrata in Pennsylvania e riconosciuta dall'Internal Revenue Service come ente di pubblica utilità esente da imposte 501(c)(3). Sono un'unica organizzazione, non due: HEART opera con il nome commerciale I Gift Aid.",
     "h": "953e2c717bf6"
   },
-  "index.16": {
-    "t": "Ogni donazione viene effettuata a HEART Humanitarian Foundation. Puoi verificare il nostro status in modo indipendente presso l'IRS usando il nostro EIN, <strong>42&#8209;2670441</strong>, su <a href=\"https://www.irs.gov/charities-non-profits/tax-exempt-organization-search\" target=\"_blank\" rel=\"noopener\">irs.gov</a>.",
+  "index.15": {
+    "t": "Ogni donazione viene effettuata a HEART Humanitarian Foundation. Puoi verificare il nostro stato in modo indipendente con l'IRS utilizzando il nostro EIN, <strong>42&#8209;2670441</strong>, su <a href=\"https://www.irs.gov/charities-non-profits/tax-exempt-organization-search\" target=\"_blank\" rel=\"noopener\">irs.gov</a>.",
     "h": "c4f12ac715e8"
   },
-  "index.17": {
-    "t": "Leggi di più su <a href=\"https://hearthumanitarianfoundation.org\" target=\"_blank\" rel=\"noopener\">hearthumanitarianfoundation.org</a>.",
+  "index.16": {
+    "t": "Ulteriori informazioni su <a href=\"https://hearthumanitarianfoundation.org\" target=\"_blank\" rel=\"noopener\">hearthumanitarianfoundation.org</a>.",
     "h": "b4d0b6617472"
   },
-  "index.18": {
+  "index.17": {
     "t": "Dove si trovano le nostre campagne",
     "h": "167cbb0c67ae"
   },
-  "index.19": {
-    "t": "Le nostre campagne sono ospitate e gestite su piattaforme di raccolta fondi regolamentate; questi partner si occupano dell'elaborazione delle donazioni, della conformità normativa e del versamento dei fondi. Noi coordiniamo e selezioniamo le campagne; le piattaforme elencate di seguito forniscono l'infrastruttura regolamentata.",
+  "index.18": {
+    "t": "Le nostre campagne sono ospitate e gestite su piattaforme di raccolta fondi regolamentate; questi partner si occupano dell'elaborazione delle donazioni, della conformità e del versamento dei fondi. Noi coordiniamo e selezioniamo, le piattaforme qui sotto forniscono l'infrastruttura regolamentata.",
     "h": "a5619cfad9e3"
   },
-  "index.20": {
+  "index.19": {
     "t": "<a href=\"https://chuffed.org\" target=\"_blank\" rel=\"noopener\">Chuffed.org</a>",
     "h": "6b211c3c68af"
   },
-  "index.21": {
+  "index.20": {
     "t": "<a href=\"https://gofundme.com\" target=\"_blank\" rel=\"noopener\">GoFundMe</a>",
     "h": "0bf8275ded31"
   },
-  "index.22": {
+  "index.21": {
     "t": "I nostri valori",
     "h": "3f106511a8e4"
   },
-  "index.23": {
-    "t": "Generosità in Azione",
+  "index.22": {
+    "t": "La generosità in azione",
     "h": "aded2220011a"
   },
-  "index.24": {
-    "t": "Visibilità Equa",
+  "index.23": {
+    "t": "Esposizione Equa",
     "h": "35c3f8ec93f8"
   },
-  "index.25": {
+  "index.24": {
     "t": "Trasparenza per Principio",
     "h": "7c0b5faac923"
   },
-  "index.26": {
+  "index.25": {
     "t": "Inclusivo &amp; Accessibile",
     "h": "bf14c1556650"
   },
-  "index.27": {
+  "index.26": {
     "t": "Empowerment",
     "h": "0d8615fb4c4f"
   },
-  "index.28": {
+  "index.27": {
     "t": "Contattaci",
     "h": "115e410f01dc"
   },
-  "index.29": {
-    "t": "Stai richiedendo supporto o hai domande su una campagna? Scrivici su WhatsApp &mdash; il messaggio arriva direttamente al nostro team, in inglese o in arabo.",
+  "index.28": {
+    "t": "Vuoi richiedere supporto o hai domande su una campagna? Scrivici su WhatsApp &mdash; il messaggio arriva direttamente al nostro team, in inglese o in arabo.",
     "h": "82da79aa3aae"
   },
-  "index.30": {
+  "index.29": {
     "t": "<!-- /chat is a redirect handled in server.js, so the number is never printed here and can change without breaking this link. --> <a class=\"chat-btn\" href=\"/chat\" rel=\"noopener\"> <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\" focusable=\"false\"> <path fill=\"currentColor\" d=\"M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z\"/> <path fill=\"currentColor\" d=\"M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23a8.19 8.19 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23z\"/> </svg> <span>Scrivici su WhatsApp</span> </a>",
     "h": "2b5dd3d50a40"
   },
-  "index.31": {
+  "index.30": {
     "t": "Partner, beneficiari e donatori possono contattarci anche all'indirizzo <a href=\"mailto:hello@igiftaid.org\">hello@igiftaid.org</a>.",
     "h": "34daceffde88"
-  },
-  "campaigns.01": {
-    "t": "Famiglie che abbiamo verificato, che raccolgono fondi per qualcosa di specifico. Ogni campagna è ospitata su una piattaforma di raccolta fondi regolamentata che gestisce il pagamento; noi facciamo i controlli e il seguito.",
-    "h": "92e69cb47e40"
-  },
-  "campaigns.02": {
-    "t": "<strong>Questa pagina viene mescolata ad ogni visita.</strong> Garantiamo visibilità equa a ogni campagna: non esiste uno spazio in evidenza, nessuna classifica e niente che possa essere acquistato. Una campagna vicina al suo obiettivo non viene mostrata sopra una che non ha raccolto nulla &mdash; l'ordine che vedi è deliberatamente diverso dall'ordine che vede chiunque altro. Puoi ordinarlo tu stesso qui sotto, se preferisci.",
-    "h": "6658bd91f849"
-  },
-  "campaigns.03": {
-    "t": "Tutte",
-    "h": "a52ace420f21"
-  },
-  "campaigns.04": {
-    "t": "Medico",
-    "h": "fec80bef0d8a"
-  },
-  "campaigns.05": {
-    "t": "Istruzione",
-    "h": "512ab3c6b986"
-  },
-  "campaigns.06": {
-    "t": "Alloggio",
-    "h": "cfcd1f3d6aeb"
-  },
-  "campaigns.07": {
-    "t": "Cibo &amp; Carburante",
-    "h": "faf071cae733"
-  },
-  "campaigns.08": {
-    "t": "Neonati &amp; Bambini",
-    "h": "0d3ee6ab2067"
-  },
-  "campaigns.09": {
-    "t": "Inverno",
-    "h": "1b17869e03ec"
-  },
-  "campaigns.10": {
-    "t": "Emergenza",
-    "h": "4538f2dc67b5"
-  },
-  "campaigns.11": {
-    "t": "Ordine",
-    "h": "6be090825c99"
-  },
-  "campaigns.12": {
-    "t": "Casuale (predefinito)",
-    "h": "2caaad646ccd"
-  },
-  "campaigns.13": {
-    "t": "Aperto più di recente",
-    "h": "42f4be2677bc"
-  },
-  "campaigns.14": {
-    "t": "Aperto da più tempo",
-    "h": "62bc26ebef3b"
-  },
-  "campaigns.15": {
-    "t": "Nessuna campagna corrisponde a questi filtri al momento.",
-    "h": "2b134eb7e1d9"
-  },
-  "needs.01": {
-    "t": "Il Daily Needs Wall",
-    "h": "d8d2337e4784"
-  },
-  "needs.02": {
-    "t": "Un bisogno piccolo e specifico per famiglia, pubblicato una volta ogni 24 ore. Non una campagna, non un obiettivo &mdash; una singola cosa di cui qualcuno ha bisogno questa settimana, e quanto costa. Scegline quanti vuoi e risolvili insieme.",
-    "h": "8abaebb05a34"
-  },
-  "needs.03": {
-    "t": "<strong>Ogni richiesta scade dopo 24 ore.</strong> Una famiglia può pubblicare una richiesta al giorno, così nessuno può intasare la bacheca e nulla rimane qui a invecchiare. Se una richiesta viene finanziata viene rimossa immediatamente; se scade senza essere finanziata, la famiglia può pubblicarla di nuovo il giorno successivo.",
-    "h": "dfe105f0b379"
-  },
-  "needs.04": {
-    "t": "<strong>Non ordiniamo mai questa bacheca per popolarità.</strong> L'ordine predefinito è quello di scadenza più imminente &mdash; la più urgente, non la più fortunata. Non esistono posizioni in evidenza e nulla può essere acquistato.",
-    "h": "c23bea5b2e06"
-  },
-  "needs.05": {
-    "t": "In bacheca oggi",
-    "h": "884976d0f628"
-  },
-  "needs.06": {
-    "t": "Importo",
-    "h": "49e96d7cdf58"
-  },
-  "needs.07": {
-    "t": "Qualsiasi",
-    "h": "2b505597daa7"
-  },
-  "needs.08": {
-    "t": "Meno di $40",
-    "h": "7060faef59d9"
-  },
-  "needs.09": {
-    "t": "Da $40 a $70",
-    "h": "7887df757f3e"
-  },
-  "needs.10": {
-    "t": "$70 e oltre",
-    "h": "3dfcea5a6ce7"
   },
   "how-it-works.01": {
     "t": "Cosa succede tra il momento in cui fai una donazione e quello in cui una famiglia la riceve — comprese le parti che sono ancora imperfette.",
@@ -396,56 +292,12 @@
     "h": "c11b16233c18"
   },
   "nav.01": {
-    "t": "Campagne",
-    "h": "30e9a089397b"
-  },
-  "nav.02": {
-    "t": "Bisogni quotidiani",
-    "h": "0bb97f5767b6"
-  },
-  "nav.03": {
     "t": "Come funziona",
     "h": "9c870aa6e5e9"
   },
-  "nav.04": {
-    "t": "Fiducia",
+  "nav.02": {
+    "t": "Affidabilità",
     "h": "ade9248e0132"
-  },
-  "campaigns.16": {
-    "t": "Cerchi qualcosa di più piccolo?",
-    "h": "33213293d658"
-  },
-  "campaigns.17": {
-    "t": "Una campagna riguarda un bisogno grande e occasionale e dura settimane. Il <a href=\"/needs.html\">Daily Needs Wall</a> è l'opposto: una cosa sola di cui una famiglia ha bisogno questa settimana, di solito tra $18 e $100, pubblicata una volta al giorno e sparita in 24 ore.",
-    "h": "bde6fb2cfbd2"
-  },
-  "needs.11": {
-    "t": "Ordina",
-    "h": "bec69036aa27"
-  },
-  "needs.12": {
-    "t": "In scadenza prima",
-    "h": "d5ca328f0b1c"
-  },
-  "needs.13": {
-    "t": "Più recenti prima",
-    "h": "ffb6f5764bdd"
-  },
-  "needs.14": {
-    "t": "Importo più basso",
-    "h": "4404f9cd60c1"
-  },
-  "needs.15": {
-    "t": "Nessun risultato corrisponde a questi filtri al momento. Prova ad allargarli &mdash; il pannello cambia nel corso della giornata.",
-    "h": "d3990b7fa152"
-  },
-  "needs.16": {
-    "t": "Da dove provengono",
-    "h": "642dff85e29e"
-  },
-  "needs.17": {
-    "t": "Le famiglie già verificate attraverso il nostro processo di candidatura possono inviare una necessità mandandocela su WhatsApp. Poiché scrivono dal numero con cui le abbiamo verificate, sappiamo chi sta pubblicando, e il limite di un messaggio al giorno viene applicato al loro record anziché basarsi su un sistema di fiducia. Ogni nota viene controllata prima di apparire qui.",
-    "h": "78260951fcfe"
   },
   "ui.chip.medical": {
     "t": "Medico",
@@ -546,9 +398,5 @@
   "ui.expiredKept": {
     "t": "Scaduto — ancora nella tua selezione",
     "h": "3a23053a594a"
-  },
-  "needs.18": {
-    "t": "Le note sono scritte dalle famiglie e tradotte dove necessario. Le accorciamo per il pannello; non le abbellimo.",
-    "h": "1df7235646ac"
   }
 }

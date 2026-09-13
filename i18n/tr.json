@@ -28,200 +28,96 @@
     "h": "e6a3ff056109"
   },
   "index.08": {
-    "t": "Tek bir büyük ihtiyaç için &mdash; tedavi, yeniden yapılanma, bir yıllık okul masrafı &mdash; bağış toplayan doğrulanmış bir aile. Düzenlenmiş bir bağış toplama platformunda haftalarca devam eder.",
-    "h": "8f4d77b67389"
+    "t": "Doğrulanmış bir aile, tek büyük bir ihtiyaç için bağış topluyor &mdash; tedavi, yeniden yapılanma, bir yıllık okul masrafı. Her kampanya, düzenlenmiş bir bağış platformunda haftalarca devam edecek.",
+    "h": "9afef119517f"
   },
   "index.09": {
-    "t": "<a href=\"/campaigns.html\">Kampanyalara göz at &rarr;</a>",
-    "h": "97648109eca0"
+    "t": "Ekim'den itibaren açılıyor.",
+    "h": "8632bb3f25ad"
   },
   "index.10": {
     "t": "<strong>Günlük İhtiyaçlar Duvarı</strong>",
     "h": "2751bdd524a6"
   },
   "index.11": {
-    "t": "Bir ailenin bu hafta ihtiyaç duyduğu küçük, somut bir şey &mdash; genellikle $18 ile $100 arasında. Günde bir kez yayınlanır, 24 saat içinde kalkar. Birkaçını seçin ve hepsini birden karşılayın.",
-    "h": "b0b1aa227ee9"
+    "t": "Bir ailenin bu hafta ihtiyaç duyduğu küçük, somut bir şey &mdash; genellikle $18 ile $100 arasında. Günde bir kez yayınlanır, 24 saat içinde sona erer. Birkaçını seçip hepsini birden ödeyebileceksiniz.",
+    "h": "abdc88a65de9"
   },
   "index.12": {
-    "t": "<a href=\"/needs.html\">Bugünün duvarını gör &rarr;</a>",
-    "h": "81170cc0624f"
-  },
-  "index.13": {
-    "t": "Hiçbiri popülerliğe göre sıralanmaz. Kampanyalar her ziyarette rastgele karıştırılır; duvar ise en yakın süre dolacak olanı gösterir. Bu şekilde hiç bağış almamış bir aile, neredeyse hedefe ulaşmış bir aileyle aynı görünürlüğe sahip olur. <a href=\"/how-it-works.html\">Adil görünürlük</a> burada bunu ifade eder.",
+    "t": "Hiçbiri popülerliğe göre sıralanmaz. Kampanyalar her ziyarette karıştırılır ve duvar her zaman en yakın süresi dolacak olanı gösterir; bu yüzden hiç bağış almamış bir aile, neredeyse hedefe ulaşmış biri kadar görünür olur. Burada <a href=\"/how-it-works.html\">adil görünürlük</a> budur.",
     "h": "798cc15a0b0d"
   },
-  "index.14": {
+  "index.13": {
     "t": "Biz kimiz",
     "h": "696ab4d5bfb5"
   },
-  "index.15": {
-    "t": "<strong>I Gift Aid</strong>, faaliyet gösterdiğimiz isimdir. <strong>HEART Humanitarian Foundation</strong> ise arkasındaki kuruluştur &mdash; Pennsylvania'da tescil edilmiş ve İç Gelir Servisi tarafından 501(c)(3) vergiden muaf kamu yararına kuruluş olarak tanınmış, kâr amacı gütmeyen bir kurumdur. Bunlar iki ayrı kuruluş değil, birdir: HEART, I Gift Aid adıyla faaliyet göstermektedir.",
+  "index.14": {
+    "t": "<strong>I Gift Aid</strong>, faaliyet gösterdiğimiz isimdir. <strong>HEART Humanitarian Foundation</strong> ise arkasındaki hayır kurumudur &mdash; Pennsylvania'da tescil edilmiş ve İç Gelir Servisi tarafından 501(c)(3) (ABD vergi kanunu kapsamında) vergiden muaf bir kamu yardım kuruluşu olarak tanınmış, kâr amacı gütmeyen bir şirkettir. Bunlar tek bir kuruluştur, iki ayrı kuruluş değil: HEART, I Gift Aid adıyla faaliyet göstermektedir.",
     "h": "953e2c717bf6"
   },
-  "index.16": {
-    "t": "Her bağış, HEART Humanitarian Foundation'a yapılır. Durumumuzu, EIN numaramız olan <strong>42&#8209;2670441</strong> ile <a href=\"https://www.irs.gov/charities-non-profits/tax-exempt-organization-search\" target=\"_blank\" rel=\"noopener\">irs.gov</a> üzerinden IRS'e bağımsız olarak doğrulayabilirsiniz.",
+  "index.15": {
+    "t": "Her bağış, HEART Humanitarian Foundation'a yapılmaktadır. Durumumuzu, EIN numaramız <strong>42&#8209;2670441</strong> ile <a href=\"https://www.irs.gov/charities-non-profits/tax-exempt-organization-search\" target=\"_blank\" rel=\"noopener\">irs.gov</a> üzerinden IRS aracılığıyla bağımsız olarak doğrulayabilirsiniz.",
     "h": "c4f12ac715e8"
   },
-  "index.17": {
-    "t": "<a href=\"https://hearthumanitarianfoundation.org\" target=\"_blank\" rel=\"noopener\">hearthumanitarianfoundation.org</a> adresinden daha fazlasını okuyun.",
+  "index.16": {
+    "t": "<a href=\"https://hearthumanitarianfoundation.org\" target=\"_blank\" rel=\"noopener\">hearthumanitarianfoundation.org</a> adresinde daha fazla bilgi edinebilirsiniz.",
     "h": "b4d0b6617472"
   },
-  "index.18": {
-    "t": "Kampanyalarımızın bulunduğu yerler",
+  "index.17": {
+    "t": "Kampanyalarımızın yayımlandığı yerler",
     "h": "167cbb0c67ae"
   },
-  "index.19": {
-    "t": "Kampanyalarımız, düzenlenmiş bağış toplama platformlarında barındırılmakta ve işletilmektedir; bu ortaklar bağışçı işlemlerini, mevzuata uyumu ve ödeme dağıtımını yönetmektedir. Biz koordine eder ve seçeriz; aşağıdaki platformlar ise düzenlenmiş altyapıyı sağlar.",
+  "index.18": {
+    "t": "Kampanyalarımız, düzenleyici denetime tabi bağış toplama platformlarında barındırılmakta ve işletilmektedir; bu ortaklar bağışçı işlemlerini, mevzuat uyumunu ve ödeme dağıtımını yönetmektedir. Koordinasyon ve seçimi biz sağlıyoruz, aşağıdaki platformlar ise düzenlenmiş altyapıyı sunmaktadır.",
     "h": "a5619cfad9e3"
   },
-  "index.20": {
+  "index.19": {
     "t": "<a href=\"https://chuffed.org\" target=\"_blank\" rel=\"noopener\">Chuffed.org</a>",
     "h": "6b211c3c68af"
   },
-  "index.21": {
+  "index.20": {
     "t": "<a href=\"https://gofundme.com\" target=\"_blank\" rel=\"noopener\">GoFundMe</a>",
     "h": "0bf8275ded31"
   },
-  "index.22": {
+  "index.21": {
     "t": "Değerlerimiz",
     "h": "3f106511a8e4"
   },
-  "index.23": {
+  "index.22": {
     "t": "Harekete Geçen Cömertlik",
     "h": "aded2220011a"
   },
-  "index.24": {
-    "t": "Adil Görünürlük",
+  "index.23": {
+    "t": "Adil Temsil",
     "h": "35c3f8ec93f8"
   },
-  "index.25": {
-    "t": "Tasarımla Şeffaflık",
+  "index.24": {
+    "t": "Tasarımdan Şeffaflık",
     "h": "7c0b5faac923"
   },
-  "index.26": {
+  "index.25": {
     "t": "Kapsayıcı &amp; Erişilebilir",
     "h": "bf14c1556650"
   },
-  "index.27": {
+  "index.26": {
     "t": "Güçlendirme",
     "h": "0d8615fb4c4f"
   },
-  "index.28": {
+  "index.27": {
     "t": "İletişime geçin",
     "h": "115e410f01dc"
   },
-  "index.29": {
-    "t": "Destek başvurusu yapıyor veya bir kampanya hakkında bilgi almak mı istiyorsunuz? WhatsApp üzerinden bize mesaj atın &mdash; doğrudan ekibimize ulaşır, İngilizce veya Arapça.",
+  "index.28": {
+    "t": "Destek başvurusu yapıyor musunuz ya da bir kampanya hakkında bilgi almak mı istiyorsunuz? WhatsApp üzerinden bize mesaj gönderin &mdash; İngilizce veya Arapça olarak doğrudan ekibimize ulaşır.",
     "h": "82da79aa3aae"
   },
-  "index.30": {
-    "t": "<!-- /chat is a redirect handled in server.js, so the number is never printed here and can change without breaking this link. --> <a class=\"chat-btn\" href=\"/chat\" rel=\"noopener\"> <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\" focusable=\"false\"> <path fill=\"currentColor\" d=\"M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z\"/> <path fill=\"currentColor\" d=\"M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23a8.19 8.19 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23z\"/> </svg> <span>WhatsApp üzerinden mesaj atın</span> </a>",
+  "index.29": {
+    "t": "<!-- /chat is a redirect handled in server.js, so the number is never printed here and can change without breaking this link. --> <a class=\"chat-btn\" href=\"/chat\" rel=\"noopener\"> <svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" aria-hidden=\"true\" focusable=\"false\"> <path fill=\"currentColor\" d=\"M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35z\"/> <path fill=\"currentColor\" d=\"M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23a8.19 8.19 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23z\"/> </svg> <span>WhatsApp üzerinden mesaj gönderin</span> </a>",
     "h": "2b5dd3d50a40"
   },
-  "index.31": {
+  "index.30": {
     "t": "Ortaklar, yararlanıcılar ve bağışçılar bize ayrıca <a href=\"mailto:hello@igiftaid.org\">hello@igiftaid.org</a> adresinden ulaşabilir.",
     "h": "34daceffde88"
-  },
-  "campaigns.01": {
-    "t": "Doğruladığımız ve belirli bir amaç için bağış toplayan aileler. Her kampanya, ödemeyi yöneten düzenlenmiş bir bağış toplama platformunda barındırılır; kontrol ve takip işlemlerini biz yaparız.",
-    "h": "92e69cb47e40"
-  },
-  "campaigns.02": {
-    "t": "<strong>Bu sayfa her ziyarette karıştırılır.</strong> Her kampanyaya adil görünürlük sağlamayı taahhüt ediyoruz; bu nedenle öne çıkarılan yer, sıralama ve para ile satın alınabilecek hiçbir şey yoktur. Hedefine yakın bir kampanya, hiç bağış almamış birinin üzerinde gösterilmez &mdash; gördüğünüz sıra, başka birinin gördüğü sıra değildir; bu kasıtlı bir tercihtir. Dilerseniz aşağıdan kendiniz sıralayabilirsiniz.",
-    "h": "6658bd91f849"
-  },
-  "campaigns.03": {
-    "t": "Tümü",
-    "h": "a52ace420f21"
-  },
-  "campaigns.04": {
-    "t": "Tıbbi",
-    "h": "fec80bef0d8a"
-  },
-  "campaigns.05": {
-    "t": "Eğitim",
-    "h": "512ab3c6b986"
-  },
-  "campaigns.06": {
-    "t": "Barınak",
-    "h": "cfcd1f3d6aeb"
-  },
-  "campaigns.07": {
-    "t": "Gıda &amp; Yakıt",
-    "h": "faf071cae733"
-  },
-  "campaigns.08": {
-    "t": "Bebek &amp; Çocuk",
-    "h": "0d3ee6ab2067"
-  },
-  "campaigns.09": {
-    "t": "Kış",
-    "h": "1b17869e03ec"
-  },
-  "campaigns.10": {
-    "t": "Acil",
-    "h": "4538f2dc67b5"
-  },
-  "campaigns.11": {
-    "t": "Sıralı",
-    "h": "6be090825c99"
-  },
-  "campaigns.12": {
-    "t": "Karışık (varsayılan)",
-    "h": "2caaad646ccd"
-  },
-  "campaigns.13": {
-    "t": "En son açılan",
-    "h": "42f4be2677bc"
-  },
-  "campaigns.14": {
-    "t": "En uzun süredir açık",
-    "h": "62bc26ebef3b"
-  },
-  "campaigns.15": {
-    "t": "Şu anda bu filtrelere uyan kampanya yok.",
-    "h": "2b134eb7e1d9"
-  },
-  "needs.01": {
-    "t": "Günlük İhtiyaç Duvarı",
-    "h": "d8d2337e4784"
-  },
-  "needs.02": {
-    "t": "Aile başına günde bir kez yayınlanan, küçük ve somut tek bir ihtiyaç. Kampanya değil, hedef de değil &mdash; birinin bu hafta ihtiyaç duyduğu tek bir şey ve bunun maliyeti. İstediğiniz kadar seçin ve hepsini birlikte karşılayın.",
-    "h": "8abaebb05a34"
-  },
-  "needs.03": {
-    "t": "<strong>Her not 24 saat sonra sona erer.</strong> Bir aile günde yalnızca bir ihtiyaç paylaşabilir; böylece kimse duvarı dolduramaz ve hiçbir şey burada bayat kalmaz. Bir ihtiyaç karşılanırsa hemen kaldırılır; süre dolduğunda karşılanmamışsa aile ertesi gün yeniden paylaşabilir.",
-    "h": "dfe105f0b379"
-  },
-  "needs.04": {
-    "t": "<strong>Bu duvarı hiçbir zaman popülerliğe göre sıralamayız.</strong> Varsayılan sıralama en yakın sona erecek olandan başlar &mdash; en başarılıdan değil, en acilinden. Öne çıkarılan bir alan yoktur ve hiçbir şey için ödeme yapılamaz.",
-    "h": "c23bea5b2e06"
-  },
-  "needs.05": {
-    "t": "Bugün gündemde",
-    "h": "884976d0f628"
-  },
-  "needs.06": {
-    "t": "Tutar",
-    "h": "49e96d7cdf58"
-  },
-  "needs.07": {
-    "t": "Herhangi",
-    "h": "2b505597daa7"
-  },
-  "needs.08": {
-    "t": "$40 altı",
-    "h": "7060faef59d9"
-  },
-  "needs.09": {
-    "t": "$40 ile $70 arası",
-    "h": "7887df757f3e"
-  },
-  "needs.10": {
-    "t": "$70 ve üzeri",
-    "h": "3dfcea5a6ce7"
   },
   "how-it-works.01": {
     "t": "Bağış yapmanızdan bir ailenin parayı almasına kadar ne olduğu — hâlâ kusurlu olan kısımlar dahil.",
@@ -396,56 +292,12 @@
     "h": "c11b16233c18"
   },
   "nav.01": {
-    "t": "Kampanyalar",
-    "h": "30e9a089397b"
-  },
-  "nav.02": {
-    "t": "Günlük İhtiyaçlar",
-    "h": "0bb97f5767b6"
-  },
-  "nav.03": {
     "t": "Nasıl çalışır",
     "h": "9c870aa6e5e9"
   },
-  "nav.04": {
+  "nav.02": {
     "t": "Güven",
     "h": "ade9248e0132"
-  },
-  "campaigns.16": {
-    "t": "Daha küçük bir şey mi arıyorsunuz?",
-    "h": "33213293d658"
-  },
-  "campaigns.17": {
-    "t": "Kampanya, büyük ve tek seferlik bir ihtiyaç içindir ve haftalarca sürer. <a href=\"/needs.html\">Günlük İhtiyaçlar Duvarı</a> bunun tam tersidir: bir ailenin bu hafta ihtiyaç duyduğu küçük bir şey, genellikle $18 ile $100 arasında, günde bir kez yayınlanır ve 24 saat içinde kalkar.",
-    "h": "bde6fb2cfbd2"
-  },
-  "needs.11": {
-    "t": "Sırala",
-    "h": "bec69036aa27"
-  },
-  "needs.12": {
-    "t": "En yakın bitiş",
-    "h": "d5ca328f0b1c"
-  },
-  "needs.13": {
-    "t": "Önce en yeniler",
-    "h": "ffb6f5764bdd"
-  },
-  "needs.14": {
-    "t": "En küçük tutar",
-    "h": "4404f9cd60c1"
-  },
-  "needs.15": {
-    "t": "Şu an bu filtrelere uyan bir şey yok. Filtreleri genişletmeyi deneyin &mdash; duvar gün içinde değişiyor.",
-    "h": "d3990b7fa152"
-  },
-  "needs.16": {
-    "t": "Bunlar nereden geliyor",
-    "h": "642dff85e29e"
-  },
-  "needs.17": {
-    "t": "Başvuru sürecimizde zaten doğrulanmış aileler, bir ihtiyacı bize WhatsApp üzerinden göndererek duvara ekleyebilir. Doğruladığımız numaradan mesaj attıkları için kimin paylaştığını biliyoruz; günde bir paylaşım sınırı onur sistemine değil, kendi kayıtlarına karşı uygulanıyor. Her not burada görünmeden önce kontrol edilir.",
-    "h": "78260951fcfe"
   },
   "ui.chip.medical": {
     "t": "Tıbbi",
@@ -546,9 +398,5 @@
   "ui.expiredKept": {
     "t": "Süresi doldu — seçiminizde kalıyor",
     "h": "3a23053a594a"
-  },
-  "needs.18": {
-    "t": "Notlar aileler tarafından yazılır, gerektiğinde çevrilir. Duvar için kısaltırız; süsleme yapmayız.",
-    "h": "1df7235646ac"
   }
 }

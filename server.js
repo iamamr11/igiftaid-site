@@ -36,35 +36,29 @@ app.get('/chat', (_req, res) => {
 // had 18 notes and showed 3. Regenerating the file only resets that clock; it does
 // not stop it.
 //
-// So the window slides at serve time. Every timestamp is shifted by the age of the
-// file, which preserves the SPREAD the generator built — some notes nearly fresh,
-// some close to expiry, which is the whole point of the "expiring soonest" default
-// — while anchoring it to now. The file on disk stays the fixture; only what is
-// served moves.
+// ── Campaigns and the Daily Needs Wall are GONE, deliberately ───────────────
 //
-// This is mock data. When real needs arrive from the bot this route goes away and
-// the timestamps are whatever the family's message actually carried.
-const fs = require('fs');
-const NEEDS_JSON = path.join(__dirname, 'public', 'data', 'needs.json');
-
-app.get('/data/needs.json', (_req, res) => {
-  let doc;
-  try {
-    doc = JSON.parse(fs.readFileSync(NEEDS_JSON, 'utf8'));
-  } catch (e) {
-    return res.status(500).json({ items: [] });
-  }
-  const gen = Date.parse(doc.generated);
-  const shift = Number.isFinite(gen) ? Date.now() - gen : 0;
-  if (shift > 0) {
-    const move = (iso) => new Date(Date.parse(iso) + shift).toISOString().replace(/\.\d{3}Z$/, 'Z');
-    doc.generated = move(doc.generated);
-    doc.items = (doc.items || []).map((n) => ({ ...n, posted: move(n.posted), expires: move(n.expires) }));
-  }
-  // No caching: the whole point is that the answer depends on when you asked.
-  res.setHeader('Cache-Control', 'no-store');
-  res.json(doc);
-});
+// Both pages rendered invented families as real. campaigns.html showed six of
+// them — "The Haddad family", "Amal and her four children" — each tagged
+// "verification": "identity", under the heading "Families we have verified",
+// with Support buttons pointing at chuffed.org. The needs wall listed invented
+// needs with amounts and a "Fund these" button whose handler was an alert saying
+// checkout was not connected. Nothing on either page said it was illustrative,
+// and the generator re-dated the notes on every request so the wall always looked
+// freshly posted.
+//
+// That is fabricated beneficiaries presented as verified, on a charity's site,
+// beneath donate-shaped buttons. They come back when there are real families to
+// put on them, which is not before October.
+//
+// ⚠ 410, NOT THE CATCH-ALL. The catch-all below answers any unknown path with the
+// homepage and a 200, so deleting the files alone would leave these URLs looking
+// fine — and anything that indexed them keeps serving the old snippet. 410 Gone
+// says the content existed and was withdrawn, which is both true and what a
+// search engine needs to drop it.
+for (const gone of ['/campaigns.html', '/needs.html', '/data/needs.json', '/data/campaigns.json']) {
+  app.get(gone, (_req, res) => res.status(410).type('text/plain').send('Gone.'));
+}
 
 app.use(express.static(path.join(__dirname, 'public'), {
   maxAge: '60s',

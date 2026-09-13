@@ -44,7 +44,10 @@ I18N = os.path.join(HERE, "i18n")
 BLOCK = re.compile(r'<(h1|h2|h3|p|li|button|label|option)(\s[^>]*)?>(.*?)</\1>', re.S)
 NAVLINK = re.compile(r'(<a class="navlink"[^>]*>)([^<]+)</a>')
 
-PAGES = ["index.html", "campaigns.html", "needs.html", "how-it-works.html", "trust.html"]
+# ⚠ campaigns.html and needs.html were REMOVED on 2026-09-13 — they rendered
+# invented families as verified, beneath Support and Fund buttons. server.js
+# answers those paths with 410. They return when there are real families.
+PAGES = ["index.html", "how-it-works.html", "trust.html"]
 
 # Legal pages are deliberately NOT translated — a mistranslated liability clause is
 # worse than an English one, and two versions of a policy raise the question of which
